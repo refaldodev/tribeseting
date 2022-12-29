@@ -1,0 +1,144 @@
+@import "_variable.scss";
+
+.phone-wrapper {
+  margin-left: 2rem;
+  .preview-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+    display: none;
+    pointer-events: all;
+    color: $dark-gray;
+    font-size: 0.91rem;
+    -webkit-overflow-scrolling: touch;
+    z-index: 100;
+  }
+}
+
+.phone-container {
+  height: 680px;
+  width: 331px;
+  position: sticky;
+  top: 0.9rem;
+  pointer-events: all;
+  border: 15px solid black;
+  border-radius: 50px;
+  
+
+
+  .close-preview-btn {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.4rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    height: 30px;
+    width: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    pointer-events: all;
+    z-index: 9999;
+    display: none;
+  }
+
+  .content-box {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+    
+    .content {
+      height: 100%;
+      width: 100%;
+
+      .iframe {
+        border-radius: 33px;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .link {
+        color: #0044cc;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1250px) {
+  .phone-wrapper {
+    background-color: rgba(255, 255, 255, 0);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    transition: background-color 100ms;
+    pointer-events: none;
+
+    &.show {
+      pointer-events: all;
+
+      .phone-container {
+        display: block;
+      }
+
+      .preview-btn {
+        display: none;
+      }
+    }
+    .preview-btn {
+      display: block;
+    }
+  }
+
+  .phone-container {
+    display: none;
+    margin-top: 0;
+    min-width: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+
+
+    .content-box {
+      border: none;
+      border-radius: 0;
+      .content {
+        height: 100%;
+        width: 100%;
+
+        .iframe {
+          border-radius: 0;
+        }
+      }
+    }
+
+    .close-preview-btn {
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Chrome */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

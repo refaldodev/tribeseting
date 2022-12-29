@@ -1,0 +1,216 @@
+.button {
+    width: fit-content !important;
+    font-size: 1rem;
+    font-weight: 400 !important;
+    padding: 7px 13px !important;
+    cursor: pointer !important;
+    word-break: break-all;
+}
+.d-flex {
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -webkit-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -moz-box;
+    /* TWEENER - IE 10 */
+    display: -ms-flexbox;
+    /* NEW - Chrome */
+    display: -webkit-flex;
+    display: flex;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-primary {
+    color: var(--green-color) !important;
+}
+
+.green-text {
+    color: #76cc11;
+}
+
+.red-text {
+    color: #ff0000;
+}
+
+.gray-text {
+    color: #959595;
+}
+
+.caption {
+    font-size: 0.85rem;
+    color: #000;
+}
+.text-btn {
+    background: none;
+    outline: none !important;
+    border: none;
+    padding: 0;
+}
+.twentyfivebold {
+    font-size: 1.6rem !important;
+    font-weight: 700;
+}
+.fourteenbold {
+    font-size: 0.875rem !important;
+    font-weight: 700;
+}
+
+.fourteenpx {
+    font-size: var(--font-size-14);
+}
+.tenpx {
+    font-size: 0.833rem;
+}
+
+.eightpx {
+    font-size: var(--font-size-eight);
+}
+.elevenpx {
+    font-size: 0.917rem;
+}
+
+.twelvepx {
+    font-size: var(--font-size-12);
+}
+
+.sixteenpx {
+    font-size: var(--font-size-16);
+}
+.ninepx {
+    font-size: 0.75rem;
+}
+.font-weight-light {
+    font-weight: 400;
+}
+.font-weight-x-bold {
+    font-weight: 800;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.underline-btn {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+}
+
+.pointer {
+    cursor: pointer;
+}
+.break-word {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.btn-primary {
+    min-height: 46px;
+    padding: 0 36px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff !important;
+    word-break: break-all;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #ffeded !important;
+    border: 1px solid #ffeded !important;
+    box-shadow: none !important;
+}
+.btn-outline-primary,
+.btn-fill-light,
+.btn-edit-sm {
+    min-height: 46px;
+    padding: 0 36px;
+    border-radius: 4px;
+    font-weight: 800;
+    border: 1px solid;
+    outline: none;
+    word-break: break-all;
+    line-height: 1.2;
+}
+.btn-fill-light.active {
+    background-color: var(--green-color);
+    color: #fff !important;
+}
+.btn-fill-light.active:hover {
+    background-color: var(--green-color);
+    filter: brightness(0.95);
+}
+.btn-outline-primary:hover,
+.btn-fill-light:hover,
+.btn-edit-sm:hover {
+    background-color: var(--green-color);
+}
+a.btn.btn-primary {
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -webkit-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -moz-box;
+    /* TWEENER - IE 10 */
+    display: -ms-flexbox;
+    /* NEW - Chrome */
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.btn-rounded {
+    border-radius: 2rem;
+}
+.btn-fill-light {
+    background: rgb(223, 251, 223);
+    border-radius: 30px;
+    min-height: unset;
+    padding: 12px 0.75rem;
+    color: var(--green-color) !important;
+    width: 100%;
+}
+
+.btn-fill-light:hover {
+    color: #fff !important;
+}
+.btn-fill-light svg {
+    margin-left: 0;
+}
+.btn-edit-sm {
+    padding: 0.2rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    min-height: 1rem;
+}
+.btn-edit-sm:hover {
+    color: #fff;
+}
+.btn.focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.bg-dark {
+    background-color: #262626 !important;
+}
+
+.form-control {
+    border-radius: 6px !important;
+    height: 40px;
+    border-color: #b8b8b8;
+}
+
+.form-control:focus {
+    border-color: var(--green-color) !important;
+}
+
+.modal-dialog {
+    margin: 0.5rem auto !important;
+    padding: 0 20px;
+}

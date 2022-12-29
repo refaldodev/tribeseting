@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <title>Sociabuzz Linkbio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/scss/links.css" />
+    <link rel="stylesheet" href="./src/css/creators_all.css" />
+
+    <link
+      rel="icon"
+      href="./src/img/favicon.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    
+
+  </head>
+  <body>
+
+    <!-- cover input modal -->
+    <div class="modal fade croppie-imgcover-modal" id="profile-img-modal" tabindex="-1" role="dialog" aria-labelledby="profile-img-modal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="crop-container">
+              <div class="upload-profile-img-wrap">
+                <div id="upload-profile-img"></div>
+              </div>
+            </div>
+            <div class="file-input-container">
+              <label for="upload">Choose file</label>
+              <input type="file" name='cropped' id="upload" accept="image/x-png,image/gif,image/jpeg">
+              <p class="file-name">No file selected</p>
+            </div>
+            <p class="tenpx gray-font mb-0 mt-2">Hanya format jpg, jpeg, png | Max 1MB | Min width 1000px            </p>
+            <p class="image-error-msg mb-0 text-message tenpx" style="color: red;"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="get-cropped-img pointer btn-fill-light active py-2" class="close" data-dismiss="modal" aria-label="Close">Simpan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cover input modal -->
+
+<!--Delete Modal-->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn btn-fill-light active mb-3" data-dismiss="modal" id="confirm-delete-btn">Hapus</button>
+        <button type="button" class="btn btn-fill-light" data-dismiss="modal" id="cancel-delete-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Delete Modal-->
+
+
+    <!-- Header Section Start -->
+    <header>
+      
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-md">
+          <a class="navbar-brand" href="https://sociabuzz.com"><img src="./image/logo.png"
+                  class="header-pro-logo d-block" alt="Sociabuzz Pro Logo" /></a>
+
+          <div class="nav-bar-link ml-auto d-flex align-items-center">
+              <div class="navigation-bar">
+                  <div class="">
+                      <ul class="navbar-nav mr-auto align-items-center">
+                       
+                          <li class="nav-item px-1 active">
+                              <!-- tambahkan red-dot class untuk membuat lingkaran merah -->
+                              <a class="nav-link" href="#"><i class="far fa-envelope"></i></a>
+                              <!-- tambahkan red-dot class untuk membuat lingkaran merah -->
+                          </li>
+
+                          <li class="nav-item px-1">
+                              <!-- tambahkan red-dot class untuk membuat lingkaran merah -->
+                              <a class="nav-link red-dot" href="#" data-toggle="dropdown" href="#" role="button"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <i class="far fa-bell"></i>
+                              </a>
+                              <!-- tambahkan red-dot class untuk membuat lingkaran merah -->
+                              <div class="dropdown-menu dropdown-menu-right notification" id="notification-dropdown">
+                                  <div>
+                                      <h4 class="notif-title font-weight-x-bold mb-0">
+                                          Notifikasi
+                                      </h4>
+                                      <div class="message-wrapper">
+                                          <!-- tambahkan class read pada message-container untuk menandakan notification telah dibaca -->
+                                          <div class="message-container read">
+                                              <a href="">
+                                                  <img src="https://img.tek.id/crop/600x400/content/2021/02/19/37609/lagi-video-pewdiepie-dihapus-youtube-VXtaVgI8XE.png"
+                                                      alt="" />
+                                                  <div>
+                                                      <p class="message mb-0">
+                                                          <span class="font-weight-bold">Profile
+                                                              Name
+                                                              Here</span>
+                                                          posted a new
+                                                          content: “Lorem
+                                                          ipsumasd dolor
+                                                          sit amet”.
+                                                      </p>
+                                                      <p class="time text-secondary">
+                                                          1 jam lalu
+                                                      </p>
+                                                  </div>
+                                                  <button class="read-notif" class="read-notif" data-toggle="tooltip"
+                                                      data-placement="top" title="Tandai sudah dibaca"></button>
+                                              </a>
+                                          </div>
+                                          <!-- tambahkan class read pada message-container untuk menandakan notification telah dibaca -->
+                                          <div class="message-container read">
+                                              <a href="">
+                                                  <img src="./image/person.jpg" alt="" />
+                                                  <div>
+                                                      <p class="message mb-0">
+                                                          <span class="font-weight-bold">Profile
+                                                              Name
+                                                              Here</span>
+                                                          posted a new
+                                                          content: “Lorem
+                                                          ipsumasd dolor
+                                                          sit amet”.
+                                                      </p>
+                                                      <p class="time text-secondary">
+                                                          1 jam lalu
+                                                      </p>
+                                                  </div>
+                                                  <button class="read-notif"></button>
+                                              </a>
+                                          </div>
+                                          <!-- tambahkan class read pada message-container untuk menandakan notification telah dibaca -->
+                                          <div class="message-container">
+                                              <a href="">
+                                                  <img src="./image/person.jpg" alt="" />
+                                                  <div>
+                                                      <p class="message mb-0">
+                                                          <span class="font-weight-bold">Profile
+                                                              Name
+                                                              Here</span>
+                                                          posted a new
+                                                          content: “Lorem
+                                                          ipsumasd dolor
+                                                          sit
+                                                          ametasdasdwasdasdasdwasdsadasd.
+                                                      </p>
+                                                      <p class="time text-secondary">
+                                                          1 jam lalu
+                                                      </p>
+                                                  </div>
+                                                  <button class="read-notif" data-toggle="tooltip"
+                                                      data-placement="top" title="Tandai sudah dibaca"></button>
+                                              </a>
+                                          </div>
+                                          <!-- tambahkan class read pada message-container untuk menandakan notification telah dibaca -->
+                                          <div class="message-container read">
+                                              <a href="">
+                                                  <img src="./image/person.jpg" alt="" />
+                                                  <div>
+                                                      <p class="message mb-0">
+                                                          <span class="font-weight-bold">Profile
+                                                              Name
+                                                              Here</span>
+                                                          posted a new
+                                                          content: “Lorem
+                                                          ipsumasd dolor
+                                                          sit amet Lorem
+                                                          ipsum dolor sit
+                                                          amet consectetur
+                                                          adipisicing
+                                                          elit. Ducimus,
+                                                          odio..
+                                                      </p>
+                                                      <p class="time text-secondary">
+                                                          1 jam lalu
+                                                      </p>
+                                                  </div>
+                                                  <button class="read-notif" data-toggle="tooltip"
+                                                      data-placement="top" title="Tandai sudah dibaca"></button>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <button class="text-btn green-text eightpx ml-3 mb-1">
+                                          Tandai semua sudah dibaca
+                                      </button>
+                                      <button class="underline-btn eightpx d-block ml-3">
+                                          Lihat semua
+                                      </button>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="nav-item px-1 active">
+                              <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                  aria-expanded="false"><i class="fas fa-bars"> </i><span
+                                      class="ml-2 menu-text">Menu</span></a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item nav-link" href="./contents.html">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-newspaper fa-fw"></i>
+                                      </span>
+                                      <span class="text">Contents</span></a>
+                                  <a class="dropdown-item nav-link" href="./subscriptions.html">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-repeat fa-fw"></i>
+                                      </span>
+                                      <span class="text">Subscriptions</span></a>
+                                  <a class="dropdown-item nav-link" href="./purchases.html">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-box fa-fw"></i>
+                                      </span>
+                                      <span class="text">Purchases</span></a>
+                                  <a class="dropdown-item nav-link" href="./service.html">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-handshake fa-fw"></i>
+                                      </span>
+                                      <span class="text">Talents & Services</span></a>
+                                  <a class="dropdown-item nav-link" href="./transactions.html">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-wallet fa-fw"></i>
+                                      </span>
+                                      <span class="text">Transactions</span></a>
+                                  <a class="dropdown-item nav-link" href="./creators.html">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-users fa-fw"></i>
+                                      </span>
+                                      <span class="text">Creators</span></a>
+                                  <a class="dropdown-item nav-link" href="./account.html">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-circle-user fa-fw"></i>
+                                      </span>
+                                      <span class="text">Account</span></a><a class="dropdown-item nav-link"
+                                      href="/signin">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-right-to-bracket fa-fw"></i>
+                                      </span>
+                                      <span class="text">Sign in</span></a>
+                                  <a class="dropdown-item nav-link" href="/logout">
+                                      <span class="icon">
+                                          <i class="fa-solid fa-right-from-bracket fa-fw"></i>
+                                      </span>
+                                      <span class="text">Log out</span></a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </nav>
+      <!-- navbar end -->
+    </header>
+    <!-- Header Section End -->
+
+    <!---------------- main--------------------->
+    <main class="">
+      <section class="content-wrapper">
+          <div class="d-flex justify-content-center mb-5">
+            <img
+              class="head-logo "
+              src="./image/feature-tribe.png"
+              alt=""
+            />
+          </div>
+          
+          <!--Feature Page navigation-->
+          <ul
+            class="nav nav-tabs d-flex justify-content-center"
+            id="sbgigsTab"
+            role="tablist"
+          >
+            <li class="nav-item height-link ">
+              <a
+                class="nav-link break-word active"
+                id="links-tab-btn"
+                href="index.html"
+                role="tab"
+                aria-controls="links"
+                aria-selected="true"
+                font-weight-x-bold
+                >Page Settings</a
+              >
+            </li>
+            <li class="nav-item height-link ">
+              <a
+                class="nav-link "
+                id="style-tab-btn"
+                href="./style.html"
+                role="tab"
+                aria-controls="style"
+                aria-selected="true"
+                font-weight-x-bold
+                >Options / Tiers</a
+              >
+            </li>
+            
+            <li class="nav-item height-link ">
+              <a
+                class="nav-link"
+                id="analytics-tab-btn"
+                href="analytics.html"
+                role="tab"
+                aria-controls="Analytics"
+                aria-selected="false"
+                >Poll / Vote</a
+              >
+            </li>
+            <li class="nav-item height-link ">
+              <a
+                class="nav-link"
+                id="settings​-tab-btn"
+                href="settings.html"
+                role="tab"
+                aria-controls=settings​"
+                aria-selected="false"
+                >Banner</a
+              >
+            </li>
+            <li class="nav-item height-link ">
+              <a
+                class="nav-link"
+                id="settings​-tab-btn"
+                href="settings.html"
+                role="tab"
+                aria-controls=settings​"
+                aria-selected="false"
+                >Integrations</a
+              >
+            </li>
+            <li class="nav-item height-link ">
+              <a
+                class="nav-link"
+                id="settings​-tab-btn"
+                href="settings.html"
+                role="tab"
+                aria-controls=settings​"
+                aria-selected="false"
+                >Lorem Ipsum</a
+              >
+            </li>
+            <li class="nav-item height-link ">
+              <a
+                class="nav-link"
+                id="settings​-tab-btn"
+                href="settings.html"
+                role="tab"
+                aria-controls=settings​"
+                aria-selected="false"
+                >Lorem Ipsum Dolor Sit Amet</a
+              >
+            </li>
+            <li class="nav-item height-link ">
+              <a
+                class="nav-link"
+                id="settings​-tab-btn"
+                href="settings.html"
+                role="tab"
+                aria-controls=settings​"
+                aria-selected="false"
+                >Lorem Ipsum</a
+              >
+            </li>
+          </ul>
+          <!--Feature Page navigation-->
+          
+          
+         <!-- accordion -->
+         
+       
+
+     <!-- end accordion -->
+
+          
+    <div class="wrapper-accordion">
+      <div class="accordion-container">
+        <div class="accordion-item active accordion-item mb-card-default ">
+          <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+              <div class="wrapper-icontext d-flex align-items-center">
+              <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+            
+            <p class="text-left lineHeight160 mr-6 ">Cover Image</p>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+          </div>
+         
+        
+          </div>
+          <div class="accordion-body bg-opacity  ">
+         <div class="cover-image display-none">
+          <img src="" alt="" id="profile-img" class="w-100"> 
+         </div>
+         <!-- user -->
+         <!-- <div class="profile-img-container">
+          <img src="" alt="" id="profile-img">
+                  <div class="user-icon">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div> -->
+                <!-- user -->
+            <div class="wrapper-upload wrapper-upploadCover">
+              <div class="file-input-container">
+                <!-- <div class="wrapper-input">
+                <label for="upload">Upload Image</label>
+                <input type="file" name="cropped" id="upload" accept="image/x-png,image/gif,image/jpeg">
+                <input type="hidden" name="userfile" id="input-upload" value="">
+              </div> -->
+              <button class="button button-modalUpload " data-toggle="modal" data-target="#profile-img-modal">Upload Image</button>
+                <div class="wrapper-delete">
+                <button type="button" class="" id="del-btn" data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">         
+                  <i class="fas fa-trash-alt"></i> 
+                </button>
+              </div>
+            </div>
+            <ul>
+              <li>The image is displayed at the top of your page </li>
+              <li>Allowed file types: JPG, JPEG, PNG  </li>
+              <li>Max file size: 1MB  </li>
+              <li>Min image width: 1000px</li>
+              <li> Min image height: 285px </li>
+              <li> Recommended image ratio: 14 : 4 (width : height) </li>
+              
+            </ul>
+            
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+
+
+
+    <!-- biarkan ini d-none -->
+          <div class="d-none">
+            <div class="d-flex justify-content-around rounded-link-wrapper mb-5">
+  
+              <div class="d-flex flex-column rounded-link-container  circle-link-btn" id="cirlce-link-1" data-img="circle-img-1" data-link="">
+                <div class="rounded-link d-flex  mb-2">
+                  <button class="icon text-center text-primary tenpx font-weight-bold  m-0 " type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal" >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                  <img src="" alt="" id="circle-img-1">
+                  <button class="arrange-btn" data-tooltip="tooltip" data-placement="top" title="Drag to reorder">
+                    <i class="fas fa-grip-vertical"></i>
+                  </button>
+                </div>
+                <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
+                <div class="icon-container d-flex align-items-center">
+                  <div class="switch mr-2">
+                    <input type="checkbox" id="switch-circle-1" /><label for="switch-circle-1">Toggle</label>
+                  </div>
+                  <button class="" id="del-btn" data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </div>
+  
+  
+              <div class="d-flex flex-column rounded-link-container   circle-link-btn" data-img="circle-img-2" data-link="">
+                <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
+                  <button class="icon text-center text-primary tenpx font-weight-bold  m-0"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal" >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                  <img  alt="" src="" id="circle-img-2">
+                  <button class="arrange-btn" data-tooltip="tooltip" data-placement="top" title="Drag to reorder">
+                    <i class="fas fa-grip-vertical"></i>
+                  </button>
+                </div>
+                <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
+                <div class="icon-container d-flex align-items-center">
+                  <div class="switch mr-2">
+                    <input type="checkbox" id="switch-circle-2" /><label for="switch-circle-2">Toggle</label>
+                  </div>
+                  <button class="" id="del-btn" data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </div>
+  
+  
+              <div class="d-flex flex-column rounded-link-container  circle-link-btn"  class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModa" data-img="circle-img-3" data-link="">
+                <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
+                  <button class="icon text-center text-primary tenpx font-weight-bold  m-0 " type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal" >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                  <img  alt="" src="" id="circle-img-3">
+                  <button class="arrange-btn" data-tooltip="tooltip" data-placement="top" title="Drag to reorder">
+                    <i class="fas fa-grip-vertical"></i>
+                  </button>
+                </div>
+                <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
+                <div class="icon-container d-flex align-items-center">
+                  <div class="switch mr-2">
+                    <input type="checkbox" id="switch-circle-3" /><label for="switch-circle-3">Toggle</label>
+                  </div>
+                  <button class="" id="del-btn" data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+                
+              </div>
+              
+  
+              <!-- Modal -->
+              <div class="modal fade" id="addCirlceLinkModal" tabindex="-1" role="dialog" aria-labelledby="addCirlceLinkModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="upload-photo-container mb-2 font-weight-light">
+                        <input type="file" id="circle-link-img-input" accept="image/x-png,image/gif,image/jpeg">
+                        <p>Upload Image
+                        </p>
+                        <img src="" alt="" id="circle-link-modal-img">
+                      </div>
+                      <p class="eightpx gray-font">Hanya format JPG, JPEG, PNG, GIF | Max 1MB
+                      </p>
+                      <div class="input-wrapper">
+                        <div class="input-container">
+                          <p class="tenpx font-weight-bold mb-1">Judul</p>
+                          <input type="text" class="form-control" id="circle-link-title-input" autocomplete="off" maxlength="9">
+                          <p class="eightpx text-right mb-1 circle-title-length gray-font">0 / 9</p>
+                        </div>
+                        <div class="input-container">
+                          <p class="tenpx font-weight-bold mb-1">Link</p>
+                          <input type="text" class="form-control" id="circle-link-link-input" autocomplete="off">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="circle-link-save-btn" data-dismiss="modal" aria-label="Close">Simpan</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+  
+            </div>
+            <!--Circle Link-->
+  
+  
+            <!-- All the input form -->
+            <div class="form-wrapper">
+            </div>
+            <!-- All the input form -->
+          </div>
+    <!-- end biarkan ini d-none -->
+      </section>
+      
+         <!--Phone preview-->
+         <div class="phone-wrapper" id="overlay" >
+          <div class="phone-container show">
+              <div class="content-box">
+                <div class="content">
+                  <iframe
+                  src="https://linkbio-azure.vercel.app/"
+                  frameborder="0"
+                  width="100%"
+                  height="100%"
+                  class="iframe"
+                ></iframe>
+                </div>
+              </div>
+            <button class="close-preview-btn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <button class="preview-btn">
+            <span class="mr-2">
+              <i class="fas fa-eye"></i>
+            </span>
+            Preview
+          </button>
+        </div>
+          <!--Phone preview-->
+    </main>
+
+    <!---------------- main--------------------->
+
+    <!---------------- Footer --------------------->
+    <!-- footer start -->
+    <footer class="bg-dark text-center p-5">
+      <img
+        src="./src/img/logo-white.png"
+        class="mb-4 mx-auto d-block"
+        alt="footer image"
+      />
+      <a href="" class="text-white d-block mb-2">Hubungi Support</a>
+      <a href="" class="text-white d-block mb-2">FAQ</a>
+      <a href="" class="text-white d-block mb-2"> Ketentuan Penggunaan </a>
+      <a href="" class="text-white d-block mb-4"> Kebijakan Privasi </a>
+
+      <p class="text-secondary">&copy; PT Komunika Lintas Maya</p>
+    </footer>
+    <!-- footer end -->
+    <!---------------- Footer --------------------->
+
+    <script src="./src/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./src/js/lib/popper.min.js"></script>
+    <script src="./src/js/lib/Sortable.min.js"></script>
+    <script src="./src/js/lib/bootstrap.min.js"></script>
+    <script src="./src/js/lib/select2.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./src/js/linkPage/main.js" ></script>
+
+    <!-- User bundler for old browser that does not support Javascript ES6 Modules -->
+    <!-- Bundler using minipack in tool folder by running node minipack.js -->
+    <script src="./src/js/linkPage/bundle.js"></script>
+    <script src="./src/js/linkPage/script.js"></script>
+</html>

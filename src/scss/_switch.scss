@@ -1,0 +1,63 @@
+@import "_variable.scss";
+
+.switch {
+  position: relative;
+  width: 30px;
+  height: 20px;
+
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 30px;
+    height: 100%;
+    background: $gray;
+    display: block;
+    border-radius: 100px;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+  }
+
+  label:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-transform: translate(0%, -50%); /* WebKit */
+    -moz-transform: translate(0%, -50%); /* Mozilla */
+    -o-transform: translate(0%, -50%); /* Opera */
+    -ms-transform: translate(0%, -50%); /* Internet Explorer */
+    transform: translate(0%, -50%); /* CSS3 */
+    transition: all 250ms ease;
+  }
+
+  input:checked + label {
+    background: #4dc91c;
+  }
+
+  input:checked + label:after {
+    /* Firefox */
+    left: -moz-calc(100% - 2px);
+    /* WebKit */
+    left: -webkit-calc(100% - 2px);
+    /* Opera */
+    left: -o-calc(100% - 2px);
+    /* Standard */
+    left: calc(100% - 2px);
+    -webkit-transform: translate(-100%, -50%); /* WebKit */
+    -moz-transform: translate(-100%, -50%); /* Mozilla */
+    -o-transform: translate(-100%, -50%); /* Opera */
+    -ms-transform: translate(-100%, -50%); /* Internet Explorer */
+    transform: translate(-100%, -50%);
+  }
+}

@@ -1,6 +1,6 @@
-var containerLinkBio = document.querySelector(".accordion-container");
+var containerAccordion = document.querySelector(".accordion-container");
 
-containerLinkBio.addEventListener("click", function (e) {
+containerAccordion.addEventListener("click", function (e) {
   // e.preventDefault();
   var header = e.target.closest(".accordion-header");
   if (header) {
@@ -14,6 +14,27 @@ containerLinkBio.addEventListener("click", function (e) {
 
     // Show current clicked
     var item = e.target.closest(".accordion-item");
+    item.classList.toggle("active");
+  }
+});
+
+// sub accordion
+var subContainerAccordion = document.querySelector(".subAccordion-container");
+
+subContainerAccordion.addEventListener("click", function (e) {
+  // e.preventDefault();
+  var header = e.target.closest(".subAccordion-header");
+  if (header) {
+    // Hide current open
+    var headerOpen = document.querySelector(
+      ".subAccordion-item.active .subAccordion-header"
+    );
+    if (headerOpen && !headerOpen.isSameNode(header)) {
+      headerOpen.closest(".subAccordion-item").classList.remove("active");
+    }
+
+    // Show current clicked
+    var item = e.target.closest(".subAccordion-item");
     item.classList.toggle("active");
   }
 });
@@ -181,7 +202,7 @@ function profileSection() {
         if (input.files[0].size > 1048576) {
           isValidSize = false;
           $(".get-cropped-imgPicture").prop("disabled", true);
-          $(".modal .image-error-msg").html("Max 1MB");
+          $(".modal .image-error-msgprofile").html("Max 1MB");
 
           return;
         }
@@ -225,11 +246,11 @@ function profileSection() {
             URL.revokeObjectURL(objectUrl);
             if (isValidSize && this.height > 320 && this.width > 320) {
               $(".file-nameprofile").html(_this.files[0].name);
-              $(".modal .image-error-msg").html("");
+              $(".modal .image-error-msgprofile").html("");
               $(".get-cropped-imgPicture").prop("disabled", false);
             }
           } else {
-            $(".modal .image-error-msg").html(
+            $(".modal .image-error-msgprofile").html(
               "Min height 300px dan min width 300px"
             );
             $(".profile-img-container").css("display", "none");
@@ -289,3 +310,43 @@ function profileSection() {
 }
 
 profileSection();
+
+// text area
+$("textarea")
+  .each(function () {
+    this.setAttribute(
+      "style",
+      "height:" + this.scrollHeight + "px;overflow-y:hidden;"
+    );
+  })
+  .on("input", function () {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+    var result = 0;
+    if (this.id === "shortDescription") {
+      $("#countShortDescription").text(this.value.length + " " + " / 60");
+    }
+  });
+
+// text area
+$("input")
+  .each(function () {
+    this.setAttribute(
+      "style",
+      "height:" + this.scrollHeight + "px;overflow-y:hidden;"
+    );
+  })
+  .on("input", function () {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+    var result = 0;
+    if (this.id === "profileName") {
+      $("#countProfileName").text(this.value.length + " " + " / 60");
+    } else if (this.id === "TextonButton") {
+      $("#countTextonButton").text(this.value.length + " " + " / 20");
+    } else if (this.id === "TextonButton2") {
+      $("#countTextonButton2").text(this.value.length + " " + " / 20");
+    } else if (this.id === "ItemName") {
+      $("#countItemName").text(this.value.length + " " + " / 20");
+    }
+  });

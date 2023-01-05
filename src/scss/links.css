@@ -1760,6 +1760,10 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
     background: transparent;
     margin-bottom: 18px !important;
   }
+  .wrapper-accordion .subAccordion-container .cover-image {
+    background: transparent;
+    margin-bottom: 18px !important;
+  }
   .accordion-item:not(:last-child) {
     margin-bottom: 20px !important;
   }
@@ -1955,6 +1959,14 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   -moz-user-select: none;
   -ms-user-select: none;
 }
+.wrapper-accordion .accordion-container .accordion-item .title-accordion {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+}
 .wrapper-accordion .accordion-container .accordion-item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -1988,6 +2000,43 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion .accordion-container .accordion-item .accordion-body {
   display: none;
   padding: 0;
+}
+.wrapper-accordion .accordion-container .accordion-item .accordion-body .form-title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  margin-bottom: 5px;
+  color: #000000;
+}
+.wrapper-accordion .accordion-container .accordion-item .accordion-body .desc {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+  margin-top: 4px;
+  color: #595959;
+}
+.wrapper-accordion .accordion-container .accordion-item .accordion-body .messageInput {
+  min-height: 40px !important;
+}
+.wrapper-accordion .accordion-container .accordion-item .accordion-body .messageTextArea {
+  min-height: 40px !important;
+}
+.wrapper-accordion .accordion-container .accordion-item .accordion-body .countNumber {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+  margin-top: 4px;
+  text-align: right;
+  color: #959595;
 }
 .wrapper-accordion .accordion-container .accordion-item.active .accordion-bg-default {
   border-top: 1px solid #b8b8b8;
@@ -2150,6 +2199,281 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   pointer-events: none;
 }
 .wrapper-accordion .accordion-container .profile-img-container .user-icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 5rem;
+  color: #888787;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .title-accordion {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .switch-text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-header {
+  background: transparent;
+  display: flex;
+  font-weight: 700;
+  background-color: white;
+  color: #000000;
+  border: 1px solid #b8b8b8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-header::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f107";
+  color: #bbb;
+  margin: auto 0;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 100%;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .wrapper__card--item {
+  padding: 11px 15px;
+  text-decoration: none !important;
+  border-radius: 0.6rem;
+  min-height: 50px;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-body {
+  display: none;
+  padding: 0;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-body .form-title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  margin-bottom: 5px;
+  color: #000000;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-body .desc {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+  margin-top: 4px;
+  color: #595959;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-body .messageInput {
+  min-height: 40px !important;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-body .messageTextArea {
+  min-height: 40px !important;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-body .countNumber {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+  margin-top: 4px;
+  text-align: right;
+  color: #959595;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item.active .subAccordion-bg-default {
+  border-top: 1px solid #b8b8b8;
+  border-left: 1px solid #b8b8b8;
+  border-right: 1px solid #b8b8b8;
+  border-bottom: 1px solid transparent;
+  border-radius: 0.6rem 0.6rem 0rem 0rem;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item.active .wrapper-switch {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 23px;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item.active .wrapper-switch .switch {
+  margin: 0 5px;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item.active .subAccordion-body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  /* background-color: white; */
+  color: #000000;
+  border-left: 1px solid #b8b8b8;
+  border-right: 1px solid #b8b8b8;
+  border-bottom: 1px solid #b8b8b8;
+  border-top: 0px solid #b8b8b8;
+  border-radius: 0rem 0rem 0.6rem 0.6rem;
+  -webkit-border-radius: 0rem 0rem 0.6rem 0.6rem;
+  -moz-border-radius: 0rem 0rem 0.6rem 0.6rem;
+  -ms-border-radius: 0rem 0rem 0.6rem 0.6rem;
+  -o-border-radius: 0rem 0rem 0.6rem 0.6rem;
+  border-color: #bbbbbb !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0px 17px 17px 17px;
+  text-decoration: none !important;
+  min-height: 50px;
+  z-index: 300;
+  overflow: hidden !important;
+  position: relative;
+  display: block;
+}
+.wrapper-accordion .subAccordion-container .subAccordion-item.active .subAccordion-header::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f106";
+  font-weight: 900;
+  color: #bbb;
+  margin: auto 0;
+  font-size: 20px;
+  line-height: 100%;
+}
+.wrapper-accordion .subAccordion-container .cover-image {
+  background: transparent;
+  margin-bottom: 18px;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container label {
+  border: 1px solid #76cc11;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 140%;
+  min-width: 105px;
+  max-height: 46px;
+  color: #76cc11;
+  background-color: #dffbdf;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container label:hover {
+  background-color: #76cc11;
+  color: white;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container input[type=file] {
+  margin-top: 1rem;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #76cc11;
+  width: 0;
+  height: 0;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .wrapper-delete {
+  width: 36px;
+  height: 36px;
+  /* background: red; */
+  border: 1px solid #76cc11;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .wrapper-delete:hover {
+  cursor: pointer;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .wrapper-delete button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #76cc11;
+  cursor: pointer;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .button-modalUpload {
+  border: 1px solid #76cc11;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 140%;
+  min-width: 105px;
+  max-height: 46px;
+  color: #76cc11;
+  background-color: #dffbdf;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .button-modalUpload:hover {
+  background-color: #76cc11;
+  color: white;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload ul {
+  font-family: "Open Sans";
+  font-style: normal;
+  padding-left: 0rem;
+  list-style-position: disc outside !important;
+  margin: 0 0 0 1.8em !important;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #595959;
+}
+.wrapper-accordion .subAccordion-container .profile-img-container {
+  height: 100px;
+  width: 100px;
+  background-color: #c2c2c2;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 100px;
+  margin-bottom: 18px;
+}
+.wrapper-accordion .subAccordion-container .profile-img-container img[src=""] {
+  display: none;
+}
+.wrapper-accordion .subAccordion-container .profile-img-container img {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  pointer-events: none;
+}
+.wrapper-accordion .subAccordion-container .profile-img-container .user-icon {
   position: absolute;
   height: 100%;
   width: 100%;

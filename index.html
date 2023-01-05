@@ -93,7 +93,7 @@
               <p class="file-nameprofile">No file selected</p>
             </div>
             <p class="tenpx gray-font mb-0 mt-2">Hanya format jpg, jpeg, png | Max 1MB | Min width 1000px            </p>
-            <p class="image-error-msg mb-0 text-message tenpx" style="color: red;"></p>
+            <p class="image-error-msgprofile mb-0 text-message tenpx" style="color: red;"></p>
           </div>
           <div class="modal-footer">
             <button type="button" class="get-cropped-imgPicture pointer btn-fill-light active py-2" class="close" data-dismiss="modal" aria-label="Close">Simpan</button>
@@ -437,7 +437,7 @@
               <div class="wrapper-icontext d-flex align-items-center">
               <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
             
-            <p class="text-left lineHeight160 mr-6 ">Cover Image</p>
+            <p class="text-left lineHeight160 mr-6  title-accordion">Cover Image</p>
             <!-- <i class="fa-solid fa-chevron-down"></i> -->
           </div>
          
@@ -490,7 +490,7 @@
               <div class="wrapper-icontext d-flex align-items-center">
               <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
             
-            <p class="text-left lineHeight160 mr-6 ">Profile Picture</p>
+            <p class="text-left lineHeight160 mr-6  title-accordion">Profile Picture</p>
             <!-- <i class="fa-solid fa-chevron-down"></i> -->
           </div>
          
@@ -537,15 +537,198 @@
               <div class="wrapper-icontext d-flex align-items-center">
               <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
             
-            <p class="text-left lineHeight160 mr-6 ">Profile Information</p>
+            <p class="text-left lineHeight160 mr-6  title-accordion">Profile Information</p>
             <!-- <i class="fa-solid fa-chevron-down"></i> -->
           </div>
          
         
           </div>
           <div class="accordion-body bg-opacity  ">
+            <div class="wrapper-form">
+              <p class="form-title">
+                Profile Name
+            </p>
+           
+
+            <input type="text" id="profileName" rows="1" class="form-control mt-9 messageInput"  maxlength="60" >
+            <div class="d-flex align-items-start flex mt-6 justify-content-end">
+             
+              <p class="countNumber" id="countProfileName">0  / 60</p>
+          </div>
+          </div>
+            <div class="wrapper-form">
+              <p class="form-title">
+                Short Description
+            </p>
+            <textarea name="" id="shortDescription" rows="1" class="form-control mt-9 messageTextArea"  maxlength="60" ></textarea>
+            <div class="d-flex align-items-start flex mt-6 justify-content-end">
+             
+              <p class="countNumber" id="countShortDescription">0  / 60</p>
+          </div>
+          </div>
+          <div class="wrapper-form">
+            <p class="form-title">
+              About CreatorNameHere
+          </p>
+         <div id="editor">
+
+         </div>
+        </div>
+          <div class="wrapper-form">
+            <p class="form-title">
+              Profile Video
+          </p>
+          <textarea name=""  rows="1" class="form-control mt-9 messageTextArea"   ></textarea>
+          <div class="d-flex align-items-start flex mt-6 justify-content-start">
+           
+            <p class="desc" >YouTube video link only</p>
+        </div>
+        </div>
+          </div>
+        </div>
+        <div class="accordion-item  accordion-item mb-card-default ">
+          <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+              <div class="wrapper-icontext d-flex align-items-center">
+              <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+            
+            <p class="text-left lineHeight160 mr-6  title-accordion">Give Support Buttons</p>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+          </div>
          
-      tes
+        
+          </div>
+          <div class="accordion-body bg-opacity  ">
+
+            <div class="wrapper-accordion mt-0">
+        <div class="subAccordion-container">
+          <div class="subAccordion-item  subAccordion-item mb-card-default ">
+            <div class="subAccordion-header  wrapper__card--item subAccordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+                <div class="wrapper-icontext d-flex align-items-center">
+                <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+              
+              <p class="text-left lineHeight160 mr-6  title-accordion">Button #1</p>
+              <!-- <i class="fa-solid fa-chevron-down"></i> -->
+            </div>
+           
+          
+            </div>
+            <div class="subAccordion-body bg-opacity  ">
+              <div class="wrapper-switch">
+                <span class="switch-text">
+                Off
+              </span>
+                <div class="switch">
+                  <input type="checkbox" id="switch-1"><label for="switch-1">Toggle</label> 
+                </div>
+                <span class="switch-text">
+                On
+                </span>
+              </div>
+              <div class="wrapper-form">
+                <p class="form-title">
+                  Text on button
+              </p>
+             
+  
+              <input type="text" id="TextonButton" rows="1" class="form-control mt-9 messageInput"  maxlength="20" >
+              <div class="d-flex align-items-start flex mt-6 justify-content-end">
+               
+                <p class="countNumber" id="countTextonButton">0  / 20</p>
+            </div>
+            </div>
+            </div>
+          </div>     
+          <div class="subAccordion-item  subAccordion-item mb-card-default ">
+            <div class="subAccordion-header  wrapper__card--item subAccordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+                <div class="wrapper-icontext d-flex align-items-center">
+                <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+              
+              <p class="text-left lineHeight160 mr-6  title-accordion">Button #2</p>
+              <!-- <i class="fa-solid fa-chevron-down"></i> -->
+            </div>
+           
+          
+            </div>
+            <div class="subAccordion-body bg-opacity  ">
+              <div class="wrapper-switch">
+              <span class="switch-text">
+              Off
+            </span>
+              <div class="switch">
+                <input type="checkbox" id="switch-circle-2"><label for="switch-circle-2">Toggle</label> 
+              </div>
+              <span class="switch-text">
+              On
+              </span>
+            </div>
+            <div class="wrapper-form">
+              <p class="form-title">
+                Text on button
+            </p>
+           
+
+            <input type="text" id="TextonButton2" rows="1" class="form-control mt-9 messageInput"  maxlength="20" >
+            <div class="d-flex align-items-start flex mt-6 justify-content-end">
+             
+              <p class="countNumber" id="countTextonButton2">0  / 20</p>
+          </div>
+          </div>  
+          <div class="wrapper-form">
+            <p class="form-title">
+              Item name
+          </p>
+         
+
+          <input type="text" id="ItemName" rows="1" class="form-control mt-9 messageInput"  maxlength="20" >
+          <div class="d-flex align-items-start flex mt-6 justify-content-end">
+           
+            <p class="countNumber" id="countItemName">0  / 20</p>
+        </div>
+        </div>
+        
+        <div class="wrapper-form">
+          <p class="form-title">
+            Item picture
+        </p>
+          <!-- user -->
+          <div class="profile-img-container profile-image display-none">
+            <img src="" alt=""  id="profile-image">
+                    <!-- <div class="user-icon">
+                      <i class="fas fa-user"></i>
+                    </div> -->
+                  </div>
+                  <!-- user -->
+              <div class="wrapper-upload wrapper-upploadCover">
+                <div class="file-input-container">
+                  <!-- <div class="wrapper-input">
+                  <label for="upload">Upload Image</label>
+                  <input type="file" name="cropped" id="upload" accept="image/x-png,image/gif,image/jpeg">
+                  <input type="hidden" name="userfile" id="input-upload" value="">
+                </div> -->
+                <button class="button button-modalUpload " data-toggle="modal" data-target="#profile-pic-modal">Upload Image</button>
+                 <div class="display-none" id="wrapper-deleteIconProfile">
+                <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalProfile" data-tooltip="tooltip" data-placement="top"     title="" data-original-title="Delete">
+                  <button type="button" class="" id="del-btnProfile" >         
+                    <i class="fas fa-trash-alt"></i> 
+                  </button>
+                </div>
+              </div>
+              </div>
+              <ul>
+                <li>Allowed file types: JPG, JPEG, PNG  </li>
+                <li>Max file size: 1MB  </li>
+                <li>Min image height and width: 320px</li>
+  
+              </ul>
+              
+              </div>
+
+      </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
           </div>
         </div>
       </div> 
@@ -721,7 +904,6 @@
                   Terms of Use
               </a>
           </p>
-
           <p class="d-block mb-4">
               <a href="https://sociabuzz.com/info/privacy" target="_blank">
                   Privacy Policy

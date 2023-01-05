@@ -217,7 +217,7 @@ input::placeholder {
   color: #888787;
   font-size: 0.91rem;
   -webkit-overflow-scrolling: touch;
-  z-index: 100;
+  z-index: 22100;
 }
 
 .phone-container {

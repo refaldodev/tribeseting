@@ -1767,6 +1767,9 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   .accordion-item:not(:last-child) {
     margin-bottom: 20px !important;
   }
+  main .content-wrapper {
+    padding: 0;
+  }
 }
 .rounded-link-wrapper {
   max-width: 500px;

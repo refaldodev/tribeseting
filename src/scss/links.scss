@@ -252,6 +252,11 @@ main {
       margin-bottom: 20px !important;
     }
   }
+  main {
+    .content-wrapper {
+      padding: 0;
+    }
+  }
 }
 
 .rounded-link-wrapper {

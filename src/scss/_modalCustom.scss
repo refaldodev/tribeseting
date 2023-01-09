@@ -90,6 +90,35 @@
     }
   }
 }
+#deleteModalItem {
+  .modal-content {
+    width: auto;
+    padding: 0;
+    p.text-message {
+      color: red;
+    }
+    .modal-body {
+      padding: 2rem;
+
+      .btn-fill-light {
+        background-color: transparent;
+        min-width: 120px;
+
+        &:hover {
+          background-color: #76cc11;
+        }
+
+        &.active {
+          background-color: #76cc11;
+
+          &:hover {
+            background-color: #6fc211;
+          }
+        }
+      }
+    }
+  }
+}
 #thumbnailModal {
   .btn {
     border-radius: 10px;

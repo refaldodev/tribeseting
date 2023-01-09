@@ -44,11 +44,11 @@ main {
   margin: auto;
 
   .content-wrapper {
-    max-width: 800px;
+    max-width: 752px;
     // margin: auto;
     min-height: 100vh;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 2rem 0 0;
 
     &.hide {
       display: none;
@@ -512,6 +512,7 @@ main {
         margin-bottom: 30px;
       }
       .accordion-header {
+        cursor: pointer;
         background: transparent;
         display: flex;
         font-weight: 700;
@@ -551,6 +552,22 @@ main {
 
           margin-bottom: 5px;
           color: #000000;
+        }
+        .wrapper-showVideo {
+          height: 220px;
+          max-height: 220px;
+          width: auto;
+          max-width: 100%;
+        }
+        .image-supporter {
+          height: 220px;
+          max-height: 220px;
+          width: auto;
+          max-width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
         .desc {
           font-family: "Open Sans";
@@ -611,7 +628,7 @@ main {
         font-weight: 700;
         font-size: 16px;
         line-height: 26px;
-        padding: 0px 17px 17px 17px;
+        padding: 10px 17px 30px 17px;
         text-decoration: none !important;
         min-height: 50px;
         z-index: 300;
@@ -724,9 +741,16 @@ main {
         color: #595959;
       }
     }
+    .mb-16 {
+      margin-bottom: 16px !important;
+    }
+
+    .mt-11 {
+      margin-top: 11px;
+    }
     .profile-img-container {
-      height: 100px;
-      width: 100px;
+      height: 120px;
+      width: 120px;
       background-color: #c2c2c2;
       border-radius: 50%;
       overflow: hidden;
@@ -762,7 +786,70 @@ main {
       }
     }
   }
+  .wrapper-switch {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
 
+    margin-bottom: 23px;
+    .switch {
+      margin: 0 5px;
+    }
+    .switch-text {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      /* identical to box height, or 20px */
+
+      display: flex;
+      align-items: center;
+
+      color: #000000;
+    }
+  }
+  .border-currency {
+    //border-left: none;
+    border-radius: 0 6px 6px 0 !important;
+    -webkit-border-radius: 0 6px 6px 0 !important;
+    -moz-border-radius: 0 6px 6px 0 !important;
+    -ms-border-radius: 0 6px 6px 0 !important;
+    -o-border-radius: 0 6px 6px 0 !important;
+  }
+  .border-custom-currency {
+    border-radius: 6px 0 0 6px !important;
+    -webkit-border-radius: 6px 0 0 6px !important;
+    -moz-border-radius: 6px 0 0 6px !important;
+    -ms-border-radius: 6px 0 0 6px !important;
+    -o-border-radius: 6px 0 0 6px !important;
+    background-color: #eeeeee !important;
+    color: #575757;
+    font-size: 16px;
+  }
+  .desc-amount {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    /* identical to box height, or 20px */
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #000000;
+  }
+  .desc-pagesetting {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: normal;
+    /* or 17px */
+
+    color: #595959;
+  }
   // sub
   .subAccordion-container {
     //   width: 100%;
@@ -799,6 +886,7 @@ main {
       }
       .subAccordion-header {
         background: transparent;
+        cursor: pointer;
         display: flex;
         font-weight: 700;
         background-color: white;
@@ -851,6 +939,24 @@ main {
         .messageInput {
           min-height: 40px !important;
         }
+        .border-currency {
+          //border-left: none;
+          border-radius: 0 6px 6px 0 !important;
+          -webkit-border-radius: 0 6px 6px 0 !important;
+          -moz-border-radius: 0 6px 6px 0 !important;
+          -ms-border-radius: 0 6px 6px 0 !important;
+          -o-border-radius: 0 6px 6px 0 !important;
+        }
+        .border-custom-currency {
+          border-radius: 6px 0 0 6px !important;
+          -webkit-border-radius: 6px 0 0 6px !important;
+          -moz-border-radius: 6px 0 0 6px !important;
+          -ms-border-radius: 6px 0 0 6px !important;
+          -o-border-radius: 6px 0 0 6px !important;
+          background-color: #eeeeee !important;
+          color: #575757;
+          font-size: 16px;
+        }
         .messageTextArea {
           min-height: 40px !important;
         }
@@ -876,16 +982,7 @@ main {
         border-bottom: 1px solid transparent;
         border-radius: 0.6rem 0.6rem 0rem 0rem;
       }
-      .wrapper-switch {
-        display: flex;
-        align-items: center;
-        margin-top: 8px;
 
-        margin-bottom: 23px;
-        .switch {
-          margin: 0 5px;
-        }
-      }
       .subAccordion-body {
         height: 100%;
         padding: 0;
@@ -1058,6 +1155,90 @@ main {
     }
   }
 }
+
+.wrapperr-form {
+  .select2-container--default .select2-selection--single {
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+  }
+}
+.custom-control-input {
+  &:checked {
+    ~ {
+      .custom-control-label {
+        &::before {
+          border-color: #76cc11;
+          background-color: #76cc11;
+          width: 20px;
+          height: 20px;
+        }
+        &::after {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+.custom-control-label {
+  &::after {
+    width: 20px;
+    height: 20px;
+  }
+  &::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+.titlemessage {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  margin-bottom: 4px;
+  color: #000000;
+}
+.descmessage {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+
+  color: #595959;
+}
+.desc-textarea {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+  margin-top: 4px;
+  color: #595959;
+}
+.custom-control {
+  .wrapper-form {
+    margin-left: 4px;
+  }
+  .text-control {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 4px;
+    /* identical to box height, or 20px */
+
+    color: #000000;
+  }
+}
+
 .head-logo {
   max-width: 300px;
   max-height: 35px;

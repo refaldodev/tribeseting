@@ -115,6 +115,19 @@
 </div>
 <!--Delete  profile -->
 
+
+<!--Delete Modal item -->
+<div class="modal fade" id="deleteModalItem" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn btn-fill-light active mb-3" data-dismiss="modal" id="confirm-delete-btnItem">Hapus</button>
+        <button type="button" class="btn btn-fill-light" data-dismiss="modal" id="cancel-delete-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Delete  item -->
     <!-- Header Section Start -->
     <header>
       
@@ -586,7 +599,7 @@
         </div>
           </div>
         </div>
-        <div class="accordion-item  accordion-item mb-card-default ">
+        <div class="accordion-item  accordion-item mb-card-default  ">
           <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
               <div class="wrapper-icontext d-flex align-items-center">
               <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
@@ -649,7 +662,7 @@
            
           
             </div>
-            <div class="subAccordion-body bg-opacity  ">
+            <div class="subAccordion-body bg-opacity active ">
               <div class="wrapper-switch">
               <span class="switch-text">
               Off
@@ -686,46 +699,543 @@
         </div>
         </div>
         
-        <div class="wrapper-form">
+        <div class="wrapper-form mb-3">
           <p class="form-title">
             Item picture
         </p>
           <!-- user -->
-          <div class="profile-img-container profile-image display-none">
-            <img src="" alt=""  id="profile-image">
+          <div class="profile-img-container profile-image display-none  " id="wrapperitem-image">
+            <img src="" alt=""  id="item-image">
                    
                   </div>
                   <!-- user -->
-              <div class="wrapper-upload wrapper-upploadCover">
-                <div class="file-input-container">
+              <div class="wrapper-upload wrapper-upploadCover mt-11">
+                <div class="file-input-container mb-16">
                  
-                <button class="button button-modalUpload " data-toggle="modal" data-target="#profile-pic-modal">Upload Image</button>
-                 <div class="display-none" id="wrapper-deleteIconProfile">
-                <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalProfile" data-tooltip="tooltip" data-placement="top"     title="" data-original-title="Delete">
+                  <div class="wrapper-upload">
+                    <label for="uploadItem">Choose file</label>
+                    <input type="file" name="uploadItem" id="uploadItem" accept="image/x-png,image/gif,image/jpeg" >
+                
+                  </div>
+                 <div class="display-none" id="wrapper-deleteItem">
+                <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalItem" data-tooltip="tooltip" data-placement="top"     title="" data-original-title="Delete">
                   <button type="button" class="" id="del-btnProfile" >         
                     <i class="fas fa-trash-alt"></i> 
                   </button>
                 </div>
               </div>
               </div>
+
+
+            <p class="error-message-item" style="color: red;" id="error-message"></p>
               <ul>
                 <li>Allowed file types: JPG, JPEG, PNG  </li>
-                <li>Max file size: 1MB  </li>
-                <li>Min image height and width: 320px</li>
+                <li>Max file size: 500kb  </li>
+                <li>Min image height and width: 100px</li>
   
               </ul>
               
               </div>
 
       </div>
-      
+      <div class="wrapper-form">
+        <p class="form-title">
+          Price per unit      </p>
+     
+      <!-- <div class="wrapper-elemen-form">
+
+        <input type="text" id="ItemName" rows="1" class="form-control mt-9 messageInput"  maxlength="20" >
+      </div> -->
+
+      <div class="col-auto p-0">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend ">
+            <div class="input-group-text border-custom-currency">SGD</div>
+          </div>
+          <input type="number" class="form-control mt-9 messageInput border-currency" id="inlineFormInputGroup">
+        </div>
+      </div>
+    </div>
             </div>
           </div>
         </div>
       </div>
           </div>
         </div>
-      </div> 
+        <div class="accordion-item  accordion-item mb-card-default ">
+          <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+              <div class="wrapper-icontext d-flex align-items-center">
+              <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+            
+            <p class="text-left lineHeight160 mr-6  title-accordion">Message For Supporters</p>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+          </div>
+         
+        
+          </div>
+          <div class="accordion-body bg-opacity  ">
+            <h3 class="titlemessage">Thank you message</h3>
+            <p class="descmessage">The message will be seen by supporters after making payment </p>
+            <div class="my-2 tenpx">
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio1" name="type" class="custom-control-input" value="Individu / personal" data-type="type" checked>
+                <label class="custom-control-label" for="customRadio1">
+                  <p class="text-control">Text</p>
+                </label>
+                <div class="wrapper-form">
+            
+
+                  
+                  <textarea name="" id="textMessage" rows="1" class="form-control mt-9 messageTextArea" maxlength="100" ></textarea>
+                  <div class="d-flex align-items-start flex mt-6 justify-content-end">
+                   
+                    <p class="countNumber" id="countTextMessage">0  / 100</p>
+                </div>
+                </div>
+                
+              </div>
+              <div class="custom-control custom-radio mb-3">
+                <input type="radio" id="customRadio2" name="type" class="custom-control-input" value="video" data-type="type">
+                <label class="custom-control-label" for="customRadio2">
+                  <p class="text-control">Video</p>
+                </label>
+
+                <div class="wrapper-showVideo mb-3 d-block">
+                  <video width="320" height="220" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                  </video>
+                  
+                </div>
+                <div class="wrapper-upload wrapper-upploadCover mt-2">
+                  <div class="file-input-container">
+                   
+                    <div class="wrapper-upload">
+                      <label for="">Upload Video</label>
+                      <input type="file" name="" id="" accept="image/x-png,image/gif,image/jpeg" >
+                  
+                    </div>
+                   <div class="" id="wrapper-deleteIconProfile">
+                  <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalProfile" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">
+                    <button type="button" class="" id="del-btnProfile">         
+                      <i class="fas fa-trash-alt"></i> 
+                    </button>
+                  </div>
+                </div>
+                </div>
+  
+  
+              <p class="error-message-item" style="color: red;"></p>
+              <ul> <li>Allowed file types: MPEG, MP4, MOV </li> <li> Max file size: 20MB </li> </ul>
+                
+                </div>
+              </div>
+              <div class="custom-control custom-radio mb-3">
+                <input type="radio" id="customRadio3" name="type" class="custom-control-input" value="image" data-type="type">
+                <label class="custom-control-label" for="customRadio3">
+                  <p class="text-control">Image</p>
+                </label>
+                 <div class="wrapper-showVideo mb-3 d-block">
+                <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="image-supporter">
+                  
+                </div>
+                <div class="wrapper-upload wrapper-upploadCover mt-2">
+                  <div class="file-input-container">
+                   
+                    <div class="wrapper-upload">
+                      <label for="">Upload Image</label>
+                      <input type="file" name="" id="" accept="image/x-png,image/gif,image/jpeg" >
+                  
+                    </div>
+                   <div class="" id="wrapper-deleteIconProfile">
+                  <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalProfile" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">
+                    <button type="button" class="" id="del-btnProfile">         
+                      <i class="fas fa-trash-alt"></i> 
+                    </button>
+                  </div>
+                </div>
+                </div>
+  
+  
+              <p class="error-message-item" style="color: red;"></p>
+              <ul> <li>Allowed file types: JPG, JPEG, PNG, GIF
+               
+                </li> 
+                <li>  Max file size: 1MB</li> 
+                <li> Min image height & width: 100px </li> 
+              </ul>
+                
+                </div>
+              </div>
+            </div>
+            <div class="wrapper-form">
+              <p class="form-title">
+                Words of invitation to support
+            </p>
+           
+            <textarea name="" id="word" rows="1" class="form-control mt-9 messageTextArea" maxlength="200" ></textarea>
+            
+            <div class="d-flex align-items-start flex mt-6 justify-content-between">
+              <p class="desc-textarea">The message is displayed under “Give Support Buttons”</p>
+              <p class="countNumber" id="countword">0  / 200</p>
+          </div>
+          </div>
+          </div>
+        </div>
+        <div class="accordion-item  accordion-item mb-card-default ">
+          <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+              <div class="wrapper-icontext d-flex align-items-center">
+              <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+            
+            <p class="text-left lineHeight160 mr-6  title-accordion">Amount Collected</p>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+          </div>
+         
+        
+          </div>
+          <div class="accordion-body bg-opacity  ">
+            <div class="wrapper-switch">
+              <span class="switch-text">
+              Off
+            </span>
+              <div class="switch">
+                <input type="checkbox" id="switch-circle-3" ><label for="switch-circle-3">Toggle</label> 
+              </div>
+              <span class="switch-text">
+              On
+              </span>
+            </div>
+
+            <div class="wrapper-form">
+              <p class="form-title">
+                Title
+            </p>
+           
+
+            <input type="text" id="titleAmount" rows="1" class="form-control mt-9 messageInput"  maxlength="100" >
+            <div class="d-flex align-items-start flex mt-6 justify-content-end">
+             
+              <p class="countNumber" id="countTitleAmount">0  / 100</p>
+          </div>
+          </div>
+          <div class="wrapper-form mb-3">
+            <p class="form-title">
+              Target amount</p>
+         
+          <!-- <div class="wrapper-elemen-form">
+    
+            <input type="text" id="ItemName" rows="1" class="form-control mt-9 messageInput"  maxlength="20" >
+          </div> -->
+    
+          <div class="col-auto p-0">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend ">
+                <div class="input-group-text border-custom-currency">SGD</div>
+              </div>
+              <input type="number" class="form-control mt-9 messageInput border-currency" id="inlineFormInputGroup" style="height:0px;overflow-y:hidden;">
+            </div>
+          </div>
+        </div>
+          <div class="wrapper-form mb-3">
+            <p class="form-title">
+              Description / about the target 
+          </p>
+         <div >
+          <textarea name="" class="editor2 " ></textarea>
+         </div>
+        </div>
+         <div class="wrapper-form ">
+            <p class="form-title" style="margin-bottom: 4px;">
+              Show amount per <span style="color:#76CC11 ; font-weight:400; text-decoration:underline; cursor:pointer; ">Edit</span> 
+              </p>
+              <span class="desc-amount">From the beginning until now</span>
+        </div>
+          </div>
+        </div>
+          <div class="accordion-item  accordion-item mb-card-default ">
+          <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+              <div class="wrapper-icontext d-flex align-items-center">
+              <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+            
+            <p class="text-left lineHeight160 mr-6  title-accordion">Number Of Supporters</p>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+          </div>
+         
+        
+          </div>
+          <div class="accordion-body bg-opacity  ">
+            <div class="wrapper-switch">
+              <span class="switch-text">
+              Off
+            </span>
+              <div class="switch">
+                <input type="checkbox" id="switch-circle-4" ><label for="switch-circle-4">Toggle</label> 
+              </div>
+              <span class="switch-text">
+              On
+              </span>
+            </div>
+
+            <div class="wrapper-form">
+              <p class="form-title">
+                Title
+            </p>
+           
+
+            <input type="text" id="titleAmount" rows="1" class="form-control mt-9 messageInput"  maxlength="100" >
+            <div class="d-flex align-items-start flex mt-6 justify-content-end">
+             
+              <p class="countNumber" id="countTitleAmount">0  / 100</p>
+          </div>
+          </div>
+          <div class="wrapper-form mb-3">
+            <p class="form-title">
+              Target amount</p>
+         
+          <!-- <div class="wrapper-elemen-form">
+    
+            <input type="text" id="ItemName" rows="1" class="form-control mt-9 messageInput"  maxlength="20" >
+          </div> -->
+    
+       <input type="number"  rows="1" class="form-control mt-9 messageInput"   >
+        </div>
+          <div class="wrapper-form mb-3">
+            <p class="form-title">
+              Description / about the target 
+          </p>
+         <div >
+          <textarea name="" class="editor3 " ></textarea>
+         </div>
+        </div>
+         <div class="wrapper-form ">
+            <p class="form-title" style="margin-bottom: 4px;">
+              Show amount per <span style="color:#76CC11 ; font-weight:400; text-decoration:underline; cursor:pointer; ">Edit</span> 
+              </p>
+              <span class="desc-amount">From the beginning until now</span>
+        </div>
+          </div>
+        </div>
+        <div class="accordion-item  accordion-item mb-card-default ">
+          <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+              <div class="wrapper-icontext d-flex align-items-center">
+              <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+            
+            <p class="text-left lineHeight160 mr-6  title-accordion">Other Page Settings</p>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+          </div>
+         
+        
+          </div>
+          <div class="accordion-body bg-opacity  ">
+           
+
+            <div class="wrapper-form">
+              <p class="form-title">
+                Top 10 supporters
+            </p>
+           
+
+            <div class="wrapper-switch">
+              
+              <div class="switch">
+                <input type="checkbox" id="switch-circle-5" ><label for="switch-circle-5">Toggle</label> 
+              </div>
+              <span class="switch-text">
+                Show on page
+              </span>
+            </div>
+          </div>
+         
+          <div class="wrapper-form">
+            <p class="form-title">
+              Messages from supporters          </p>
+         
+
+          <div class="wrapper-switch">
+            
+            <div class="switch">
+              <input type="checkbox" id="switch-circle-6" ><label for="switch-circle-6">Toggle</label> 
+            </div>
+            <span class="switch-text">
+              Show on page
+            </span>
+          </div>
+        </div>
+         <div class="wrapper-form">
+            <p class="form- mb-1">
+              Default language for your page         </p>
+         
+<p class="desc-pagesetting">This is the language in which your page is initially displayed. Visitors to your page have the option to change it to any other language they want. Only texts from SociaBuzz are translated, not the content that you posted.</p>
+            <div class="my-2 tenpx">
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio10" name="type" class="custom-control-input" value="Individu / personal" data-type="type" checked>
+                <label class="custom-control-label" for="customRadio10">
+                  <p class="text-control">According to the language of the visitor's country</p>
+                </label>
+               
+                
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio11" name="type" class="custom-control-input" value="Individu / personal" data-type="type" >
+                <label class="custom-control-label" for="customRadio11">
+                  <p class="text-control">This language:</p>
+                </label>
+                <div class="wrapper-form">
+                
+                  <div class="select-container">
+                    <select class="language">
+                        <option value="AF" selected>
+                            Afrikaans
+                        </option>
+                        <option value="SQ">Albanian</option>
+                        <option value="AR">Arabic</option>
+                        <option value="HY">Armenian</option>
+                        <option value="EU">Basque</option>
+                        <option value="BN">Bengali</option>
+                        <option value="BG">
+                            Bulgarian
+                        </option>
+                        <option value="CA">Catalan</option>
+                        <option value="KM">
+                            Cambodian
+                        </option>
+                        <option value="ZH">
+                            Chinese (Mandarin)
+                        </option>
+                        <option value="HR">Croatian</option>
+                        <option value="CS">Czech</option>
+                        <option value="DA">Danish</option>
+                        <option value="NL">Dutch</option>
+                        <option value="EN">English</option>
+                        <option value="ET">Estonian</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finnish</option>
+                        <option value="FR">French</option>
+                        <option value="KA">Georgian</option>
+                        <option value="DE">German</option>
+                        <option value="EL">Greek</option>
+                        <option value="GU">Gujarati</option>
+                        <option value="HE">Hebrew</option>
+                        <option value="HI">Hindi</option>
+                        <option value="HU">
+                            Hungarian
+                        </option>
+                        <option value="IS">
+                            Icelandic
+                        </option>
+                        <option value="ID">
+                            Indonesian
+                        </option>
+                        <option value="GA">Irish</option>
+                        <option value="IT">Italian</option>
+                        <option value="JA">Japanese</option>
+                        <option value="JW">Javanese</option>
+                        <option value="KO">Korean</option>
+                        <option value="LA">Latin</option>
+                        <option value="LV">Latvian</option>
+                        <option value="LT">
+                            Lithuanian
+                        </option>
+                        <option value="MK">
+                            Macedonian
+                        </option>
+                        <option value="MS">Malay</option>
+                        <option value="ML">
+                            Malayalam
+                        </option>
+                        <option value="MT">Maltese</option>
+                        <option value="MI">Maori</option>
+                        <option value="MR">Marathi</option>
+                        <option value="MN">
+                            Mongolian
+                        </option>
+                        <option value="NE">Nepali</option>
+                        <option value="NO">
+                            Norwegian
+                        </option>
+                        <option value="FA">Persian</option>
+                        <option value="PL">Polish</option>
+                        <option value="PT">
+                            Portuguese
+                        </option>
+                        <option value="PA">Punjabi</option>
+                        <option value="QU">Quechua</option>
+                        <option value="RO">Romanian</option>
+                        <option value="RU">Russian</option>
+                        <option value="SM">Samoan</option>
+                        <option value="SR">Serbian</option>
+                        <option value="SK">Slovak</option>
+                        <option value="SL">
+                            Slovenian
+                        </option>
+                        <option value="ES">Spanish</option>
+                        <option value="SW">Swahili</option>
+                        <option value="SV">Swedish</option>
+                        <option value="TA">Tamil</option>
+                        <option value="TT">Tatar</option>
+                        <option value="TE">Telugu</option>
+                        <option value="TH">Thai</option>
+                        <option value="BO">Tibetan</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TR">Turkish</option>
+                        <option value="UK">
+                            Ukrainian
+                        </option>
+                        <option value="UR">Urdu</option>
+                        <option value="UZ">Uzbek</option>
+                        <option value="VI">
+                            Vietnamese
+                        </option>
+                        <option value="CY">Welsh</option>
+                        <option value="XH">Xhosa</option>
+                    </select>
+                    <span class="arrow-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                 
+                </div>
+                
+              </div>
+             
+            </div>
+
+        </div>
+          </div>
+        </div>
+        <div class="accordion-item  accordion-item mb-card-default ">
+          <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+              <div class="wrapper-icontext d-flex align-items-center">
+              <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+            
+            <p class="text-left lineHeight160 mr-6  title-accordion">Supporter Related Settings</p>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+          </div>
+         
+        
+          </div>
+          <div class="accordion-body bg-opacity  ">
+          on progress
+          </div>
+        </div>
+        <div class="accordion-item  accordion-item mb-card-default ">
+          <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+              <div class="wrapper-icontext d-flex align-items-center">
+              <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+            
+            <p class="text-left lineHeight160 mr-6  title-accordion">Your Page Link</p>
+            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+          </div>
+         
+        
+          </div>
+          <div class="accordion-body bg-opacity  ">
+          on progress
+          </div>
+        </div>
       
     </div>
 

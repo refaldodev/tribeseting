@@ -325,6 +325,10 @@ $("textarea")
     var result = 0;
     if (this.id === "shortDescription") {
       $("#countShortDescription").text(this.value.length + " " + " / 60");
+    } else if (this.id === "textMessage") {
+      $("#countTextMessage").text(this.value.length + " " + " / 100");
+    } else if (this.id === "word") {
+      $("#countword").text(this.value.length + " " + " / 200");
     }
   });
 
@@ -348,11 +352,14 @@ $("input")
       $("#countTextonButton2").text(this.value.length + " " + " / 20");
     } else if (this.id === "ItemName") {
       $("#countItemName").text(this.value.length + " " + " / 20");
+    } else if (this.id === "titleAmount") {
+      $("#countTitleAmount").text(this.value.length + " " + " / 100");
     }
   });
 
 tinymce.init({
   selector: "textarea.editor",
+  height: 250,
   plugins:
     "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss",
   toolbar:
@@ -363,4 +370,126 @@ tinymce.init({
     { value: "First.Name", title: "First Name" },
     { value: "Email", title: "Email" },
   ],
+});
+
+tinymce.init({
+  selector: "textarea.editor2",
+  height: 250,
+  plugins:
+    "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss",
+  toolbar:
+    "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat",
+  tinycomments_mode: "embedded",
+  tinycomments_author: "Author name",
+  mergetags_list: [
+    { value: "First.Name", title: "First Name" },
+    { value: "Email", title: "Email" },
+  ],
+});
+
+tinymce.init({
+  selector: "textarea.editor3",
+  height: 250,
+  plugins:
+    "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss",
+  toolbar:
+    "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat",
+  tinycomments_mode: "embedded",
+  tinycomments_author: "Author name",
+  mergetags_list: [
+    { value: "First.Name", title: "First Name" },
+    { value: "Email", title: "Email" },
+  ],
+});
+
+// Function untuk mengupload image
+function uploadImageItem() {
+  // Ambil element form dan file yang akan diupload
+  const form = document.getElementById("upload-form");
+  const file = document.getElementById("uploadItem").files[0];
+
+  // Jika tidak ada file yang dipilih, tampilkan pesan error
+  if (!file) {
+    showErrorMessage("Silakan pilih file gambar terlebih dahulu");
+    return;
+  }
+
+  // Ambil ukuran file
+  const fileSize = file.size;
+  const fileSizeKB = fileSize / 1024; // Ukuran file dalam KB
+
+  // Jika ukuran file lebih dari 500KB, tampilkan pesan error
+  if (fileSizeKB > 500) {
+    showErrorMessage("Ukuran file tidak boleh lebih dari 500KB");
+    return;
+  }
+
+  // Ambil informasi mengenai lebar dan tinggi gambar
+  const imageURL = URL.createObjectURL(file);
+  const image = new Image();
+  image.src = imageURL;
+  image.onload = function () {
+    // Ambil lebar dan tinggi gambar
+    const width = this.naturalWidth;
+    const height = this.naturalHeight;
+
+    // Jika lebar atau tinggi gambar kurang dari 100, tampilkan pesan error
+    if (width < 100 || height < 100) {
+      showErrorMessage(
+        "Lebar dan tinggi gambar tidak boleh kurang dari 100 pixel"
+      );
+      return;
+    }
+
+    // Selain itu, lakukan proses upload file
+    var src = URL.createObjectURL(file);
+    var preview = document.getElementById("item-image");
+    var item = document.getElementById("wrapperitem-image");
+
+    preview.src = src;
+    preview.style.display = "block";
+    var btn = document.getElementById("wrapper-deleteItem");
+    btn.style.display = "block";
+    item.style.display = "block";
+    showErrorMessage("");
+  };
+}
+
+// Function untuk menampilkan pesan error
+function showErrorMessage(message) {
+  const errorMessage = document.getElementById("error-message");
+  errorMessage.innerText = message;
+}
+
+// Event listener untuk mengupload image ketika file dipilih
+const fileInput = document.getElementById("uploadItem");
+fileInput.addEventListener("change", function () {
+  uploadImageItem();
+});
+
+// confirm-delete-btnItem
+
+function deleteImageItem() {
+  // Ambil element gambar
+  // const image = document.getElementById("item-image");
+  $("#item-image").attr("src", "");
+  // Hapus element gambar
+  var item = document.getElementById("wrapperitem-image");
+  var btn = document.getElementById("wrapper-deleteItem");
+  btn.style.display = "none";
+
+  // image.parentNode.removeChild(image);
+  item.style.display = "none";
+}
+
+// Event listener untuk menghapus image ketika tombol hapus diklik
+const deleteButton = document.getElementById("confirm-delete-btnItem");
+deleteButton.addEventListener("click", function () {
+  deleteImageItem();
+});
+
+// select2
+// In your Javascript (external .js resource or <script> tag)
+$(document).ready(function () {
+  $(".language").select2();
 });

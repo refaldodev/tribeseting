@@ -84,13 +84,17 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul,
+li {
   font-family: "Open Sans", sans-serif !important;
   overflow-wrap: break-word !important;
   word-wrap: break-word;
   word-break: break-word;
 }
-
+.mb-5px {
+  margin-bottom: 5px !important;
+}
 button {
   word-break: break-all;
 }

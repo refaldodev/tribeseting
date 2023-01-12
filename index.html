@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
-    <title>Sociabuzz Linkbio</title>
+    <title>Sociabuzz Tribe Setting</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -47,7 +47,7 @@
               <input type="file" name='cropped' id="upload" accept="image/x-png,image/gif,image/jpeg">
               <p class="file-name">No file selected</p>
             </div>
-            <p class="tenpx gray-font mb-0 mt-2">Hanya format jpg, jpeg, png | Max 1MB | Min width 1000px            </p>
+            <p class="tenpx gray-font mb-0 mt-2">Hanya format jpg, jpeg, png | Max 1MB |  Min height 285px dan Min width 1000px              </p>
             <p class="image-error-msg mb-0 text-message tenpx" style="color: red;"></p>
           </div>
           <div class="modal-footer">
@@ -92,7 +92,7 @@
               <input type="file" name='cropped' id="uploadProfile" accept="image/x-png,image/gif,image/jpeg">
               <p class="file-nameprofile">No file selected</p>
             </div>
-            <p class="tenpx gray-font mb-0 mt-2">Hanya format jpg, jpeg, png | Max 1MB | Min width 1000px            </p>
+            <p class="tenpx gray-font mb-0 mt-2">Hanya format jpg, jpeg, png | Max 1MB | Min height 320px dan Min width 320px            </p>
             <p class="image-error-msgprofile mb-0 text-message tenpx" style="color: red;"></p>
           </div>
           <div class="modal-footer">
@@ -128,6 +128,273 @@
   </div>
 </div>
 <!--Delete  item -->
+
+<!--Delete Modal video -->
+<div class="modal fade" id="deleteModalVideo" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn btn-fill-light active mb-3" data-dismiss="modal" id="confirm-delete-btnVideo">Hapus</button>
+        <button type="button" class="btn btn-fill-light" data-dismiss="modal" id="cancel-delete-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Delete  video -->
+
+<!-- modal edit -->
+
+<div class="modal fade" id="edit" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content pt-1">
+      <div class="modal-header text-center">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="font-size:20px">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body px-2">
+        <h5 class="modal-title modal-title-radio mb-3" id="staticBackdropLabel">Tampilkan jumlah
+        </h5>
+        <div class="my-2 tenpx">
+          <div class="custom-control custom-radio  custom-radio-modal">
+            <input type="radio" id="customRadio13" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" checked="" >
+            <label class="custom-control-label custom-control-label2" for="customRadio13">
+              <p class="text-control"><span class="font-weight-bold">Sejak awal hingga sekarang</span>
+              </p>
+            </label>
+           
+            
+          </div>
+          <div class="custom-control custom-radio  custom-radio-modal">
+            <input type="radio" id="customRadio12" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <label class="custom-control-label custom-control-label2" for="customRadio12">
+              <p class="text-control"><span class="font-weight-bold">Harian </span>(24 jam terakhir)
+</p>
+            </label>
+            
+            
+          </div>
+       
+          <div class="custom-control custom-radio  custom-radio-modal">
+            <input type="radio" id="customRadio16" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <label class="custom-control-label custom-control-label2" for="customRadio16">
+              <p class="text-control"><span class="font-weight-bold">Mingguan</span> (7 hari terakhir)
+
+</p>
+            </label>
+            
+            
+          </div>
+          <div class="custom-control custom-radio  custom-radio-modal">
+            <input type="radio" id="customRadio14" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <label class="custom-control-label custom-control-label2" for="customRadio14">
+              <p class="text-control"><span class="font-weight-bold">Bulanan</span> (30 hari terakhir)
+
+
+</p>
+            </label>
+            
+            
+          </div>
+            <div class="custom-control custom-radio  custom-radio-modal">
+            <input type="radio" id="customRadio15" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <label class="custom-control-label custom-control-label2" for="customRadio15">
+              <p class="text-control"><span class="font-weight-bold">Harian </span> (24 jam terakhir)
+</p>
+            </label>
+            
+            
+          </div>
+            <div class="custom-control custom-radio  custom-radio-modal">
+            <input type="radio" id="customRadio17" name="custom" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <label class="custom-control-label custom-control-label2" for="customRadio17">
+              <p class="text-control"><span class="font-weight-bold">Mulai tanggal & waktu tertentu
+ </span> 
+</p>
+            </label>
+          
+            <div class="select-group">
+              <div class="form-group  d-flex justify-content-start align-items-center">
+                  <label for="Tahun " class="">Tahun</label>
+                  <select class="form-control custom-select w-75 ml-auto" name="year" id="year">
+                  <option value="">--</option>
+                                                      <option value="2020" selected>2020</option>
+                                                      <option value="2021">2021</option>
+                                                      <option value="2022">2022</option>
+                                                      <option value="2023">2023</option>
+                                                      <option value="2024">2024</option>
+                                                      <option value="2025">2025</option>
+                                                  </select>
+              </div>
+  
+              <div class="form-group  d-flex justify-content-start align-items-center">
+                  <label for="Bulan" class="">Bulan</label>
+                  <select class="form-control custom-select w-75 ml-auto" name="months" id="months">
+                      <option value="">--</option>
+                                                                  <option value="1" selected>Januari</option>
+                                                                      <option value="2">Februari</option>
+                                                                      <option value="3">Maret</option>
+                                                                      <option value="4">April</option>
+                                                                      <option value="5">Mei</option>
+                                                                      <option value="6">Juni</option>
+                                                                      <option value="7">Juli</option>
+                                                                      <option value="8">Agustus</option>
+                                                                      <option value="9">September</option>
+                                                                      <option value="10">Oktober</option>
+                                                                      <option value="11">November</option>
+                                                                      <option value="12">Desember</option>
+                                                          </select>
+              </div>
+  
+              <div class="form-group  d-flex justify-content-start align-items-center">
+                  <label for="Tanggal" class="">Tanggal</label>
+                  <select class="form-control custom-select w-75 ml-auto" name="date" id="date">
+                  <option value="">--</option>
+                                                          <option value="01" selected>01</option>
+                                                              <option value="02">02</option>
+                                                              <option value="03">03</option>
+                                                              <option value="04">04</option>
+                                                              <option value="05">05</option>
+                                                              <option value="06">06</option>
+                                                              <option value="07">07</option>
+                                                              <option value="08">08</option>
+                                                              <option value="09">09</option>
+                                                              <option value="10">10</option>
+                                                              <option value="11">11</option>
+                                                              <option value="12">12</option>
+                                                              <option value="13">13</option>
+                                                              <option value="14">14</option>
+                                                              <option value="15">15</option>
+                                                              <option value="16">16</option>
+                                                              <option value="17">17</option>
+                                                              <option value="18">18</option>
+                                                              <option value="19">19</option>
+                                                              <option value="20">20</option>
+                                                              <option value="21">21</option>
+                                                              <option value="22">22</option>
+                                                              <option value="23">23</option>
+                                                              <option value="24">24</option>
+                                                              <option value="25">25</option>
+                                                              <option value="26">26</option>
+                                                              <option value="27">27</option>
+                                                              <option value="28">28</option>
+                                                              <option value="29">29</option>
+                                                              <option value="30">30</option>
+                                                              <option value="31">31</option>
+                                                      </select>
+              </div>
+  
+              <div class="form-group  d-flex justify-content-start align-items-center">
+                  <label for="Jam" class="">Jam</label>
+                  <select class="form-control custom-select w-75 ml-auto" name="hour" id="hour">
+                                                          <option value="00">00</option>
+                                                          <option value="01">01</option>
+                                                          <option value="02">02</option>
+                                                          <option value="03">03</option>
+                                                          <option value="04">04</option>
+                                                          <option value="05">05</option>
+                                                          <option value="06">06</option>
+                                                          <option value="07">07</option>
+                                                          <option value="08">08</option>
+                                                          <option value="09">09</option>
+                                                          <option value="10">10</option>
+                                                          <option value="11">11</option>
+                                                          <option value="12">12</option>
+                                                          <option value="13">13</option>
+                                                          <option value="14">14</option>
+                                                          <option value="15">15</option>
+                                                          <option value="16">16</option>
+                                                          <option value="17">17</option>
+                                                          <option value="18">18</option>
+                                                          <option value="19">19</option>
+                                                          <option value="20">20</option>
+                                                          <option value="21">21</option>
+                                                          <option value="22">22</option>
+                                                          <option value="23">23</option>
+                                                  </select>
+              </div>
+  
+              <div class="form-group  d-flex justify-content-start align-items-center">
+                  <label for="Menit" class="">Menit</label>
+                  <select class="form-control custom-select w-75 ml-auto" name="minute" id="minute">
+                                                          <option value="00">00</option>
+                                                          <option value="01">01</option>
+                                                          <option value="02">02</option>
+                                                          <option value="03">03</option>
+                                                          <option value="04">04</option>
+                                                          <option value="05">05</option>
+                                                          <option value="06">06</option>
+                                                          <option value="07">07</option>
+                                                          <option value="08">08</option>
+                                                          <option value="09">09</option>
+                                                          <option value="10">10</option>
+                                                          <option value="11">11</option>
+                                                          <option value="12">12</option>
+                                                          <option value="13">13</option>
+                                                          <option value="14">14</option>
+                                                          <option value="15">15</option>
+                                                          <option value="16">16</option>
+                                                          <option value="17">17</option>
+                                                          <option value="18">18</option>
+                                                          <option value="19">19</option>
+                                                          <option value="20">20</option>
+                                                          <option value="21">21</option>
+                                                          <option value="22">22</option>
+                                                          <option value="23">23</option>
+                                                          <option value="24">24</option>
+                                                          <option value="25">25</option>
+                                                          <option value="26">26</option>
+                                                          <option value="27">27</option>
+                                                          <option value="28">28</option>
+                                                          <option value="29">29</option>
+                                                          <option value="30">30</option>
+                                                          <option value="31">31</option>
+                                                          <option value="32">32</option>
+                                                          <option value="33">33</option>
+                                                          <option value="34">34</option>
+                                                          <option value="35">35</option>
+                                                          <option value="36">36</option>
+                                                          <option value="37">37</option>
+                                                          <option value="38">38</option>
+                                                          <option value="39">39</option>
+                                                          <option value="40">40</option>
+                                                          <option value="41">41</option>
+                                                          <option value="42">42</option>
+                                                          <option value="43">43</option>
+                                                          <option value="44">44</option>
+                                                          <option value="45">45</option>
+                                                          <option value="46">46</option>
+                                                          <option value="47">47</option>
+                                                          <option value="48">48</option>
+                                                          <option value="49">49</option>
+                                                          <option value="50">50</option>
+                                                          <option value="51">51</option>
+                                                          <option value="52">52</option>
+                                                          <option value="53">53</option>
+                                                          <option value="54">54</option>
+                                                          <option value="55">55</option>
+                                                          <option value="56">56</option>
+                                                          <option value="57">57</option>
+                                                          <option value="58">58</option>
+                                                          <option value="59">59</option>
+                                                  </select>
+              </div>
+          </div>
+          </div>
+         
+        </div>
+        
+        <button type="button" class="btn btn-edit d-block w-100">
+          Simpan
+      </button>
+      </div>
+   
+    </div>
+  </div>
+</div>
+<!-- end edit -->
+
     <!-- Header Section Start -->
     <header>
       
@@ -458,7 +725,7 @@
           </div>
           <div class="accordion-body bg-opacity  ">
          <div class="cover-image display-none">
-          <img src="" alt=""  id="cover-image" class="w-100"> 
+          <img src="" alt=""  id="cover-image" class="w-100 h-100"> 
          </div>
          <!-- user -->
          <!-- <div class="profile-img-container">
@@ -727,7 +994,7 @@
               </div>
 
 
-            <p class="error-message-item" style="color: red;" id="error-message"></p>
+            <p class="error-message-item error-message" style="color: red;" id="error-message"></p>
               <ul>
                 <li>Allowed file types: JPG, JPEG, PNG  </li>
                 <li>Max file size: 500kb  </li>
@@ -801,9 +1068,9 @@
                   <p class="text-control">Video</p>
                 </label>
 
-                <div class="wrapper-showVideo mb-3 d-block">
-                  <video width="320" height="220" controls>
-                    <source src="movie.mp4" type="video/mp4">
+                <div class="wrapper-showVideo mb-3 display-none">
+                  <video  controls id="sourceVideo"  preload="metadata">
+                    <source src="" type="video/mp4" >
                     <source src="movie.ogg" type="video/ogg">
                     Your browser does not support the video tag.
                   </video>
@@ -813,12 +1080,12 @@
                   <div class="file-input-container">
                    
                     <div class="wrapper-upload">
-                      <label for="">Upload Video</label>
-                      <input type="file" name="" id="" accept="image/x-png,image/gif,image/jpeg" >
+                      <label for="video-file">Upload Video</label>
+                      <input type="file" name="" id="video-file" accept="video/mp4,video/x-m4v,video/*" >
                   
                     </div>
-                   <div class="" id="wrapper-deleteIconProfile">
-                  <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalProfile" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">
+                   <div class="display-none" id="wrapper-deleteVideo">
+                  <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalVideo" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">
                     <button type="button" class="" id="del-btnProfile">         
                       <i class="fas fa-trash-alt"></i> 
                     </button>
@@ -827,7 +1094,7 @@
                 </div>
   
   
-              <p class="error-message-item" style="color: red;"></p>
+              <p class="error-message-Video error-message " ></p>
               <ul> <li>Allowed file types: MPEG, MP4, MOV </li> <li> Max file size: 20MB </li> </ul>
                 
                 </div>
@@ -837,19 +1104,19 @@
                 <label class="custom-control-label" for="customRadio3">
                   <p class="text-control">Image</p>
                 </label>
-                 <div class="wrapper-showVideo mb-3 d-block">
-                <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="image-supporter">
+                 <div class="wrapper-showImage mb-3 display-none">
+                <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" id="image-supporter">
                   
                 </div>
                 <div class="wrapper-upload wrapper-upploadCover mt-2">
                   <div class="file-input-container">
                    
                     <div class="wrapper-upload">
-                      <label for="">Upload Image</label>
-                      <input type="file" name="" id="" accept="image/x-png,image/gif,image/jpeg" >
+                      <label for="image-message">Upload Image</label>
+                      <input type="file" name="image-message" id="image-message" accept="image/x-png,image/gif,image/jpeg" >
                   
                     </div>
-                   <div class="" id="wrapper-deleteIconProfile">
+                   <div class="display-none" id="wrapper-deleteIconProfile">
                   <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalProfile" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">
                     <button type="button" class="" id="del-btnProfile">         
                       <i class="fas fa-trash-alt"></i> 
@@ -859,7 +1126,7 @@
                 </div>
   
   
-              <p class="error-message-item" style="color: red;"></p>
+              <p class="error-message-image error-message" style="color: red;"></p>
               <ul> <li>Allowed file types: JPG, JPEG, PNG, GIF
                
                 </li> 
@@ -949,7 +1216,7 @@
         </div>
          <div class="wrapper-form ">
             <p class="form-title" style="margin-bottom: 4px;">
-              Show amount per <span style="color:#76CC11 ; font-weight:400; text-decoration:underline; cursor:pointer; ">Edit</span> 
+              Show amount per <span  style="color:#76CC11 ; font-weight:400; text-decoration:underline; cursor:pointer; " data-toggle="modal" data-target="#edit">Edit</span> 
               </p>
               <span class="desc-amount">From the beginning until now</span>
         </div>
@@ -1012,7 +1279,7 @@
         </div>
          <div class="wrapper-form ">
             <p class="form-title" style="margin-bottom: 4px;">
-              Show amount per <span style="color:#76CC11 ; font-weight:400; text-decoration:underline; cursor:pointer; ">Edit</span> 
+              Show amount per <span style="color:#76CC11 ; font-weight:400; text-decoration:underline; cursor:pointer; " data-toggle="modal" data-target="#edit">Edit</span> 
               </p>
               <span class="desc-amount">From the beginning until now</span>
         </div>
@@ -1071,7 +1338,7 @@
 <p class="desc-pagesetting">This is the language in which your page is initially displayed. Visitors to your page have the option to change it to any other language they want. Only texts from SociaBuzz are translated, not the content that you posted.</p>
             <div class="my-2 tenpx">
               <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio10" name="type" class="custom-control-input" value="Individu / personal" data-type="type" checked>
+                <input type="radio" id="customRadio10" name="type2" class="custom-control-input" value="Individu / personal" data-type="type" checked>
                 <label class="custom-control-label" for="customRadio10">
                   <p class="text-control">According to the language of the visitor's country</p>
                 </label>
@@ -1079,13 +1346,13 @@
                 
               </div>
               <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio11" name="type" class="custom-control-input" value="Individu / personal" data-type="type" >
+                <input type="radio" id="customRadio11" name="type2" class="custom-control-input" value="Individu / personal" data-type="type" >
                 <label class="custom-control-label" for="customRadio11">
                   <p class="text-control">This language:</p>
                 </label>
                 <div class="wrapper-form">
                 
-                  <div class="select-container">
+                  <div class="select-container select-container-languageAccordion">
                     <select class="language">
                         <option value="AF" selected>
                             Afrikaans
@@ -1218,13 +1485,125 @@
         
           </div>
           <div class="accordion-body bg-opacity  ">
-            sedang dalam pengerjaan          </div>
+          <div class="wrapper-form mb-4">
+            <p class="form-title">
+              Minimum amount per support
+          </p>
+            <div class="col-auto p-0">
+              <label class="sr-only" for="inlineFormInputGroup">Username</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend ">
+                  <div class="input-group-text border-custom-currency">SGD</div>
+                </div>
+                <input type="number" class="form-control mt-9 messageInput border-currency" id="inlineFormInputGroup" style="height: 38px; overflow-y: hidden;">
+              </div>
+            </div>
+          </div>
+           <div class="wrapper-form mb-4">
+            <p class="form-title">
+              Payment fee is borne by the supporters
+          </p>
+          <div class="wrapper-switch mb-5px">
+              
+            <div class="switch">
+              <input type="checkbox" id="switch-circle-7" style="height:0px;overflow-y:hidden;"><label for="switch-circle-7">Toggle</label> 
+            </div>
+            <span class="switch-text">
+              Yes
+            </span>
+          </div>
+          <p class="desc-payment">Each payment method has different payment fees (fixed cost and/or percentage) from our payment service providers.<span class="desc-paymentRed"> If disabled, payment fees will be deducted from your earnings, and will not be charged to supporters.</span></p>
+          </div>
+            <div class="wrapper-form mb-4">
+            <p class="form-title">
+              Payment fee is borne by the supporters
+          </p>
+          <div class="wrapper-switch mb-5px">
+              
+            <div class="switch">
+              <input type="checkbox" id="switch-circle-8" style="height:0px;overflow-y:hidden;"><label for="switch-circle-8">Toggle</label> 
+            </div>
+            <span class="switch-text">
+              Yes
+            </span>
+          </div>
+          <p class="desc-payment"><span class="desc-paymentRed">Warning:</span> If disabled, the same supporter may be registered as a different supporter, because without knowing the email, our system cannot know that the supporter is the same person.</p>
+          </div>
+          <!--  sub accordion supporter -->
+
+          <div class="subAccordion-containerSupporter">
+            <div class="subAccordion-itemSupporter mb-card-default">
+              <div class="subAccordion-headerSupporter  wrapper__card--item subAccordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
+                  <div class="wrapper-icontext d-flex align-items-center">
+                  <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
+                
+                <p class="text-left lineHeight160 mr-6  title-accordion">Supporters can send voice messages</p>
+                <!-- <i class="fa-solid fa-chevron-down"></i> -->
+              </div>
+             
+            
+              </div>
+              <div class="subAccordion-bodySupporter bg-opacity  ">
+                <div class="wrapper-form mb-4">
+                  <p class="form-title">
+                    Supporters can send voice messages
+                </p>
+                <div class="wrapper-switch mb-5px">
+                    
+                  <div class="switch">
+                    <input type="checkbox" id="switch-circle-9" style="height:0px;overflow-y:hidden;"><label for="switch-circle-9">Toggle</label> 
+                  </div>
+                  <span class="switch-text">
+                    Yes
+                  </span>
+                </div>
+                <p class="desc-payment">If enabled, the option to send voice message will appear on your page.</p>
+                </div>
+                <div class="wrapper-form mb-4">
+                  <p class="form-title">
+                    Minimum amount per support to send voice message
+                </p>
+                  <div class="col-auto p-0">
+                    <label class="sr-only" for="inlineFormInputGroup"></label>
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend ">
+                        <div class="input-group-text border-custom-currency">SGD</div>
+                      </div>
+                      <input type="number" class="form-control mt-9 messageInput border-currency" id="inlineFormInputGroup" >
+                    </div>
+                  </div>
+                </div>
+                <div class="wrapper-form mb-4">
+                  <p class="form-title">
+                    Maximum duration of voice message
+                </p>
+                <div class="form-group mb-1">
+                  <input type="number" class="form-control d-inline-block  p-2 alert-duration input" name="timer" id="timer" value="" min="0" max="60">
+                  <span class="input-content-font">seconds</span>
+              </div>
+              <p class="text-light-grayCustom small mb-0">
+                Min 10. Max 60 detik.
+            </p>
+            
+                </div>
+                <div class="wrapper-form mb-4">
+              
+              <p class="caution">
+               <span class="font-weight-bold">Use with caution.</span>  By using this feature, you understand that voice messages from supporters will appear as is without filter/censorship.
+            </p>
+            
+                </div>
+              </div>
+            </div>     
+            
+          </div>
+          <!-- end sub accordion supporter -->
+           </div>
         </div>
         <div class="accordion-item  accordion-item mb-card-default ">
           <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
               <div class="wrapper-icontext d-flex align-items-center">
               <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
-            
             <p class="text-left lineHeight160 mr-6  title-accordion">Your Page Link</p>
             <!-- <i class="fa-solid fa-chevron-down"></i> -->
           </div>
@@ -1232,7 +1611,80 @@
         
           </div>
           <div class="accordion-body bg-opacity  ">
-           sedang dalam pengerjaan
+           <div class="wrapper-link">
+            <div class="wrapper-mainPage">
+              <h6 class="wrapper-mainPage--title mb-4px">Main page</h6>
+              <p class="wrapper-mainPage--description">Which displays all the information based on your page settings</p>
+              <div class="wrappper__card--itemModal modal-link-mainPage ">
+                  <div class="link-urlModal fs16">
+                    <a href="https://sociabuzz.com/" target="_blank" class="link-anchor link-anchor--modalTribe">https://sociabuzz.com/xxxxxxxxxxxxxxxxxxxx/<b>tribe</b></a>
+                  </div>
+                  <div class="modal-link-action d-flex">
+                   <div class="modal-copy-link mr-14" id="mainPage-tribe-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Link copied!">
+                       <i class="far fa-copy mr-2px"></i>
+                       Copy link
+                   </div>
+                   <div class="modal-open-link">
+                       
+                       <i class="fas fa-external-link-alt mr-2px"></i>
+                       Open link
+                   </div>
+                   </div>
+                 </div>
+          </div>
+          <div class="wrapper-simplePage">
+            <h6 class="wrapper-mainPage--title mb-4px">Simple page</h6>
+            <p class="wrapper-mainPage--description">Which only displays a form to give support</p>
+            <div class="wrappper__card--itemModal modal-link-simplePage ">
+                <div class="link-urlModal fs16">
+                  <a href="https://sociabuzz.com/" target="_blank" class="link-anchor link-anchorDefault">https://sociabuzz.com/xxxxxxxxxxxxxxxxxxxx/<b>support</b></a>
+                </div>
+                <div class="modal-link-action d-flex">
+                 <div class="modal-copy-linkDefault mr-14" id="simplePage-support-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Link copied!">
+                     <i class="far fa-copy mr-2px"></i>
+                     Copy link
+                 </div>
+                 <div class="modal-open-linkDefault">
+                     
+                     <i class="fas fa-external-link-alt mr-2px"></i>
+                     Open link
+                 </div>
+                 </div>
+               </div>
+               <div class="wrappper__card--itemModal modal-link-simplePage ">
+                <div class="link-urlModal fs16">
+                  <a href="https://sociabuzz.com/" target="_blank" class="link-anchor link-anchorDefault">https://sociabuzz.com/xxxxxxxxxxxxxxxxxxxx/<b>donate</b></a>
+                </div>
+                <div class="modal-link-action d-flex">
+                 <div class="modal-copy-linkDefault mr-14" id="simplePage-donate-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Link copied!">
+                     <i class="far fa-copy mr-2px"></i>
+                     Copy link
+                 </div>
+                 <div class="modal-open-linkDefault">
+                     
+                     <i class="fas fa-external-link-alt mr-2px"></i>
+                     Open link
+                 </div>
+                 </div>
+               </div>
+               <div class="wrappper__card--itemModal modal-link-simplePage ">
+                <div class="link-urlModal fs16">
+                  <a href="https://sociabuzz.com/" target="_blank" class="link-anchor link-anchorDefault">https://sociabuzz.com/xxxxxxxxxxxxxxxxxxxx/<b>give</b></a>
+                </div>
+                <div class="modal-link-action d-flex">
+                 <div class="modal-copy-linkDefault mr-14" id="simplePage-give-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Link copied!">
+                     <i class="far fa-copy mr-2px"></i>
+                     Copy link
+                 </div>
+                 <div class="modal-open-linkDefault">
+                     
+                     <i class="fas fa-external-link-alt mr-2px"></i>
+                     Open link
+                 </div>
+                 </div>
+               </div>
+        </div>
+           </div>
           </div>
         </div>
       
@@ -1314,7 +1766,7 @@
               <!-- Modal -->
               <div class="modal fade" id="addCirlceLinkModal" tabindex="-1" role="dialog" aria-labelledby="addCirlceLinkModal" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
+                  <div class="modal-content ">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -1577,5 +2029,132 @@
     <script src="./src/js/tribeSettingPage/bundle.js"></script>
     <script src="./src/js/tribeSettingPage/script.js"></script>
     <script src="./src/js/navbarAndFooter.js"></script>
+    <script>
+            
+function actionCopy () {
+    // link bio
+    $(".copy-linkBio").tooltip({ trigger: "click" });
+
+$(".copy-linkBio").on("click", function (e) {
+  $(".copy-linkBio").tooltip("show");
+
+  setTimeout(function () {
+    $(".copy-linkBio").tooltip("hide");
+  }, 800);
+});
+
+// trribe 
+$("#copyLink").tooltip({ trigger: "click" });
+
+$("#copyLink").on("click", function (e) {
+  $("#copyLink").tooltip("show");
+
+  setTimeout(function () {
+    $("#copyLink").tooltip("hide");
+  }, 800);
+});
+
+
+$("#copylinkContent").tooltip({ trigger: "click" });
+
+$("#copylinkContent").on("click", function (e) {
+  $("#copylinkContent").tooltip("show");
+
+  setTimeout(function () {
+    $("#copylinkContent").tooltip("hide");
+  }, 800);
+});
+// shp
+
+$(".copy-linkShop").tooltip({ trigger: "click" });
+
+$(".copy-linkShop").on("click", function (e) {
+  $(".copy-linkShop").tooltip("show");
+
+  setTimeout(function () {
+    $(".copy-linkShop").tooltip("hide");
+  }, 800);
+});
+
+
+// gigs
+
+
+$(".copy-linkGigs").tooltip({ trigger: "click" });
+
+$(".copy-linkGigs").on("click", function (e) {
+  $(".copy-linkGigs").tooltip("show");
+
+  setTimeout(function () {
+    $(".copy-linkGigs").tooltip("hide");
+  }, 800);
+});
+
+// shoutout
+
+$(".copy-linkShoutout").tooltip({ trigger: "click" });
+
+$(".copy-linkShoutout").on("click", function (e) {
+  $(".copy-linkShoutout").tooltip("show");
+
+  setTimeout(function () {
+    $(".copy-linkShoutout").tooltip("hide");
+  }, 800);
+});
+
+// modal
+  // tribe
+  $("#mainPage-tribe-link").tooltip({ trigger: "click" });
+
+$("#mainPage-tribe-link").on("click", function (e) {
+  $("#mainPage-tribe-link").tooltip("show");
+
+  setTimeout(function () {
+    $("#mainPage-tribe-link").tooltip("hide");
+  }, 800);
+});
+
+
+    // support simple
+    $("#simplePage-support-link").tooltip({ trigger: "click" });
+
+$("#simplePage-support-link").on("click", function (e) {
+  $("#simplePage-support-link").tooltip("show");
+
+  setTimeout(function () {
+    $("#simplePage-support-link").tooltip("hide");
+  }, 800);
+});
+
+
+
+    // donate simple
+    $("#simplePage-donate-link").tooltip({ trigger: "click" });
+
+$("#simplePage-donate-link").on("click", function (e) {
+  $("#simplePage-donate-link").tooltip("show");
+
+  setTimeout(function () {
+    $("#simplePage-donate-link").tooltip("hide");
+  }, 800);
+});
+
+
+    // give simple
+    $("#simplePage-give-link").tooltip({ trigger: "click" });
+
+$("#simplePage-give-link").on("click", function (e) {
+  $("#simplePage-give-link").tooltip("show");
+
+  setTimeout(function () {
+    $("#simplePage-give-link").tooltip("hide");
+  }, 800);
+});
+
+
+}
+actionCopy ()
+
+    </script>
 
 </html>

@@ -119,6 +119,40 @@
     }
   }
 }
+#deleteModalVideo {
+  .modal-content {
+    width: auto;
+    padding: 0;
+    p.text-message {
+      color: red;
+    }
+    .modal-body {
+      padding: 2rem;
+
+      .btn-fill-light {
+        background-color: transparent;
+        min-width: 120px;
+
+        &:hover {
+          background-color: #76cc11;
+        }
+
+        &.active {
+          background-color: #76cc11;
+
+          &:hover {
+            background-color: #6fc211;
+          }
+        }
+      }
+    }
+  }
+}
+// #upload-profile-img {
+//   .cr-viewport {
+//     width: 85% !important;
+//   }
+// }
 #thumbnailModal {
   .btn {
     border-radius: 10px;
@@ -267,14 +301,20 @@
     }
   }
 }
-// @media (max-width: 576px) {
-//   .croppie-imgcover-modal {
-//     .cr-boundary {
-//       width: 250px !important;
-//       height: 250px !important;
-//     }
-//   }
-// }
+@media (max-width: 1000px) {
+  // .croppie-imgcover-modal {
+  //   .cr-boundary {
+  //     width: 250px !important;
+  //     height: 250px !important;
+  //   }
+  // }
+  #upload-profile-img {
+    .cr-viewport {
+      width: 85% !important;
+      height: 150px;
+    }
+  }
+}
 
 @media (min-width: 576px) {
   .croppie-imgcover-modal {

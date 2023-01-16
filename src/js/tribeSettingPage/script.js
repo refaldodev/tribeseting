@@ -593,22 +593,23 @@ function deleteVideo() {
 // image message supporter
 function uploadImageMessage() {
   // Ambil element form dan file yang akan diupload
-  const form = document.getElementById("upload-form");
+  // const form = document.getElementById("upload-form");
   const file = document.getElementById("image-message").files[0];
+  console.log(file);
 
   // Jika tidak ada file yang dipilih, tampilkan pesan error
   if (!file) {
-    showErrorMessageItem("Silakan pilih file gambar terlebih dahulu");
+    showErrorMessageImage("Silakan pilih file gambar terlebih dahulu");
     return;
   }
 
   // Ambil ukuran file
   const fileSize = file.size;
-  const fileSizeKB = fileSize / 1024; // Ukuran file dalam KB
+  const fileSizeKB = 1 * 1024 * 1024; // Ukuran file dalam KB
 
   // Jika ukuran file lebih dari 500KB, tampilkan pesan error
-  if (fileSizeKB > 500) {
-    showErrorMessageItem("Ukuran file tidak boleh lebih dari 500KB");
+  if (fileSize > fileSizeKB) {
+    showErrorMessageImage("Ukuran file tidak boleh lebih dari 1MB");
     return;
   }
 
@@ -623,7 +624,7 @@ function uploadImageMessage() {
 
     // Jika lebar atau tinggi gambar kurang dari 100, tampilkan pesan error
     if (width < 100 || height < 100) {
-      showErrorMessageItem(
+      showErrorMessageImage(
         "Lebar dan tinggi gambar tidak boleh kurang dari 100 pixel"
       );
       return;
@@ -632,20 +633,21 @@ function uploadImageMessage() {
     // Selain itu, lakukan proses upload file
     var src = URL.createObjectURL(file);
     var preview = document.getElementById("image-supporter");
-    var item = document.getElementById("wrapper-showImage");
-
+    var btn = document.getElementById("wrapper-deleteImageMessageModal");
+    btn.style.display = "block";
     preview.src = src;
     preview.style.display = "block";
-    var btn = document.getElementById("wrapper-deleteItem");
-    btn.style.display = "block";
+    // var btn = document.getElementById("wrapper-deleteItem"); 
+    // btn.style.display = "block";
+    var item = document.querySelector(".wrapper-showImage");
     item.style.display = "block";
-    showErrorMessageItem("");
+    showErrorMessageImage("");
   };
 }
 
 // Function untuk menampilkan pesan error
-function showErrorMessageItem(message) {
-  const errorMessage = document.getElementById("error-message-image");
+function showErrorMessageImage(message) {
+  const errorMessage = document.querySelector(".error-message-imageSupporter");
   errorMessage.innerText = message;
 }
 
@@ -656,14 +658,27 @@ fileInputImage.addEventListener("change", function () {
 });
 
 // Event listener untuk button delete
+function deleteImageMessage() {
+  // Ambil element gambar
+  // const image = document.getElementById("item-image");
+  $("#image-supporter").attr("src", "");
+  // Hapus element gambar
+
+  var btn = document.getElementById("wrapper-deleteImageMessageModal");
+  btn.style.display = "none";
+  var item = document.querySelector(".wrapper-showImage");
+
+  // image.parentNode.removeChild(image);
+  item.style.display = "none";
+}
 document
-  .getElementById("confirm-delete-btnVideo")
-  .addEventListener("click", deleteVideo);
+  .getElementById("wrapper-deleteImageMessage")
+  .addEventListener("click", deleteImageMessage);
 
 // radio
 
-$('input[type="radio"]').on("change", function () {
-  $('input[type="radio"]').not(this).prop("checked", false);
+$('input[type="radio"].radio').on("change", function () {
+  $('input[type="radio"].radio').not(this).prop("checked", false);
   console.log(this.name);
   if (this.name != "custom") {
     $("#year").attr("disabled", true);

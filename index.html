@@ -142,6 +142,21 @@
 </div>
 <!--Delete  video -->
 
+<!--Delete Modal video -->
+<div class="modal fade" id="deleteImageMessageModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn btn-fill-light active mb-3" data-dismiss="modal" id="wrapper-deleteImageMessage">Hapus</button>
+        <button type="button" class="btn btn-fill-light" data-dismiss="modal" id="cancel-delete-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Delete  video -->
+
+
+
 <!-- modal edit -->
 
 <div class="modal fade" id="edit" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -158,7 +173,7 @@
         </h5>
         <div class="my-2 tenpx">
           <div class="custom-control custom-radio  custom-radio-modal">
-            <input type="radio" id="customRadio13" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" checked="" >
+            <input type="radio" id="customRadio13" name="type3" class="custom-control-input radio" value="Individu / personal" data-type="type" checked="true" >
             <label class="custom-control-label custom-control-label2" for="customRadio13">
               <p class="text-control"><span class="font-weight-bold">Sejak awal hingga sekarang</span>
               </p>
@@ -167,7 +182,7 @@
             
           </div>
           <div class="custom-control custom-radio  custom-radio-modal">
-            <input type="radio" id="customRadio12" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <input type="radio" id="customRadio12" name="type3" class="custom-control-input radio" value="Individu / personal" data-type="type" >
             <label class="custom-control-label custom-control-label2" for="customRadio12">
               <p class="text-control"><span class="font-weight-bold">Harian </span>(24 jam terakhir)
 </p>
@@ -177,7 +192,7 @@
           </div>
        
           <div class="custom-control custom-radio  custom-radio-modal">
-            <input type="radio" id="customRadio16" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <input type="radio" id="customRadio16" name="type3" class="custom-control-input radio" value="Individu / personal" data-type="type" >
             <label class="custom-control-label custom-control-label2" for="customRadio16">
               <p class="text-control"><span class="font-weight-bold">Mingguan</span> (7 hari terakhir)
 
@@ -187,7 +202,7 @@
             
           </div>
           <div class="custom-control custom-radio  custom-radio-modal">
-            <input type="radio" id="customRadio14" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <input type="radio" id="customRadio14" name="type3" class="custom-control-input radio" value="Individu / personal" data-type="type" >
             <label class="custom-control-label custom-control-label2" for="customRadio14">
               <p class="text-control"><span class="font-weight-bold">Bulanan</span> (30 hari terakhir)
 
@@ -198,7 +213,7 @@
             
           </div>
             <div class="custom-control custom-radio  custom-radio-modal">
-            <input type="radio" id="customRadio15" name="type3" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <input type="radio" id="customRadio15" name="type3" class="custom-control-input radio" value="Individu / personal" data-type="type" >
             <label class="custom-control-label custom-control-label2" for="customRadio15">
               <p class="text-control"><span class="font-weight-bold">Harian </span> (24 jam terakhir)
 </p>
@@ -207,7 +222,7 @@
             
           </div>
             <div class="custom-control custom-radio  custom-radio-modal">
-            <input type="radio" id="customRadio17" name="custom" class="custom-control-input" value="Individu / personal" data-type="type" >
+            <input type="radio" id="customRadio17" name="custom" class="custom-control-input radio" value="Individu / personal" data-type="type" >
             <label class="custom-control-label custom-control-label2" for="customRadio17">
               <p class="text-control"><span class="font-weight-bold">Mulai tanggal & waktu tertentu
  </span> 
@@ -217,7 +232,7 @@
             <div class="select-group">
               <div class="form-group  d-flex justify-content-start align-items-center">
                   <label for="Tahun " class="">Tahun</label>
-                  <select class="form-control custom-select w-75 ml-auto" name="year" id="year">
+                  <select class="form-control custom-select w-75 ml-auto" name="year" id="year" disabled="disabled">
                   <option value="">--</option>
                                                       <option value="2020" selected>2020</option>
                                                       <option value="2021">2021</option>
@@ -230,7 +245,7 @@
   
               <div class="form-group  d-flex justify-content-start align-items-center">
                   <label for="Bulan" class="">Bulan</label>
-                  <select class="form-control custom-select w-75 ml-auto" name="months" id="months">
+                  <select class="form-control custom-select w-75 ml-auto" name="months" id="months" disabled="disabled">
                       <option value="">--</option>
                                                                   <option value="1" selected>Januari</option>
                                                                       <option value="2">Februari</option>
@@ -249,7 +264,7 @@
   
               <div class="form-group  d-flex justify-content-start align-items-center">
                   <label for="Tanggal" class="">Tanggal</label>
-                  <select class="form-control custom-select w-75 ml-auto" name="date" id="date">
+                  <select class="form-control custom-select w-75 ml-auto" name="date" id="date" disabled="disabled">
                   <option value="">--</option>
                                                           <option value="01" selected>01</option>
                                                               <option value="02">02</option>
@@ -287,7 +302,7 @@
   
               <div class="form-group  d-flex justify-content-start align-items-center">
                   <label for="Jam" class="">Jam</label>
-                  <select class="form-control custom-select w-75 ml-auto" name="hour" id="hour">
+                  <select class="form-control custom-select w-75 ml-auto" name="hour" id="hour" disabled="disabled">
                                                           <option value="00">00</option>
                                                           <option value="01">01</option>
                                                           <option value="02">02</option>
@@ -317,7 +332,7 @@
   
               <div class="form-group  d-flex justify-content-start align-items-center">
                   <label for="Menit" class="">Menit</label>
-                  <select class="form-control custom-select w-75 ml-auto" name="minute" id="minute">
+                  <select class="form-control custom-select w-75 ml-auto" name="minute" id="minute" disabled="disabled">
                                                           <option value="00">00</option>
                                                           <option value="01">01</option>
                                                           <option value="02">02</option>
@@ -723,7 +738,7 @@
          
         
           </div>
-          <div class="accordion-body bg-opacity  ">
+          <div class="accordion-body pt-0 bg-opacity  ">
          <div class="cover-image display-none">
           <img src="" alt=""  id="cover-image" class="w-100 h-100"> 
          </div>
@@ -743,7 +758,7 @@
                 <input type="hidden" name="userfile" id="input-upload" value="">
               </div> -->
               <button class="button button-modalUpload " data-toggle="modal" data-target="#profile-img-modal">Upload Image</button>
-               <div class="display-none" id="wrapper-deleteIcon">
+               <div class="display-none wrapper-deleteMarginLeft" id="wrapper-deleteIcon">
               <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top"     title="" data-original-title="Delete">
                 <button type="button" class="" id="del-btn" >         
                   <i class="fas fa-trash-alt"></i> 
@@ -776,7 +791,7 @@
          
         
           </div>
-          <div class="accordion-body bg-opacity  ">
+          <div class="accordion-body bg-opacity    pt-0">
          
          <!-- user -->
          <div class="profile-img-container profile-image display-none">
@@ -794,7 +809,7 @@
                 <input type="hidden" name="userfile" id="input-upload" value="">
               </div> -->
               <button class="button button-modalUpload " data-toggle="modal" data-target="#profile-pic-modal">Upload Image</button>
-               <div class="display-none" id="wrapper-deleteIconProfile">
+               <div class="display-none wrapper-deleteMarginLeft" id="wrapper-deleteIconProfile">
               <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalProfile" data-tooltip="tooltip" data-placement="top"     title="" data-original-title="Delete">
                 <button type="button" class="" id="del-btnProfile" >         
                   <i class="fas fa-trash-alt"></i> 
@@ -877,7 +892,7 @@
          
         
           </div>
-          <div class="accordion-body bg-opacity  ">
+          <div class="accordion-body bg-opacity  pt-0">
 
             <div class="wrapper-accordion mt-0">
         <div class="subAccordion-container">
@@ -892,8 +907,8 @@
            
           
             </div>
-            <div class="subAccordion-body bg-opacity  ">
-              <div class="wrapper-switch">
+            <div class="subAccordion-body bg-opacity ">
+              <div class="wrapper-switch"> 
                 <span class="switch-text">
                 Off
               </span>
@@ -971,7 +986,7 @@
             Item picture
         </p>
           <!-- user -->
-          <div class="profile-img-container profile-image display-none  " id="wrapperitem-image">
+          <div class="profile-img-container2 profile-image display-none  " id="wrapperitem-image">
             <img src="" alt=""  id="item-image">
                    
                   </div>
@@ -984,7 +999,7 @@
                     <input type="file" name="uploadItem" id="uploadItem" accept="image/x-png,image/gif,image/jpeg" >
                 
                   </div>
-                 <div class="display-none" id="wrapper-deleteItem">
+                 <div class="display-none wrapper-deleteMarginLeft " id="wrapper-deleteItem">
                 <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalItem" data-tooltip="tooltip" data-placement="top"     title="" data-original-title="Delete">
                   <button type="button" class="" id="del-btnProfile" >         
                     <i class="fas fa-trash-alt"></i> 
@@ -1030,7 +1045,7 @@
       </div>
           </div>
         </div>
-        <div class="accordion-item  accordion-item mb-card-default ">
+        <div class="accordion-item  accordion-item mb-card-default active">
           <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
               <div class="wrapper-icontext d-flex align-items-center">
               <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
@@ -1084,7 +1099,7 @@
                       <input type="file" name="" id="video-file" accept="video/mp4,video/x-m4v,video/*" >
                   
                     </div>
-                   <div class="display-none" id="wrapper-deleteVideo">
+                   <div class="display-none wrapper-deleteMarginLeft" id="wrapper-deleteVideo">
                   <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalVideo" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">
                     <button type="button" class="" id="del-btnProfile">         
                       <i class="fas fa-trash-alt"></i> 
@@ -1105,7 +1120,7 @@
                   <p class="text-control">Image</p>
                 </label>
                  <div class="wrapper-showImage mb-3 display-none">
-                <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" id="image-supporter">
+                <img src="" alt="" id="image-supporter">
                   
                 </div>
                 <div class="wrapper-upload wrapper-upploadCover mt-2">
@@ -1116,8 +1131,8 @@
                       <input type="file" name="image-message" id="image-message" accept="image/x-png,image/gif,image/jpeg" >
                   
                     </div>
-                   <div class="display-none" id="wrapper-deleteIconProfile">
-                  <div class="wrapper-delete " data-toggle="modal" data-target="#deleteModalProfile" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">
+                   <div class="display-none wrapper-deleteMarginLeft" id="wrapper-deleteImageMessageModal">
+                  <div class="wrapper-delete " data-toggle="modal" data-target="#deleteImageMessageModal" data-tooltip="tooltip" data-placement="top" title="" data-original-title="Delete">
                     <button type="button" class="" id="del-btnProfile">         
                       <i class="fas fa-trash-alt"></i> 
                     </button>
@@ -1126,7 +1141,7 @@
                 </div>
   
   
-              <p class="error-message-image error-message" style="color: red;"></p>
+              <p class="error-message-imageSupporter error-message" style="color: red;"></p>
               <ul> <li>Allowed file types: JPG, JPEG, PNG, GIF
                
                 </li> 

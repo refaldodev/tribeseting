@@ -892,6 +892,30 @@ footer .row:first-of-type::after {
   background-color: #6fc211;
 }
 
+#deleteImageMessageModal .modal-content {
+  width: auto;
+  padding: 0;
+}
+#deleteImageMessageModal .modal-content p.text-message {
+  color: red;
+}
+#deleteImageMessageModal .modal-content .modal-body {
+  padding: 2rem;
+}
+#deleteImageMessageModal .modal-content .modal-body .btn-fill-light {
+  background-color: transparent;
+  min-width: 120px;
+}
+#deleteImageMessageModal .modal-content .modal-body .btn-fill-light:hover {
+  background-color: #76cc11;
+}
+#deleteImageMessageModal .modal-content .modal-body .btn-fill-light.active {
+  background-color: #76cc11;
+}
+#deleteImageMessageModal .modal-content .modal-body .btn-fill-light.active:hover {
+  background-color: #6fc211;
+}
+
 #thumbnailModal .btn {
   border-radius: 10px;
   padding: 0.5rem 1rem;
@@ -2125,6 +2149,10 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   display: none;
 }
 
+.wrapper-deleteMarginLeft {
+  margin-left: 10px;
+}
+
 .error-message-item {
   color: red;
   font-size: 0.833rem;
@@ -2146,6 +2174,19 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion .accordion-container .accordion-item video#sourceVideo {
   width: auto;
   height: 220px;
+}
+.wrapper-accordion .accordion-container .accordion-item .wrapper-showImage {
+  width: auto;
+  max-width: 100%;
+  height: 220px;
+  max-height: 220px;
+  min-height: 220px;
+  position: relative;
+}
+.wrapper-accordion .accordion-container .accordion-item .wrapper-showImage img {
+  max-width: 100%;
+  min-height: 220px;
+  max-height: 220px;
 }
 .wrapper-accordion .accordion-container .accordion-item .title-accordion {
   font-family: "Open Sans";
@@ -2270,7 +2311,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-weight: 700;
   font-size: 16px;
   line-height: 26px;
-  padding: 10px 17px 30px 17px;
+  padding: 8px 17px 30px 17px;
   text-decoration: none !important;
   min-height: 50px;
   z-index: 300;
@@ -2312,7 +2353,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   background-color: #dffbdf;
   border-radius: 30px;
   padding: 0.5rem 1rem;
-  margin-right: 10px;
   margin-bottom: 0;
 }
 .wrapper-accordion .accordion-container .wrapper-upload .file-input-container label:hover {
@@ -2362,7 +2402,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   background-color: #dffbdf;
   border-radius: 30px;
   padding: 0.5rem 1rem;
-  margin-right: 10px;
   margin-bottom: 0;
 }
 .wrapper-accordion .accordion-container .wrapper-upload .file-input-container .button-modalUpload:hover {
@@ -2662,7 +2701,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   background-color: #dffbdf;
   border-radius: 30px;
   padding: 0.5rem 1rem;
-  margin-right: 10px;
   margin-bottom: 0;
 }
 .wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container label:hover {
@@ -2712,7 +2750,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   background-color: #dffbdf;
   border-radius: 30px;
   padding: 0.5rem 1rem;
-  margin-right: 10px;
   margin-bottom: 0;
 }
 .wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .button-modalUpload:hover {
@@ -2757,6 +2794,66 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   pointer-events: none;
 }
 .wrapper-accordion .subAccordion-container .profile-img-container .user-icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 5rem;
+  color: #888787;
+}
+.wrapper-accordion .profile-img-container2 {
+  height: 100px;
+  width: 100px;
+  background-color: #c2c2c2;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 100px;
+  margin-bottom: 18px;
+}
+.wrapper-accordion .profile-img-container2 img {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  pointer-events: none;
+}
+.wrapper-accordion .subAccordion-containerSupporter .profile-img-container2 {
+  height: 100px;
+  width: 100px;
+  background-color: #c2c2c2;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 100px;
+  margin-bottom: 18px;
+}
+.wrapper-accordion .subAccordion-containerSupporter .profile-img-container2 img[src=""] {
+  display: none;
+}
+.wrapper-accordion .subAccordion-containerSupporter .profile-img-container2 img {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  pointer-events: none;
+}
+.wrapper-accordion .subAccordion-containerSupporter .profile-img-container2 .user-icon {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -2981,7 +3078,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   background-color: #dffbdf;
   border-radius: 30px;
   padding: 0.5rem 1rem;
-  margin-right: 10px;
   margin-bottom: 0;
 }
 .wrapper-accordion .subAccordion-containerSupporter .wrapper-upload .file-input-container label:hover {
@@ -3031,7 +3127,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   background-color: #dffbdf;
   border-radius: 30px;
   padding: 0.5rem 1rem;
-  margin-right: 10px;
   margin-bottom: 0;
 }
 .wrapper-accordion .subAccordion-containerSupporter .wrapper-upload .file-input-container .button-modalUpload:hover {

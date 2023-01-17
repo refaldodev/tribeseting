@@ -745,7 +745,7 @@ footer .row:first-of-type::after {
   border-bottom: none;
 }
 .nav-tabs .nav-item {
-  height: 42px;
+  min-height: 42px;
 }
 .nav-tabs .nav-item .nav-link {
   border: 1px solid #76cc11;
@@ -759,6 +759,31 @@ footer .row:first-of-type::after {
   border: 1px solid #76cc11;
   background: #76cc11;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  .nav-tabs {
+    border-bottom: none;
+  }
+  .nav-tabs .nav-item {
+    min-height: 42px;
+  }
+  .nav-tabs .nav-item .nav-link {
+    border: 1px solid #76cc11;
+    margin: 0 0.3rem;
+    border-radius: 1.8rem;
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: #76cc11;
+  }
+  .nav-tabs .nav-item .nav-link.active, .nav-tabs .nav-item .nav-link:hover {
+    border: 1px solid #76cc11;
+    background: #76cc11;
+    color: #fff;
+  }
+}
+.mb-30 {
+  margin-bottom: 30px;
 }
 
 .modal-header {
@@ -1654,6 +1679,39 @@ footer .row:first-of-type::after {
   border-color: #5897fb;
 }
 
+#image-supporter {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}
+
+.mb-14 {
+  margin-bottom: 14px;
+}
+
+.mb-9 {
+  margin-bottom: 9px !important;
+}
+
+.mb-4px {
+  margin-bottom: 4px;
+}
+
+.mb-editor {
+  margin-bottom: 30px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
 #thumbnailModal .btn {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2171,6 +2229,10 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   -moz-user-select: none;
   -ms-user-select: none;
 }
+.wrapper-accordion .accordion-container .accordion-item #cover-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .wrapper-accordion .accordion-container .accordion-item video#sourceVideo {
   width: auto;
   height: 220px;
@@ -2215,14 +2277,14 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion .accordion-container .accordion-item .accordion-header::after {
   font-family: "Font Awesome 5 Free";
   content: "\f107";
-  color: #bbb;
+  color: #b8b8b8;
   margin: auto 0 auto 10px;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 100%;
 }
 .wrapper-accordion .accordion-container .accordion-item .wrapper__card--item {
-  padding: 11px 15px;
+  padding: 11px 20px;
   text-decoration: none !important;
   border-radius: 0.6rem;
   min-height: 60px;
@@ -2311,7 +2373,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-weight: 700;
   font-size: 16px;
   line-height: 26px;
-  padding: 8px 17px 30px 17px;
+  padding: 8px 20px 35px 20px;
   text-decoration: none !important;
   min-height: 50px;
   z-index: 300;
@@ -2323,9 +2385,9 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-family: "Font Awesome 5 Free";
   content: "\f106";
   font-weight: 900;
-  color: #bbb;
+  color: #b8b8b8;
   margin: auto 0;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 100%;
   margin: auto 0 auto 10px;
 }
@@ -2338,6 +2400,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   display: flex;
   align-items: center;
   margin-bottom: 13px;
+  min-height: 36px;
 }
 .wrapper-accordion .accordion-container .wrapper-upload .file-input-container label {
   border: 1px solid #76cc11;
@@ -2562,15 +2625,15 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-header::after {
   font-family: "Font Awesome 5 Free";
   content: "\f107";
-  color: #bbb;
+  color: #b8b8b8;
   margin: auto 0;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 100%;
   margin: auto 0 auto 10px;
 }
 .wrapper-accordion .subAccordion-container .subAccordion-item .wrapper__card--item {
-  padding: 11px 15px;
+  padding: 11px 20px;
   text-decoration: none !important;
   border-radius: 0.6rem;
   min-height: 60px;
@@ -2660,7 +2723,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-weight: 700;
   font-size: 16px;
   line-height: 26px;
-  padding: 0px 17px 17px 17px;
+  padding: 0px 20px 20px 20px;
   text-decoration: none !important;
   min-height: 50px;
   z-index: 300;
@@ -2672,9 +2735,9 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-family: "Font Awesome 5 Free";
   content: "\f106";
   font-weight: 900;
-  color: #bbb;
+  color: #b8b8b8;
   margin: auto 0;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 100%;
   margin: auto 0 auto 10px;
 }
@@ -2687,6 +2750,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   display: flex;
   align-items: center;
   margin-bottom: 13px;
+  min-height: 36px;
 }
 .wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container label {
   border: 1px solid #76cc11;
@@ -2939,15 +3003,15 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion .subAccordion-containerSupporter .subAccordion-itemSupporter .subAccordion-headerSupporter::after {
   font-family: "Font Awesome 5 Free";
   content: "\f107";
-  color: #bbb;
+  color: #b8b8b8;
   margin: auto 0;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 100%;
   margin: auto 0 auto 10px;
 }
 .wrapper-accordion .subAccordion-containerSupporter .subAccordion-itemSupporter .wrapper__card--item {
-  padding: 11px 15px;
+  padding: 11px 20px;
   text-decoration: none !important;
   border-radius: 0.6rem;
   min-height: 60px;
@@ -3016,6 +3080,10 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   border-right: 1px solid #b8b8b8;
   border-bottom: 1px solid transparent;
   border-radius: 0.6rem 0.6rem 0rem 0rem;
+  -webkit-border-radius: 0.6rem 0.6rem 0rem 0rem;
+  -moz-border-radius: 0.6rem 0.6rem 0rem 0rem;
+  -ms-border-radius: 0.6rem 0.6rem 0rem 0rem;
+  -o-border-radius: 0.6rem 0.6rem 0rem 0rem;
 }
 .wrapper-accordion .subAccordion-containerSupporter .subAccordion-itemSupporter.active .subAccordion-bodySupporter {
   height: 100%;
@@ -3037,7 +3105,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-weight: 700;
   font-size: 16px;
   line-height: 26px;
-  padding: 0px 17px 17px 17px;
+  padding: 8px 20px 35px 20px;
   text-decoration: none !important;
   min-height: 50px;
   z-index: 300;
@@ -3049,9 +3117,9 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-family: "Font Awesome 5 Free";
   content: "\f106";
   font-weight: 900;
-  color: #bbb;
+  color: #b8b8b8;
   margin: auto 0;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 100%;
   margin: auto 0 auto 10px;
 }
@@ -3064,6 +3132,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   display: flex;
   align-items: center;
   margin-bottom: 13px;
+  min-height: 36px;
 }
 .wrapper-accordion .subAccordion-containerSupporter .wrapper-upload .file-input-container label {
   border: 1px solid #76cc11;

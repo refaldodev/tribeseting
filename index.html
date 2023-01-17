@@ -22,8 +22,8 @@
       type="image/gif"
       sizes="16x16"
     />
-    <script src="https://cdn.tiny.cloud/1/suyzmhjyzqllp1qhnxu6yuonlxzicrvwakx6b7ajlsydb84y/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
+    <!-- <script src="https://cdn.tiny.cloud/1/suyzmhjyzqllp1qhnxu6yuonlxzicrvwakx6b7ajlsydb84y/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
   </head>
   <body>
 
@@ -610,7 +610,7 @@
     <!---------------- main--------------------->
     <main class="">
       <section class="content-wrapper">
-          <div class="d-flex justify-content-center mb-5">
+          <div class="d-flex justify-content-center mb-30">
             <img
               class="head-logo "
               src="./src/img/feature-tribe.png"
@@ -839,7 +839,7 @@
         
           </div>
           <div class="accordion-body bg-opacity  ">
-            <div class="wrapper-form">
+            <div class="wrapper-form mb-9">
               <p class="form-title">
                 Profile Name
             </p>
@@ -851,7 +851,7 @@
               <p class="countNumber" id="countProfileName">0  / 60</p>
           </div>
           </div>
-            <div class="wrapper-form">
+            <div class="wrapper-form mb-9">
               <p class="form-title">
                 Short Description
             </p>
@@ -861,15 +861,18 @@
               <p class="countNumber" id="countShortDescription">0  / 60</p>
           </div>
           </div>
-          <div class="wrapper-form mb-3">
+          <div class="wrapper-form mb-editor">
             <p class="form-title">
               About CreatorNameHere
           </p>
-         <div >
+         <!-- <div >
           <textarea name="" class="editor " ></textarea>
-         </div>
+         </div> -->
+         <div id="editorQuill" style="height:155px;">
+       
         </div>
-          <div class="wrapper-form">
+        </div>
+          <div class="wrapper-form ">
             <p class="form-title">
               Profile Video
           </p>
@@ -956,7 +959,7 @@
               On
               </span>
             </div>
-            <div class="wrapper-form">
+            <div class="wrapper-form mb-9">
               <p class="form-title">
                 Text on button
             </p>
@@ -968,7 +971,7 @@
               <p class="countNumber" id="countTextonButton2">0  / 20</p>
           </div>
           </div>  
-          <div class="wrapper-form">
+          <div class="wrapper-form mb-9">
             <p class="form-title">
               Item name
           </p>
@@ -981,12 +984,12 @@
         </div>
         </div>
         
-        <div class="wrapper-form mb-3">
+        <div class="wrapper-form mb-24">
           <p class="form-title">
             Item picture
         </p>
           <!-- user -->
-          <div class="profile-img-container2 profile-image display-none  " id="wrapperitem-image">
+          <div class="profile-img-container2  mb-2 mt-2 profile-image display-none  " id="wrapperitem-image">
             <img src="" alt=""  id="item-image">
                    
                   </div>
@@ -995,7 +998,7 @@
                 <div class="file-input-container mb-16">
                  
                   <div class="wrapper-upload">
-                    <label for="uploadItem">Choose file</label>
+                    <label for="uploadItem">Upload Image</label>
                     <input type="file" name="uploadItem" id="uploadItem" accept="image/x-png,image/gif,image/jpeg" >
                 
                   </div>
@@ -1020,7 +1023,7 @@
               </div>
 
       </div>
-      <div class="wrapper-form">
+      <div class="wrapper-form mb-24">
         <p class="form-title">
           Price per unit      </p>
      
@@ -1045,7 +1048,7 @@
       </div>
           </div>
         </div>
-        <div class="accordion-item  accordion-item mb-card-default active">
+        <div class="accordion-item  accordion-item mb-card-default ">
           <div class="accordion-header  wrapper__card--item accordion-bg-default  hover__grow d-flex justify-content-between align-content-center">
               <div class="wrapper-icontext d-flex align-items-center">
               <!-- <i class="fa-solid fa-pen-to-square mr-10"></i> -->
@@ -1065,7 +1068,7 @@
                 <label class="custom-control-label" for="customRadio1">
                   <p class="text-control">Text</p>
                 </label>
-                <div class="wrapper-form">
+                <div class="wrapper-form mt-6">
             
 
                   
@@ -1083,7 +1086,7 @@
                   <p class="text-control">Video</p>
                 </label>
 
-                <div class="wrapper-showVideo mb-3 display-none">
+                <div class="wrapper-showVideo mb-14 mt-1 display-none">
                   <video  controls id="sourceVideo"  preload="metadata">
                     <source src="" type="video/mp4" >
                     <source src="movie.ogg" type="video/ogg">
@@ -1091,8 +1094,8 @@
                   </video>
                   
                 </div>
-                <div class="wrapper-upload wrapper-upploadCover mt-2">
-                  <div class="file-input-container">
+                <div class="wrapper-upload wrapper-upploadCover mt-6">
+                  <div class="file-input-container mb-9">
                    
                     <div class="wrapper-upload">
                       <label for="video-file">Upload Video</label>
@@ -1114,17 +1117,17 @@
                 
                 </div>
               </div>
-              <div class="custom-control custom-radio mb-3">
+              <div class="custom-control custom-radio mb-24">
                 <input type="radio" id="customRadio3" name="type" class="custom-control-input" value="image" data-type="type">
                 <label class="custom-control-label" for="customRadio3">
                   <p class="text-control">Image</p>
                 </label>
-                 <div class="wrapper-showImage mb-3 display-none">
+                 <div class="wrapper-showImage mb-14 display-none mt-1">
                 <img src="" alt="" id="image-supporter">
                   
                 </div>
-                <div class="wrapper-upload wrapper-upploadCover mt-2">
-                  <div class="file-input-container">
+                <div class="wrapper-upload wrapper-upploadCover mt-6">
+                  <div class="file-input-container mb-9">
                    
                     <div class="wrapper-upload">
                       <label for="image-message">Upload Image</label>
@@ -1178,7 +1181,7 @@
         
           </div>
           <div class="accordion-body bg-opacity  ">
-            <div class="wrapper-switch">
+            <div class="wrapper-switch mt-0">
               <span class="switch-text">
               Off
             </span>
@@ -1190,7 +1193,7 @@
               </span>
             </div>
 
-            <div class="wrapper-form">
+            <div class="wrapper-form mb-9">
               <p class="form-title">
                 Title
             </p>
@@ -1202,7 +1205,7 @@
               <p class="countNumber" id="countTitleAmount">0  / 100</p>
           </div>
           </div>
-          <div class="wrapper-form mb-3">
+          <div class="wrapper-form mb-editor">
             <p class="form-title">
               Target amount</p>
          
@@ -1221,13 +1224,13 @@
             </div>
           </div>
         </div>
-          <div class="wrapper-form mb-3">
+          <div class="wrapper-form mb-editor">
             <p class="form-title">
               Description / about the target 
           </p>
-         <div >
-          <textarea name="" class="editor2 " ></textarea>
-         </div>
+          <div id="editorQuillAmount" style="height:155px;">
+          
+          </div>
         </div>
          <div class="wrapper-form ">
             <p class="form-title" style="margin-bottom: 4px;">
@@ -1249,7 +1252,7 @@
         
           </div>
           <div class="accordion-body bg-opacity  ">
-            <div class="wrapper-switch">
+            <div class="wrapper-switch  mt-0">
               <span class="switch-text">
               Off
             </span>
@@ -1261,7 +1264,7 @@
               </span>
             </div>
 
-            <div class="wrapper-form">
+            <div class="wrapper-form mb-9">
               <p class="form-title">
                 Title
             </p>
@@ -1273,7 +1276,7 @@
               <p class="countNumber" id="countTitleAmount">0  / 100</p>
           </div>
           </div>
-          <div class="wrapper-form mb-3">
+          <div class="wrapper-form mb-editor">
             <p class="form-title">
               Target amount</p>
          
@@ -1284,13 +1287,13 @@
     
        <input type="number"  rows="1" class="form-control mt-9 messageInput"   >
         </div>
-          <div class="wrapper-form mb-3">
+          <div class="wrapper-form mb-editor ">
             <p class="form-title">
               Description / about the target 
           </p>
-         <div >
-          <textarea name="" class="editor3 " ></textarea>
-         </div>
+          <div id="editorQuillSupporter" style="height:155px;">
+       
+          </div>
         </div>
          <div class="wrapper-form ">
             <p class="form-title" style="margin-bottom: 4px;">
@@ -1314,7 +1317,7 @@
           <div class="accordion-body bg-opacity  ">
            
 
-            <div class="wrapper-form">
+            <div class="wrapper-form mb-editor">
               <p class="form-title">
                 Top 10 supporters
             </p>
@@ -1331,7 +1334,7 @@
             </div>
           </div>
          
-          <div class="wrapper-form">
+          <div class="wrapper-form mb-editor">
             <p class="form-title">
               Messages from supporters          </p>
          
@@ -1346,13 +1349,13 @@
             </span>
           </div>
         </div>
-         <div class="wrapper-form">
+         <div class="wrapper-form ">
             <p class="form- mb-1">
               Default language for your page         </p>
          
 <p class="desc-pagesetting">This is the language in which your page is initially displayed. Visitors to your page have the option to change it to any other language they want. Only texts from SociaBuzz are translated, not the content that you posted.</p>
             <div class="my-2 tenpx">
-              <div class="custom-control custom-radio">
+              <div class="custom-control custom-radio mb-1">
                 <input type="radio" id="customRadio10" name="type2" class="custom-control-input" value="Individu / personal" data-type="type" checked>
                 <label class="custom-control-label" for="customRadio10">
                   <p class="text-control">According to the language of the visitor's country</p>
@@ -1365,9 +1368,9 @@
                 <label class="custom-control-label" for="customRadio11">
                   <p class="text-control">This language:</p>
                 </label>
-                <div class="wrapper-form">
+                <div class="wrapper-form mt-6">
                 
-                  <div class="select-container select-container-languageAccordion">
+                  <div class="select-container select-container-languageAccordion ml-0">
                     <select class="language">
                         <option value="AF" selected>
                             Afrikaans
@@ -1500,7 +1503,7 @@
         
           </div>
           <div class="accordion-body bg-opacity  ">
-          <div class="wrapper-form mb-4">
+          <div class="wrapper-form mb-editor">
             <p class="form-title">
               Minimum amount per support
           </p>
@@ -1514,7 +1517,7 @@
               </div>
             </div>
           </div>
-           <div class="wrapper-form mb-4">
+           <div class="wrapper-form mb-editor">
             <p class="form-title">
               Payment fee is borne by the supporters
           </p>
@@ -1529,7 +1532,7 @@
           </div>
           <p class="desc-payment">Each payment method has different payment fees (fixed cost and/or percentage) from our payment service providers.<span class="desc-paymentRed"> If disabled, payment fees will be deducted from your earnings, and will not be charged to supporters.</span></p>
           </div>
-            <div class="wrapper-form mb-4">
+            <div class="wrapper-form mb-editor">
             <p class="form-title">
               Payment fee is borne by the supporters
           </p>
@@ -1559,7 +1562,7 @@
             
               </div>
               <div class="subAccordion-bodySupporter bg-opacity  ">
-                <div class="wrapper-form mb-4">
+                <div class="wrapper-form mb-editor">
                   <p class="form-title">
                     Supporters can send voice messages
                 </p>
@@ -1574,7 +1577,7 @@
                 </div>
                 <p class="desc-payment">If enabled, the option to send voice message will appear on your page.</p>
                 </div>
-                <div class="wrapper-form mb-4">
+                <div class="wrapper-form mb-editor">
                   <p class="form-title">
                     Minimum amount per support to send voice message
                 </p>
@@ -1588,7 +1591,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="wrapper-form mb-4">
+                <div class="wrapper-form mb-editor">
                   <p class="form-title">
                     Maximum duration of voice message
                 </p>
@@ -1597,11 +1600,11 @@
                   <span class="input-content-font">seconds</span>
               </div>
               <p class="text-light-grayCustom small mb-0">
-                Min 10. Max 60 detik.
+                Max 15 seconds
             </p>
             
                 </div>
-                <div class="wrapper-form mb-4">
+                <div class="wrapper-form ">
               
               <p class="caution">
                <span class="font-weight-bold">Use with caution.</span>  By using this feature, you understand that voice messages from supporters will appear as is without filter/censorship.
@@ -2038,6 +2041,7 @@
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="./src/js/tribeSettingPage/main.js" ></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <!-- User bundler for old browser that does not support Javascript ES6 Modules -->
     <!-- Bundler using minipack in tool folder by running node minipack.js -->
@@ -2170,6 +2174,19 @@ $("#simplePage-give-link").on("click", function (e) {
 }
 actionCopy ()
 
-    </script>
+</script>
+
+<script>
+  var quill = new Quill('#editorQuill', {
+    theme: 'snow'
+  });
+
+  var quill2 = new Quill('#editorQuillAmount', {
+    theme: 'snow'
+  });
+  var quill3 = new Quill('#editorQuillSupporter', {
+    theme: 'snow'
+  });
+</script>
 
 </html>

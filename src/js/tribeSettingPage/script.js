@@ -383,51 +383,6 @@ $("input")
     }
   });
 
-tinymce.init({
-  selector: "textarea.editor",
-  height: 250,
-  plugins:
-    "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss",
-  toolbar:
-    "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat",
-  tinycomments_mode: "embedded",
-  tinycomments_author: "Author name",
-  mergetags_list: [
-    { value: "First.Name", title: "First Name" },
-    { value: "Email", title: "Email" },
-  ],
-});
-
-tinymce.init({
-  selector: "textarea.editor2",
-  height: 250,
-  plugins:
-    "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss",
-  toolbar:
-    "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat",
-  tinycomments_mode: "embedded",
-  tinycomments_author: "Author name",
-  mergetags_list: [
-    { value: "First.Name", title: "First Name" },
-    { value: "Email", title: "Email" },
-  ],
-});
-
-tinymce.init({
-  selector: "textarea.editor3",
-  height: 250,
-  plugins:
-    "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss",
-  toolbar:
-    "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat",
-  tinycomments_mode: "embedded",
-  tinycomments_author: "Author name",
-  mergetags_list: [
-    { value: "First.Name", title: "First Name" },
-    { value: "Email", title: "Email" },
-  ],
-});
-
 // Function untuk mengupload image
 function uploadImageItem() {
   // Ambil element form dan file yang akan diupload
@@ -569,7 +524,6 @@ fileInputVideo.addEventListener("change", function () {
   uploadVideo();
   var vid = document.getElementById("sourceVideo");
   vid.addEventListener("loadedmetadata", (event) => {
-    console.log(vid.videoWidth, vid.videoHeight);
     vid.style.width = vid.videoWidth;
   });
 });
@@ -629,7 +583,7 @@ function uploadImageMessage() {
       );
       return;
     }
-
+    console.log(width);
     // Selain itu, lakukan proses upload file
     var src = URL.createObjectURL(file);
     var preview = document.getElementById("image-supporter");
@@ -637,7 +591,8 @@ function uploadImageMessage() {
     btn.style.display = "block";
     preview.src = src;
     preview.style.display = "block";
-    // var btn = document.getElementById("wrapper-deleteItem"); 
+    // preview.style.width = `${width}px`;
+    // var btn = document.getElementById("wrapper-deleteItem");
     // btn.style.display = "block";
     var item = document.querySelector(".wrapper-showImage");
     item.style.display = "block";

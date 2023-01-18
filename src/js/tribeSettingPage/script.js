@@ -668,6 +668,7 @@ $('input[type="radio"].radio').on("change", function () {
 
 var quill = new Quill("#editorQuill", {
   theme: "snow",
+
   // modules: {
   //   toolbar: toolbarOptions
   // }

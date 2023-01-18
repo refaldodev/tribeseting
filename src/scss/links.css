@@ -1679,6 +1679,26 @@ footer .row:first-of-type::after {
   border-color: #5897fb;
 }
 
+.ql-snow .ql-editor h1 {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+}
+
+.ql-snow .ql-editor h2 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+
+.ql-snow .ql-editor h3 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.ql-snow .ql-editor p {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
 #image-supporter {
   border-radius: 10px;
 }

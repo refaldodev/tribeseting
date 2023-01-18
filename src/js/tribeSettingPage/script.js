@@ -365,33 +365,35 @@ $("textarea")
       $("#countItemName").text(this.value.length + " " + " / 20");
     } else if (this.id === "titleAmount") {
       $("#countTitleAmount").text(this.value.length + " " + " / 100");
+    } else if (this.id === "titleNOS") {
+      $("#countTitleNOS").text(this.value.length + " " + " / 100");
     }
   });
 
 // text area
-$("input")
-  .each(function () {
-    this.setAttribute(
-      "style",
-      "height:" + this.scrollHeight + "px;overflow-y:hidden;"
-    );
-  })
-  .on("input", function () {
-    this.style.height = "auto";
-    this.style.height = this.scrollHeight + "px";
-    var result = 0;
-    if (this.id === "profileName") {
-      $("#countProfileName").text(this.value.length + " " + " / 60");
-    } else if (this.id === "TextonButton") {
-      $("#countTextonButton").text(this.value.length + " " + " / 20");
-    } else if (this.id === "TextonButton2") {
-      $("#countTextonButton2").text(this.value.length + " " + " / 20");
-    } else if (this.id === "ItemName") {
-      $("#countItemName").text(this.value.length + " " + " / 20");
-    } else if (this.id === "titleAmount") {
-      $("#countTitleAmount").text(this.value.length + " " + " / 100");
-    }
-  });
+// $("input")
+//   .each(function () {
+//     this.setAttribute(
+//       "style",
+//       "height:" + this.scrollHeight + "px;overflow-y:hidden;"
+//     );
+//   })
+//   .on("input", function () {
+//     this.style.height = "auto";
+//     this.style.height = this.scrollHeight + "px";
+//     var result = 0;
+//     if (this.id === "profileName") {
+//       $("#countProfileName").text(this.value.length + " " + " / 60");
+//     } else if (this.id === "TextonButton") {
+//       $("#countTextonButton").text(this.value.length + " " + " / 20");
+//     } else if (this.id === "TextonButton2") {
+//       $("#countTextonButton2").text(this.value.length + " " + " / 20");
+//     } else if (this.id === "ItemName") {
+//       $("#countItemName").text(this.value.length + " " + " / 20");
+//     } else if (this.id === "titleAmount") {
+//       $("#countTitleAmount").text(this.value.length + " " + " / 100");
+//     }
+//   });
 
 // Function untuk mengupload image
 function uploadImageItem() {

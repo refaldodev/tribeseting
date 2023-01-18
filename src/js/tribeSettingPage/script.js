@@ -355,6 +355,16 @@ $("textarea")
       $("#countTextMessage").text(this.value.length + " " + " / 100");
     } else if (this.id === "word") {
       $("#countword").text(this.value.length + " " + " / 200");
+    } else if (this.id === "profileName") {
+      $("#countProfileName").text(this.value.length + " " + " / 60");
+    } else if (this.id === "TextonButton") {
+      $("#countTextonButton").text(this.value.length + " " + " / 20");
+    } else if (this.id === "TextonButton2") {
+      $("#countTextonButton2").text(this.value.length + " " + " / 20");
+    } else if (this.id === "ItemName") {
+      $("#countItemName").text(this.value.length + " " + " / 20");
+    } else if (this.id === "titleAmount") {
+      $("#countTitleAmount").text(this.value.length + " " + " / 100");
     }
   });
 
@@ -586,7 +596,9 @@ function uploadImageMessage() {
       );
       return;
     }
-    console.log(width);
+    var parent = document.querySelector(".wrapper-showImage");
+    widthParent = parent.offsetWidth;
+
     // Selain itu, lakukan proses upload file
     var src = URL.createObjectURL(file);
     var preview = document.getElementById("image-supporter");
@@ -594,7 +606,8 @@ function uploadImageMessage() {
     btn.style.display = "block";
     preview.src = src;
     preview.style.display = "block";
-    // preview.style.width = `${width}px`;
+    preview.style.width = `${width}px`;
+    preview.style.height = `auto`;
     // var btn = document.getElementById("wrapper-deleteItem");
     // btn.style.display = "block";
     var item = document.querySelector(".wrapper-showImage");

@@ -659,11 +659,13 @@ main {
 }
 .error-message-item {
   color: red;
-  font-size: 0.833rem;
+  font-size: 12px;
+  font-weight: 400;
 }
 .error-message {
   color: red;
-  font-size: 0.833rem;
+  font-weight: 400;
+  font-size: 12px;
 }
 .wrapper-accordion {
   margin-top: 20px;
@@ -675,6 +677,7 @@ main {
     .accordion-item {
       #cover-image {
         object-fit: cover;
+        border-radius: 10px;
       }
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -934,7 +937,7 @@ main {
         font-style: normal;
         padding-left: 0rem;
         list-style-position: disc outside !important;
-        margin: 0 0 0 1.8em !important;
+        margin: 0 0 0 1.3em !important;
         font-weight: 400;
         font-size: 12px;
         line-height: 17px;
@@ -1313,7 +1316,7 @@ main {
         font-style: normal;
         padding-left: 0rem;
         list-style-position: disc outside !important;
-        margin: 0 0 0 1.8em !important;
+        margin: 0 0 0 1.3em !important;
         font-weight: 400;
         font-size: 12px;
         line-height: 17px;
@@ -1361,8 +1364,8 @@ main {
 
   // sub supporter accordion
   .profile-img-container2 {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     background-color: #c2c2c2;
     border-radius: 50%;
     overflow: hidden;
@@ -1722,7 +1725,7 @@ main {
         font-style: normal;
         padding-left: 0rem;
         list-style-position: disc outside !important;
-        margin: 0 0 0 1.8em !important;
+        margin: 0 0 0 1.3em !important;
         font-weight: 400;
         font-size: 12px;
         line-height: 17px;

@@ -543,6 +543,9 @@ function deleteVideo() {
 
   showErrorMessageVideo("");
 }
+document
+  .getElementById("confirm-delete-btnVideo")
+  .addEventListener("click", deleteVideo);
 
 // image message supporter
 function uploadImageMessage() {
@@ -648,4 +651,23 @@ $('input[type="radio"].radio').on("change", function () {
     $("#hour").attr("disabled", false);
     $("#minute").attr("disabled", false);
   }
+});
+
+var quill = new Quill("#editorQuill", {
+  theme: "snow",
+  // modules: {
+  //   toolbar: toolbarOptions
+  // }
+});
+var quill2 = new Quill("#editorQuillAmount", {
+  theme: "snow",
+  // modules: {
+  //   toolbar: toolbarOptions
+  // }
+});
+var quill3 = new Quill("#editorQuillSupporter", {
+  theme: "snow",
+  // modules: {
+  //   toolbar: toolbarOptions
+  // }
 });

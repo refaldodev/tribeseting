@@ -650,8 +650,8 @@ document
 
 // radio
 
-$('input[type="radio"].radio').on("change", function () {
-  $('input[type="radio"].radio').not(this).prop("checked", false);
+$('input[type="radio"].radioedit').on("change", function () {
+  $('input[type="radio"].radioedit').not(this).prop("checked", false);
   if (this.name != "custom") {
     $("#year").attr("disabled", true);
     $("#months").attr("disabled", true);
@@ -667,8 +667,8 @@ $('input[type="radio"].radio').on("change", function () {
   }
 });
 
-$('input[type="radio"].radio2').on("change", function () {
-  $('input[type="radio"].radio2').not(this).prop("checked", false);
+$('input[type="radio"].radioedit2').on("change", function () {
+  $('input[type="radio"].radioedit2').not(this).prop("checked", false);
   console.log(this.name);
   if (this.name != "custom2") {
     $("#year2").attr("disabled", true);

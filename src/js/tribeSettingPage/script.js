@@ -652,7 +652,6 @@ document
 
 $('input[type="radio"].radio').on("change", function () {
   $('input[type="radio"].radio').not(this).prop("checked", false);
-  console.log(this.name);
   if (this.name != "custom") {
     $("#year").attr("disabled", true);
     $("#months").attr("disabled", true);
@@ -668,6 +667,23 @@ $('input[type="radio"].radio').on("change", function () {
   }
 });
 
+$('input[type="radio"].radio2').on("change", function () {
+  $('input[type="radio"].radio2').not(this).prop("checked", false);
+  console.log(this.name);
+  if (this.name != "custom2") {
+    $("#year2").attr("disabled", true);
+    $("#months2").attr("disabled", true);
+    $("#date2").attr("disabled", true);
+    $("#hour2").attr("disabled", true);
+    $("#minute2").attr("disabled", true);
+  } else {
+    $("#year2").attr("disabled", false);
+    $("#months2").attr("disabled", false);
+    $("#date2").attr("disabled", false);
+    $("#hour2").attr("disabled", false);
+    $("#minute2").attr("disabled", false);
+  }
+});
 var quill = new Quill("#editorQuill", {
   theme: "snow",
 

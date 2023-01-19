@@ -2319,9 +2319,13 @@ main {
 /*# sourceMappingURL=main.css.map */
 
 // radio
-
+.textRadioBtn {
+  line-height: 140%;
+  padding-top: 2px;
+}
 .radio-container {
   position: relative;
+  line-height: 140%;
   padding-left: 28px;
   display: block;
   cursor: pointer;
@@ -2333,6 +2337,7 @@ main {
   color: #000000;
   input {
     opacity: 0;
+    display: none;
     &:checked {
       ~ {
         .fake-radio {

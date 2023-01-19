@@ -3749,8 +3749,14 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   }
 }
 /*# sourceMappingURL=main.css.map */
+.textRadioBtn {
+  line-height: 140%;
+  padding-top: 2px;
+}
+
 .radio-container {
   position: relative;
+  line-height: 140%;
   padding-left: 28px;
   display: block;
   cursor: pointer;
@@ -3763,6 +3769,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 }
 .radio-container input {
   opacity: 0;
+  display: none;
 }
 .radio-container input:checked ~ .fake-radio {
   background-color: #76cc11;

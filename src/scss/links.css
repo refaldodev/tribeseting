@@ -2531,9 +2531,8 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion .accordion-container .wrapper-upload ul {
   font-family: "Open Sans";
   font-style: normal;
-  padding-left: 0rem;
-  list-style-position: disc outside !important;
-  margin: 0 0 0 1.3em !important;
+  list-style-position: inside !important;
+  margin: 0 0 0 auto;
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;
@@ -2881,9 +2880,8 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion .subAccordion-container .wrapper-upload ul {
   font-family: "Open Sans";
   font-style: normal;
-  padding-left: 0rem;
-  list-style-position: disc outside !important;
-  margin: 0 0 0 1.3em !important;
+  list-style-position: inside !important;
+  margin: 0 0 0 auto;
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;

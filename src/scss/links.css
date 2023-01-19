@@ -2386,11 +2386,11 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-body .messageInput {
   min-height: 40px !important;
-  color: black;
+  color: black !important;
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-body .messageTextArea {
   min-height: 40px !important;
-  color: black;
+  color: black !important;
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-body .countNumber {
   font-family: "Open Sans";

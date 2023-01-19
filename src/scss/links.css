@@ -1683,6 +1683,10 @@ footer .row:first-of-type::after {
   -webkit-user-select: text !important;
 }
 
+.ql-clean {
+  display: none !important;
+}
+
 .ql-container,
 .ql-editor,
 .ql-editor.ql-blank,
@@ -2382,9 +2386,11 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-body .messageInput {
   min-height: 40px !important;
+  color: black;
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-body .messageTextArea {
   min-height: 40px !important;
+  color: black;
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-body .countNumber {
   font-family: "Open Sans";
@@ -2715,6 +2721,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 }
 .wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-body .messageInput {
   min-height: 40px !important;
+  color: black;
 }
 .wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-body .border-currency {
   border-radius: 0 6px 6px 0 !important;

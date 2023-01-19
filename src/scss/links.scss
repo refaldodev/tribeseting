@@ -19,6 +19,9 @@
 .ql-editor {
   -webkit-user-select: text !important;
 }
+.ql-clean {
+  display: none !important;
+}
 .ql-container,
 .ql-editor,
 .ql-editor.ql-blank,
@@ -828,9 +831,11 @@ main {
         }
         .messageInput {
           min-height: 40px !important;
+          color: black;
         }
         .messageTextArea {
           min-height: 40px !important;
+          color: black;
         }
         .countNumber {
           font-family: "Open Sans";
@@ -1190,6 +1195,7 @@ main {
         }
         .messageInput {
           min-height: 40px !important;
+          color: black;
         }
         .border-currency {
           //border-left: none;

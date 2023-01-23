@@ -2553,8 +2553,8 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;
-  margin-left: 1rem;
   color: #595959;
+  padding-left: 1.3em;
 }
 .wrapper-accordion .accordion-container .mb-16 {
   margin-bottom: 16px !important;

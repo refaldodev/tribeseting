@@ -19,6 +19,20 @@
 .ql-editor {
   -webkit-user-select: text !important;
 }
+.ql-toolbar {
+  border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -ms-border-radius: 6px 6px 0 0;
+  -o-border-radius: 6px 6px 0 0;
+}
+.ql-container {
+  border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -ms-border-radius: 0 0 6px 6px;
+  -o-border-radius: 0 0 6px 6px;
+}
 .ql-clean {
   display: none !important;
 }
@@ -152,6 +166,7 @@ main {
         margin-bottom: 10px;
         .nav-link {
           padding: 8px 16px !important;
+          text-align: center;
         }
       }
     }
@@ -989,11 +1004,13 @@ main {
         font-family: "Open Sans";
         font-style: normal;
         // padding-left: 0rem;
-        list-style-position: inside !important;
+        list-style-position: outside !important;
         margin: 0 0 0 auto;
         font-weight: 400;
         font-size: 12px;
         line-height: 17px;
+        margin-left: 1rem;
+
         color: #595959;
       }
     }
@@ -1049,7 +1066,8 @@ main {
 
     margin-bottom: 23px;
     .switch {
-      margin: 0 5px;
+      margin: 0 7px 0 8px;
+      min-width: 30px;
     }
     .switch-text {
       font-family: "Open Sans";
@@ -1057,6 +1075,7 @@ main {
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
+
       /* identical to box height, or 20px */
 
       display: flex;
@@ -1513,6 +1532,7 @@ main {
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
+      margin-left: 4px;
       /* identical to box height, or 20px */
 
       color: #000000;
@@ -2095,7 +2115,7 @@ main {
       cursor: pointer;
       color: #76cc11;
       &:hover {
-        color: #76cc11 !important;
+        color: #6fc211 !important;
       }
     }
 
@@ -2120,6 +2140,9 @@ main {
       line-height: 160%;
       cursor: pointer;
       color: #8d8d8d;
+      &:hover {
+        color: #5a5959 !important;
+      }
     }
     .modal-link-simplePage {
       background: #ffffff;

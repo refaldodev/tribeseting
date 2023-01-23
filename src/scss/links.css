@@ -1683,6 +1683,22 @@ footer .row:first-of-type::after {
   -webkit-user-select: text !important;
 }
 
+.ql-toolbar {
+  border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -ms-border-radius: 6px 6px 0 0;
+  -o-border-radius: 6px 6px 0 0;
+}
+
+.ql-container {
+  border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -ms-border-radius: 0 0 6px 6px;
+  -o-border-radius: 0 0 6px 6px;
+}
+
 .ql-clean {
   display: none !important;
 }
@@ -1824,6 +1840,7 @@ main .content-wrapper .nav-tabs .nav-item {
 }
 main .content-wrapper .nav-tabs .nav-item .nav-link {
   padding: 8px 16px !important;
+  text-align: center;
 }
 
 .new-input-section-wrapper .btn-container {
@@ -2531,11 +2548,12 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion .accordion-container .wrapper-upload ul {
   font-family: "Open Sans";
   font-style: normal;
-  list-style-position: inside !important;
+  list-style-position: outside !important;
   margin: 0 0 0 auto;
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;
+  margin-left: 1rem;
   color: #595959;
 }
 .wrapper-accordion .accordion-container .mb-16 {
@@ -2588,7 +2606,8 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   margin-bottom: 23px;
 }
 .wrapper-accordion .wrapper-switch .switch {
-  margin: 0 5px;
+  margin: 0 7px 0 8px;
+  min-width: 30px;
 }
 .wrapper-accordion .wrapper-switch .switch-text {
   font-family: "Open Sans";
@@ -3013,6 +3032,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
+  margin-left: 4px;
   /* identical to box height, or 20px */
   color: #000000;
 }
@@ -3569,7 +3589,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   color: #76cc11;
 }
 .wrapper-link .wrapper-mainPage .modal-copy-link:hover {
-  color: #76cc11 !important;
+  color: #6fc211 !important;
 }
 .wrapper-link .wrapper-mainPage .link-anchor {
   color: #000;
@@ -3590,6 +3610,10 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   line-height: 160%;
   cursor: pointer;
   color: #8d8d8d;
+}
+.wrapper-link .wrapper-simplePage .modal-open-linkDefault:hover,
+.wrapper-link .wrapper-simplePage .modal-copy-linkDefault:hover {
+  color: #5a5959 !important;
 }
 .wrapper-link .wrapper-simplePage .modal-link-simplePage {
   background: #ffffff;

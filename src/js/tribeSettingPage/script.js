@@ -14,7 +14,15 @@ containerAccordion.addEventListener("click", function (e) {
 
     // Show current clicked
     var item = e.target.closest(".accordion-item");
+
     item.classList.toggle("active");
+
+    // var tujuan = item.children[0].getAttribute("href");
+    if (item.classList.contains("active")) {
+      $("html, body").animate({
+        scrollTop: $(item).offset().top - 10,
+      });
+    }
   }
 });
 
@@ -36,6 +44,11 @@ subContainerAccordion.addEventListener("click", function (e) {
     // Show current clicked
     var item = e.target.closest(".subAccordion-item");
     item.classList.toggle("active");
+    if (item.classList.contains("active")) {
+      $("html, body").animate({
+        scrollTop: $(item).offset().top - 10,
+      });
+    }
   }
 });
 
@@ -61,6 +74,11 @@ subContainerAccordionSupporter.addEventListener("click", function (e) {
     // Show current clicked
     var item = e.target.closest(".subAccordion-itemSupporter");
     item.classList.toggle("active");
+    if (item.classList.contains("active")) {
+      $("html, body").animate({
+        scrollTop: $(item).offset().top - 10,
+      });
+    }
   }
 });
 // cover iamge
@@ -721,7 +739,7 @@ var quill3 = new Quill("#editorQuillSupporter", {
 //   var elemenTujuan = $(tujuan);
 //   console.log(tujuan);
 //   $("html, body").animate({
-//     scrollTop: elemenTujuan.offset().top,
+//     scrollTop: elemenTujuan.offset().top ,
 //   });
 //   e.preventDefault();
 // });

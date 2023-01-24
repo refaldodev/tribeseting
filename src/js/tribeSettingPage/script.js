@@ -535,8 +535,10 @@ const fileInputVideo = document.getElementById("video-file");
 fileInputVideo.addEventListener("change", function () {
   uploadVideo();
   var vid = document.getElementById("sourceVideo");
+  var videoShow = document.querySelector(".wrapper-showVideo");
   vid.addEventListener("loadedmetadata", (event) => {
     vid.style.width = vid.videoWidth;
+    videoShow.style.height = vid.videoHeight;
   });
 });
 
@@ -684,7 +686,16 @@ $('input[type="radio"].radioedit2').on("change", function () {
     $("#minute2").attr("disabled", false);
   }
 });
+var toolbarOptions = [
+  ["bold", "italic", "underline"], // toggled buttons
+
+  [{ list: "ordered" }, { list: "bullet" }, { link: "url" }],
+];
+
 var quill = new Quill("#editorQuill", {
+  modules: {
+    toolbar: toolbarOptions,
+  },
   theme: "snow",
 
   // modules: {

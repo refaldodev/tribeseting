@@ -608,7 +608,7 @@ function uploadImageMessage() {
     btn.style.display = "block";
     preview.src = src;
     preview.style.display = "block";
-    preview.style.width = `${width}px`;
+    // preview.style.width = `${width}px`;
     preview.style.height = `auto`;
     // var btn = document.getElementById("wrapper-deleteItem");
     // btn.style.display = "block";

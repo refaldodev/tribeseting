@@ -744,7 +744,8 @@ main {
       -ms-user-select: none;
       video#sourceVideo {
         width: auto;
-        // height: 220px;
+        height: auto;
+        max-height: 220px;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -762,7 +763,7 @@ main {
         img {
           max-width: 100%;
           // min-height: 220px;
-          // max-height: 220px;
+          max-height: 220px;
         }
       }
       .title-accordion {
@@ -940,10 +941,14 @@ main {
           min-height: 36px;
           color: #76cc11;
           background-color: #dffbdf;
-          border-radius: 30px;
+          border-radius: 20px;
           padding: 0.5rem 1rem;
-          // margin-right: 10px;
+          //margin-right: 10px;
           margin-bottom: 0;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          -o-border-radius: 20px;
           &:hover {
             background-color: #76cc11;
             color: white;
@@ -990,9 +995,13 @@ main {
           max-height: 300px;
           color: #76cc11;
           background-color: #dffbdf;
-          border-radius: 30px;
+          border-radius: 20px;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          -o-border-radius: 20px;
           padding: 0.5rem 1rem;
-          // margin-right: 10px;
+          //margin-right: 10px;
           margin-bottom: 0;
           &:hover {
             background-color: #76cc11;
@@ -1004,13 +1013,13 @@ main {
         font-family: "Open Sans";
         font-style: normal;
         // padding-left: 0rem;
-        list-style-position: outside !important;
+        list-style-position: inside !important;
         margin: 0 0 0 auto;
         font-weight: 400;
         font-size: 12px;
         line-height: 17px;
         color: #595959;
-        padding-left: 1.3em;
+        // padding-left: 1.3em;
       }
     }
     .mb-16 {
@@ -1323,9 +1332,13 @@ main {
           max-height: 46px;
           color: #76cc11;
           background-color: #dffbdf;
-          border-radius: 30px;
+          border-radius: 20px;
           padding: 0.5rem 1rem;
 
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          -o-border-radius: 20px;
           margin-bottom: 0;
           &:hover {
             background-color: #76cc11;
@@ -1732,10 +1745,10 @@ main {
           max-height: 46px;
           color: #76cc11;
           background-color: #dffbdf;
-          border-radius: 30px;
+          border-radius: 20px;
           padding: 0.5rem 1rem;
-
           margin-bottom: 0;
+
           &:hover {
             background-color: #76cc11;
             color: white;
@@ -2103,7 +2116,7 @@ main {
       cursor: pointer;
       color: #76cc11;
       &:hover {
-        color: #76cc11 !important;
+        color: #6fc211 !important;
       }
     }
     .modal-copy-link {

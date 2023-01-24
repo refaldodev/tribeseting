@@ -16,8 +16,23 @@
 
 // utilities
 // ::ng-deep {
+html,
+body {
+  scroll-behavior: smooth;
+}
+#editorQuill,
+#editorQuillAmount,
+#editorQuillSupporter {
+  height: 120px;
+}
+.accordion-scroll {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
 .ql-editor {
-  -webkit-user-select: text !important;
+  -webkit-user-select: all !important;
 }
 .ql-toolbar {
   border-radius: 6px 6px 0 0;
@@ -32,6 +47,18 @@
   -moz-border-radius: 0 0 6px 6px;
   -ms-border-radius: 0 0 6px 6px;
   -o-border-radius: 0 0 6px 6px;
+  &:focus {
+    border: 1px solid #80bdff !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 174, 0, 0.25) !important;
+    border-color: #80bdff;
+  }
+  .ql-editor {
+    &:focus {
+      border: 1px solid #80bdff !important;
+      box-shadow: 0 0 0 0.2rem rgba(255, 174, 0, 0.25) !important;
+      border-color: #80bdff;
+    }
+  }
 }
 .ql-clean {
   display: none !important;
@@ -821,7 +848,7 @@ main {
         }
         .wrapper-showVideo {
           // height: 220px;
-          // max-height: 220px;
+          max-height: 220px;
           width: auto;
           max-width: 100%;
         }

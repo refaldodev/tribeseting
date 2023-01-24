@@ -1679,8 +1679,26 @@ footer .row:first-of-type::after {
   border-color: #5897fb;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+#editorQuill,
+#editorQuillAmount,
+#editorQuillSupporter {
+  height: 120px;
+}
+
+.accordion-scroll {
+  text-decoration: none;
+}
+.accordion-scroll:hover {
+  text-decoration: none;
+}
+
 .ql-editor {
-  -webkit-user-select: text !important;
+  -webkit-user-select: all !important;
 }
 
 .ql-toolbar {
@@ -1697,6 +1715,16 @@ footer .row:first-of-type::after {
   -moz-border-radius: 0 0 6px 6px;
   -ms-border-radius: 0 0 6px 6px;
   -o-border-radius: 0 0 6px 6px;
+}
+.ql-container:focus {
+  border: 1px solid #80bdff !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 174, 0, 0.25) !important;
+  border-color: #80bdff;
+}
+.ql-container .ql-editor:focus {
+  border: 1px solid #80bdff !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 174, 0, 0.25) !important;
+  border-color: #80bdff;
 }
 
 .ql-clean {
@@ -2381,6 +2409,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   color: #000000;
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-body .wrapper-showVideo {
+  max-height: 220px;
   width: auto;
   max-width: 100%;
 }

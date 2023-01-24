@@ -703,3 +703,13 @@ var quill3 = new Quill("#editorQuillSupporter", {
   //   toolbar: toolbarOptions
   // }
 });
+
+// $(".accordion-scroll").on("click", function (e) {
+//   var tujuan = $(this).attr("href");
+//   var elemenTujuan = $(tujuan);
+//   console.log(tujuan);
+//   $("html, body").animate({
+//     scrollTop: elemenTujuan.offset().top,
+//   });
+//   e.preventDefault();
+// });

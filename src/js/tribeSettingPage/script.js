@@ -19,9 +19,13 @@ containerAccordion.addEventListener("click", function (e) {
 
     // var tujuan = item.children[0].getAttribute("href");
     if (item.classList.contains("active")) {
-      $("html, body").animate({
-        scrollTop: $(item).offset().top - 10,
-      });
+      $("html, body").animate(
+        {
+          scrollTop: $(item).offset().top - 10,
+        },
+        500,
+        "easeInOutExpo"
+      );
     }
   }
 });

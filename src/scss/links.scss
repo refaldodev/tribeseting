@@ -56,13 +56,21 @@ body {
   -o-border-radius: 0 0 6px 6px;
   &:focus {
     border: 1px solid #76cc11 !important;
-
+    background: transparent !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none !important;
+    outline: none;
     border-color: #76cc11 !important;
   }
   .ql-editor {
     &:focus {
       border: 1px solid #76cc11 !important;
-
+      background: transparent !important;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none !important;
+      outline: none;
       border-color: #76cc11 !important;
     }
   }

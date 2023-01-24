@@ -2324,11 +2324,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
 .wrapper-accordion {
   margin-top: 20px;
 }
-.wrapper-accordion .accordion-container .accordion-item {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
 .wrapper-accordion .accordion-container .accordion-item #cover-image {
   -o-object-fit: cover;
      object-fit: cover;
@@ -2367,6 +2362,9 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   margin-bottom: 30px;
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-header {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   cursor: pointer;
   background: transparent;
   display: flex;
@@ -2409,6 +2407,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   color: #000000;
 }
 .wrapper-accordion .accordion-container .accordion-item .accordion-body .wrapper-showVideo {
+  height: auto;
   max-height: 220px;
   width: auto;
   max-width: 100%;
@@ -2696,11 +2695,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   /* or 17px */
   color: #595959;
 }
-.wrapper-accordion .subAccordion-container .subAccordion-item {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
 .wrapper-accordion .subAccordion-container .subAccordion-item .title-accordion {
   font-family: "Open Sans";
   font-style: normal;
@@ -2735,6 +2729,9 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-weight: 700;
   font-size: 16px;
   line-height: 26px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .wrapper-accordion .subAccordion-container .subAccordion-item .subAccordion-header::after {
   font-family: "Font Awesome 5 Free";
@@ -3079,11 +3076,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   /* identical to box height, or 20px */
   color: #000000;
 }
-.wrapper-accordion .subAccordion-containerSupporter .subAccordion-itemSupporter {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
 .wrapper-accordion .subAccordion-containerSupporter .subAccordion-itemSupporter .title-accordion {
   font-family: "Open Sans";
   font-style: normal;
@@ -3107,6 +3099,9 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   margin-bottom: 20px;
 }
 .wrapper-accordion .subAccordion-containerSupporter .subAccordion-itemSupporter .subAccordion-headerSupporter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   background: transparent;
   cursor: pointer;
   display: flex;

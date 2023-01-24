@@ -539,6 +539,7 @@ fileInputVideo.addEventListener("change", function () {
   vid.addEventListener("loadedmetadata", (event) => {
     vid.style.width = vid.videoWidth;
     videoShow.style.height = videoShow.videoHeight;
+    console.log(vid.videoWidth);
   });
 });
 

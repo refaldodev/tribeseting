@@ -766,9 +766,6 @@ main {
         object-fit: cover;
         border-radius: 10px;
       }
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
       video#sourceVideo {
         width: auto;
         height: auto;
@@ -805,6 +802,9 @@ main {
         margin-bottom: 30px;
       }
       .accordion-header {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         cursor: pointer;
         background: transparent;
         display: flex;
@@ -847,7 +847,7 @@ main {
           color: #000000;
         }
         .wrapper-showVideo {
-          // height: 220px;
+          height: auto;
           max-height: 220px;
           width: auto;
           max-width: 100%;
@@ -1167,9 +1167,6 @@ main {
     //   margin: 0 auto;
 
     .subAccordion-item {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
       .title-accordion {
         font-family: "Open Sans";
         font-style: normal;
@@ -1206,6 +1203,9 @@ main {
         font-weight: 700;
         font-size: 16px;
         line-height: 26px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         &::after {
           font-family: "Font Awesome 5 Free";
           content: "\f107";
@@ -1577,9 +1577,6 @@ main {
       color: #000000;
     }
     .subAccordion-itemSupporter {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
       .title-accordion {
         font-family: "Open Sans";
         font-style: normal;
@@ -1605,6 +1602,9 @@ main {
         margin-bottom: 20px;
       }
       .subAccordion-headerSupporter {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         background: transparent;
         cursor: pointer;
         display: flex;

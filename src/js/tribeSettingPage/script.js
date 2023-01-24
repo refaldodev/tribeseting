@@ -49,9 +49,13 @@ subContainerAccordion.addEventListener("click", function (e) {
     var item = e.target.closest(".subAccordion-item");
     item.classList.toggle("active");
     if (item.classList.contains("active")) {
-      $("html, body").animate({
-        scrollTop: $(item).offset().top - 10,
-      });
+      $("html, body").animate(
+        {
+          scrollTop: $(item).offset().top - 10,
+        },
+        500,
+        "easeInOutExpo"
+      );
     }
   }
 });
@@ -79,9 +83,13 @@ subContainerAccordionSupporter.addEventListener("click", function (e) {
     var item = e.target.closest(".subAccordion-itemSupporter");
     item.classList.toggle("active");
     if (item.classList.contains("active")) {
-      $("html, body").animate({
-        scrollTop: $(item).offset().top - 10,
-      });
+      $("html, body").animate(
+        {
+          scrollTop: $(item).offset().top - 10,
+        },
+        500,
+        "easeInOutExpo"
+      );
     }
   }
 });

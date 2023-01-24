@@ -723,23 +723,19 @@ var quill = new Quill("#editorQuill", {
 });
 var quill2 = new Quill("#editorQuillAmount", {
   theme: "snow",
+  modules: {
+    toolbar: toolbarOptions,
+  },
   // modules: {
   //   toolbar: toolbarOptions
   // }
 });
 var quill3 = new Quill("#editorQuillSupporter", {
   theme: "snow",
+  modules: {
+    toolbar: toolbarOptions,
+  },
   // modules: {
   //   toolbar: toolbarOptions
   // }
 });
-
-// $(".accordion-scroll").on("click", function (e) {
-//   var tujuan = $(this).attr("href");
-//   var elemenTujuan = $(tujuan);
-//   console.log(tujuan);
-//   $("html, body").animate({
-//     scrollTop: elemenTujuan.offset().top ,
-//   });
-//   e.preventDefault();
-// });

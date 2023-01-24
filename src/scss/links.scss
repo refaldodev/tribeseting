@@ -25,11 +25,18 @@ body {
 #editorQuillSupporter {
   height: 120px;
 }
+.text-ulLi {
+  position: relative;
+  left: -5px;
+}
 .accordion-scroll {
   text-decoration: none;
   &:hover {
     text-decoration: none;
   }
+}
+.ql-tooltip {
+  left: 0 !important;
 }
 .ql-editor {
   -webkit-user-select: all !important;
@@ -48,15 +55,15 @@ body {
   -ms-border-radius: 0 0 6px 6px;
   -o-border-radius: 0 0 6px 6px;
   &:focus {
-    border: 1px solid #80bdff !important;
-    box-shadow: 0 0 0 0.2rem rgba(255, 174, 0, 0.25) !important;
-    border-color: #80bdff;
+    border: 1px solid #76cc11 !important;
+
+    border-color: #76cc11 !important;
   }
   .ql-editor {
     &:focus {
-      border: 1px solid #80bdff !important;
-      box-shadow: 0 0 0 0.2rem rgba(255, 174, 0, 0.25) !important;
-      border-color: #80bdff;
+      border: 1px solid #76cc11 !important;
+
+      border-color: #76cc11 !important;
     }
   }
 }

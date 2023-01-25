@@ -719,7 +719,6 @@ $('input[type="radio"].radioedit2').on("change", function () {
 });
 var toolbarOptions = [
   // ["bold", "italic", "underline"], // toggled buttons
-
   [
     "bold",
     "italic",

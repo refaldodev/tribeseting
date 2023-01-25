@@ -54,7 +54,17 @@ body {
   left: 0 !important;
 }
 .ql-editor {
-  -webkit-user-select: all !important;
+  -webkit-user-select: text !important;
+
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.ql-clipboard {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 .ql-toolbar {
   border-radius: 6px 6px 0 0;

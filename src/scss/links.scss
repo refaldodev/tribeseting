@@ -25,6 +25,22 @@ body {
 #editorQuillSupporter {
   height: 120px;
 }
+.ql-editor {
+  ol {
+    padding-left: 1em !important;
+    li {
+      font-size: 16px !important;
+      font-weight: 400;
+    }
+  }
+  ul {
+    padding-left: 1em !important;
+    li {
+      font-size: 16px !important;
+      font-weight: 400;
+    }
+  }
+}
 .text-ulLi {
   position: relative;
   left: -5px;
@@ -1007,22 +1023,33 @@ main {
           height: 0;
         }
         .wrapper-delete {
-          width: 36px;
-          height: 36px;
           /* background: red; */
-          border: 1px solid #76cc11;
+
           display: flex;
           justify-content: center;
-          border-radius: 50%;
+
           &:hover {
             cursor: pointer;
           }
           button {
+            border: 1px solid #76cc11 !important;
             background: none;
             border: none;
             outline: none;
             color: #76cc11;
             cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            &:hover {
+              background-color: #76cc11;
+              color: white;
+            }
           }
         }
         .button-modalUpload {
@@ -1398,10 +1425,6 @@ main {
           height: 0;
         }
         .wrapper-delete {
-          width: 36px;
-          height: 36px;
-          /* background: red; */
-          border: 1px solid #76cc11;
           display: flex;
           justify-content: center;
           border-radius: 50%;
@@ -1409,11 +1432,24 @@ main {
             cursor: pointer;
           }
           button {
+            border: 1px solid #76cc11 !important;
             background: none;
             border: none;
             outline: none;
             color: #76cc11;
             cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            &:hover {
+              background-color: #76cc11;
+              color: white;
+            }
           }
         }
         .button-modalUpload {
@@ -1487,7 +1523,15 @@ main {
       }
     }
   }
-
+  .text-edit {
+    color: #76cc11;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: #6fc211;
+    }
+  }
   // sub supporter accordion
   .profile-img-container2 {
     height: 80px;
@@ -1513,6 +1557,7 @@ main {
       pointer-events: none;
     }
   }
+
   // sub
   .subAccordion-containerSupporter {
     //   width: 100%;
@@ -1559,6 +1604,7 @@ main {
       width: 60px !important;
       height: 40px !important;
       max-width: 80px;
+      min-width: 60px;
     }
     .text-light-grayCustom {
       font-family: "Open Sans";
@@ -1586,7 +1632,7 @@ main {
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
-      margin-left: 4px;
+      margin-left: 9px;
       /* identical to box height, or 20px */
 
       color: #000000;
@@ -1807,22 +1853,33 @@ main {
           height: 0;
         }
         .wrapper-delete {
-          width: 36px;
-          height: 36px;
-          /* background: red; */
-          border: 1px solid #76cc11;
           display: flex;
           justify-content: center;
           border-radius: 50%;
           &:hover {
             cursor: pointer;
+            background: #76cc11;
+            color: white;
           }
           button {
+            border: 1px solid #76cc11 !important;
             background: none;
             border: none;
             outline: none;
             color: #76cc11;
             cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            &:hover {
+              background-color: #76cc11;
+              color: white;
+            }
           }
         }
         .button-modalUpload {

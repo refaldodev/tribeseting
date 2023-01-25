@@ -1690,6 +1690,21 @@ body {
   height: 120px;
 }
 
+.ql-editor ol {
+  padding-left: 1em !important;
+}
+.ql-editor ol li {
+  font-size: 16px !important;
+  font-weight: 400;
+}
+.ql-editor ul {
+  padding-left: 1em !important;
+}
+.ql-editor ul li {
+  font-size: 16px !important;
+  font-weight: 400;
+}
+
 .text-ulLi {
   position: relative;
   left: -5px;
@@ -2555,23 +2570,31 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   height: 0;
 }
 .wrapper-accordion .accordion-container .wrapper-upload .file-input-container .wrapper-delete {
-  width: 36px;
-  height: 36px;
   /* background: red; */
-  border: 1px solid #76cc11;
   display: flex;
   justify-content: center;
-  border-radius: 50%;
 }
 .wrapper-accordion .accordion-container .wrapper-upload .file-input-container .wrapper-delete:hover {
   cursor: pointer;
 }
 .wrapper-accordion .accordion-container .wrapper-upload .file-input-container .wrapper-delete button {
+  border: 1px solid #76cc11 !important;
   background: none;
   border: none;
   outline: none;
   color: #76cc11;
   cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.wrapper-accordion .accordion-container .wrapper-upload .file-input-container .wrapper-delete button:hover {
+  background-color: #76cc11;
+  color: white;
 }
 .wrapper-accordion .accordion-container .wrapper-upload .file-input-container .button-modalUpload {
   border: 1px solid #76cc11;
@@ -2911,10 +2934,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   height: 0;
 }
 .wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .wrapper-delete {
-  width: 36px;
-  height: 36px;
-  /* background: red; */
-  border: 1px solid #76cc11;
   display: flex;
   justify-content: center;
   border-radius: 50%;
@@ -2923,11 +2942,23 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   cursor: pointer;
 }
 .wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .wrapper-delete button {
+  border: 1px solid #76cc11 !important;
   background: none;
   border: none;
   outline: none;
   color: #76cc11;
   cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .wrapper-delete button:hover {
+  background-color: #76cc11;
+  color: white;
 }
 .wrapper-accordion .subAccordion-container .wrapper-upload .file-input-container .button-modalUpload {
   border: 1px solid #76cc11;
@@ -2996,6 +3027,15 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-size: 5rem;
   color: #888787;
 }
+.wrapper-accordion .text-edit {
+  color: #76cc11;
+  font-weight: 400;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper-accordion .text-edit:hover {
+  color: #6fc211;
+}
 .wrapper-accordion .profile-img-container2 {
   height: 80px;
   width: 80px;
@@ -3060,6 +3100,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   width: 60px !important;
   height: 40px !important;
   max-width: 80px;
+  min-width: 60px;
 }
 .wrapper-accordion .subAccordion-containerSupporter .text-light-grayCustom {
   font-family: "Open Sans";
@@ -3085,7 +3126,7 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  margin-left: 4px;
+  margin-left: 9px;
   /* identical to box height, or 20px */
   color: #000000;
 }
@@ -3291,23 +3332,33 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   height: 0;
 }
 .wrapper-accordion .subAccordion-containerSupporter .wrapper-upload .file-input-container .wrapper-delete {
-  width: 36px;
-  height: 36px;
-  /* background: red; */
-  border: 1px solid #76cc11;
   display: flex;
   justify-content: center;
   border-radius: 50%;
 }
 .wrapper-accordion .subAccordion-containerSupporter .wrapper-upload .file-input-container .wrapper-delete:hover {
   cursor: pointer;
+  background: #76cc11;
+  color: white;
 }
 .wrapper-accordion .subAccordion-containerSupporter .wrapper-upload .file-input-container .wrapper-delete button {
+  border: 1px solid #76cc11 !important;
   background: none;
   border: none;
   outline: none;
   color: #76cc11;
   cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.wrapper-accordion .subAccordion-containerSupporter .wrapper-upload .file-input-container .wrapper-delete button:hover {
+  background-color: #76cc11;
+  color: white;
 }
 .wrapper-accordion .subAccordion-containerSupporter .wrapper-upload .file-input-container .button-modalUpload {
   border: 1px solid #76cc11;

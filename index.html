@@ -1067,8 +1067,8 @@
          <!-- <div >
           <textarea name="" class="editor " ></textarea>
          </div> -->
-        
-         <div id="editorQuill"  data-gramm="false" contenteditable="true">
+         <!-- data-gramm="false" contenteditable="true" -->
+         <div id="editorQuill"  >
        
         </div>
         </div>
@@ -1450,13 +1450,13 @@
             <p class="form-title">
               Description / about the target 
           </p>
-          <div id="editorQuillAmount"  data-gramm="false" contenteditable="true">
+          <div id="editorQuillAmount"  >
           
           </div>
         </div>
          <div class="wrapper-form ">
             <p class="form-title" style="margin-bottom: 4px;">
-              Show amount per <span  style="color:#76CC11 ; font-weight:400; text-decoration:underline; cursor:pointer; " data-toggle="modal" data-target="#edit">Edit</span> 
+              Show amount per <span  data-toggle="modal" data-target="#edit" class="text-edit">Edit</span> 
               </p>
               <span class="desc-amount">From the beginning until now</span>
         </div>
@@ -1515,13 +1515,13 @@
             <p class="form-title">
               Description / about the target 
           </p>
-          <div id="editorQuillSupporter"  data-gramm="false" contenteditable="true">
+          <div id="editorQuillSupporter"  >
        
           </div>
         </div>
          <div class="wrapper-form ">
             <p class="form-title" style="margin-bottom: 4px;">
-              Show amount per <span style="color:#76CC11 ; font-weight:400; text-decoration:underline; cursor:pointer; " data-toggle="modal" data-target="#edit2">Edit</span> 
+              Show amount per <span data-toggle="modal" data-target="#edit2"  class="text-edit">Edit</span> 
               </p>
               <span class="desc-amount">From the beginning until now</span>
         </div>
@@ -1576,7 +1576,7 @@
           </div>
         </div>
          <div class="wrapper-form ">
-            <p class="form- mb-1">
+            <p class="form-title mb-1">
               Default language for your page         
             </p>
          
@@ -1819,7 +1819,7 @@
                   <p class="form-title">
                     Maximum duration of voice message
                 </p>
-                <div class="form-group mb-1">
+                <div class="form-group mb-1 d-flex align-items-center">
                   <input type="number" class="form-control d-inline-block  p-2 alert-duration input" name="timer" id="timer" value="" min="0" max="60">
                   <span class="input-content-font">seconds</span>
               </div>

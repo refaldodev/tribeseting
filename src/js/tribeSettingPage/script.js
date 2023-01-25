@@ -718,9 +718,16 @@ $('input[type="radio"].radioedit2').on("change", function () {
   }
 });
 var toolbarOptions = [
-  ["bold", "italic", "underline"], // toggled buttons
+  // ["bold", "italic", "underline"], // toggled buttons
 
-  [{ list: "ordered" }, { list: "bullet" }, { link: "url" }],
+  [
+    "bold",
+    "italic",
+    "underline",
+    { list: "ordered" },
+    { list: "bullet" },
+    { link: "url" },
+  ],
 ];
 
 var quill = new Quill("#editorQuill", {

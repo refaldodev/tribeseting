@@ -734,7 +734,6 @@ var quill = new Quill("#editorQuill", {
     toolbar: toolbarOptions,
   },
   theme: "snow",
-  placeholder: "Compose an epic...",
 
   // modules: {
   //   toolbar: toolbarOptions

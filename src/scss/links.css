@@ -1737,7 +1737,7 @@ body {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-  padding: 12px;
+  padding: 20px;
   min-height: 140px;
 }
 .text-editor .cdx-block {
@@ -1755,9 +1755,12 @@ body {
   background: #fff;
 }
 .text-editor a {
-  color: royalBlue;
+  color: #007aff !important;
   text-decoration: none;
-  border-bottom: 1px solid #eee;
+}
+.text-editor a:hover {
+  text-decoration: underline;
+  color: #007aff !important;
 }
 
 .ql-formats svg {

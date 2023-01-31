@@ -750,9 +750,10 @@ const editor = new EditorJS({
   tools: {
     list: {
       class: List,
-      inlineToolbar: ["link"],
+      inlineToolbar: ["link", "normal"],
       shortcut: "CMD+SHIFT+L",
     },
+    underline: Underline,
   },
 
   minHeight: 0,

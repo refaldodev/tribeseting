@@ -1687,7 +1687,7 @@ body {
 #editorQuill,
 #editorQuillAmount,
 #editorQuillSupporter {
-  height: 140px;
+  min-height: 140px;
 }
 
 .ql-editor ol {
@@ -1704,6 +1704,10 @@ body {
   font-size: 16px !important;
   font-weight: 400;
 }
+.ql-editor p {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
 
 .text-ulLi {
   position: relative;
@@ -1715,6 +1719,49 @@ body {
 }
 .accordion-scroll:hover {
   text-decoration: none;
+}
+
+.ce-block__content,
+.ce-toolbar__content {
+  max-width: unset;
+}
+
+.cdx-block {
+  font-weight: 400;
+}
+
+.text-editor {
+  border: 1px solid #b8b8b8;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 12px;
+  min-height: 140px;
+}
+.text-editor .cdx-block {
+  line-height: 140% !important;
+}
+.text-editor .ce-paragraph,
+.text-editor .cdx-list__item {
+  line-height: 140% !important;
+  padding: 0;
+}
+.text-editor #editorjs {
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: #fff;
+}
+.text-editor a {
+  color: royalBlue;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.ql-formats svg {
+  pointer-events: none;
 }
 
 .ql-tooltip {
@@ -1735,27 +1782,15 @@ body {
   user-select: text;
 }
 
-.ql-toolbar {
-  border-radius: 6px 6px 0 0;
-  -webkit-border-radius: 6px 6px 0 0;
-  -moz-border-radius: 6px 6px 0 0;
-  -ms-border-radius: 6px 6px 0 0;
-  -o-border-radius: 6px 6px 0 0;
-}
-
-.ql-container {
-  border-radius: 0 0 6px 6px;
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  -ms-border-radius: 0 0 6px 6px;
-  -o-border-radius: 0 0 6px 6px;
-}
-.ql-container:focus {
-  border: 1px solid #76cc11 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  outline: none;
-  border-color: #76cc11 !important;
+.ql-container .ql-editor {
+  min-height: 140px;
+  border-radius: 6px;
+  border: 1px solid #b8b8b8 !important;
+  border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
 }
 .ql-container .ql-editor:focus {
   border: 1px solid #76cc11 !important;
@@ -1763,10 +1798,6 @@ body {
   box-shadow: none !important;
   outline: none;
   border-color: #76cc11 !important;
-}
-
-.ql-clean {
-  display: none !important;
 }
 
 .ql-container,
@@ -1778,21 +1809,6 @@ body {
   -ms-user-select: text !important;
   user-select: text !important;
   -webkit-user-select: text !important;
-}
-
-.ql-snow .ql-editor h1 {
-  font-size: 28px !important;
-  font-weight: 800 !important;
-}
-
-.ql-snow .ql-editor h2 {
-  font-size: 24px !important;
-  font-weight: 600 !important;
-}
-
-.ql-snow .ql-editor h3 {
-  font-size: 20px !important;
-  font-weight: 600 !important;
 }
 
 .ql-snow .ql-editor p {
@@ -2520,7 +2536,6 @@ main .content-wrapper .nav-tabs .nav-item .nav-link {
   text-decoration: none !important;
   min-height: 50px;
   z-index: 300;
-  overflow: hidden !important;
   position: relative;
   display: block;
 }

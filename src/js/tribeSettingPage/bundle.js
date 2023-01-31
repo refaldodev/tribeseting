@@ -28,7 +28,7 @@
       var _previewHandler = require("../globalHandler/previewHandler.js");
 
       var _thumbnailHandler = require("../linkPage/thumbnailHandler.js");
-
+      // var _thumbnailHandler = require("./thumbnailHandler.js");
       (0, _circleLinkHandler.circleLinkHandler)();
       (0, _inputFormHandler.inputFormHandler)();
       (0, _rearrangeHandler.rearrangeHandler)();

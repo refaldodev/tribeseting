@@ -93,6 +93,7 @@ subContainerAccordionSupporter.addEventListener("click", function (e) {
     }
   }
 });
+
 // cover iamge
 function coverSection() {
   //input profile image
@@ -338,7 +339,7 @@ function profileSection() {
 
   uploadProfileImg();
 
-  //delete profile imag
+  //delete profile image
   $("#wrapper-deleteIconProfile").click(function (e) {
     deleteConfirmation();
   });
@@ -399,31 +400,6 @@ $("textarea")
       $("#countTitleNOS").text(this.value.length + " " + " / 100");
     }
   });
-
-// text area
-// $("input")
-//   .each(function () {
-//     this.setAttribute(
-//       "style",
-//       "height:" + this.scrollHeight + "px;overflow-y:hidden;"
-//     );
-//   })
-//   .on("input", function () {
-//     this.style.height = "auto";
-//     this.style.height = this.scrollHeight + "px";
-//     var result = 0;
-//     if (this.id === "profileName") {
-//       $("#countProfileName").text(this.value.length + " " + " / 60");
-//     } else if (this.id === "TextonButton") {
-//       $("#countTextonButton").text(this.value.length + " " + " / 20");
-//     } else if (this.id === "TextonButton2") {
-//       $("#countTextonButton2").text(this.value.length + " " + " / 20");
-//     } else if (this.id === "ItemName") {
-//       $("#countItemName").text(this.value.length + " " + " / 20");
-//     } else if (this.id === "titleAmount") {
-//       $("#countTitleAmount").text(this.value.length + " " + " / 100");
-//     }
-//   });
 
 // Function untuk mengupload image
 function uploadImageItem() {
@@ -717,43 +693,67 @@ $('input[type="radio"].radioedit2').on("change", function () {
     $("#minute2").attr("disabled", false);
   }
 });
-var toolbarOptions = [
-  // ["bold", "italic", "underline"], // toggled buttons
-  [
-    "bold",
-    "italic",
-    "underline",
-    { list: "ordered" },
-    { list: "bullet" },
-    { link: "url" },
-  ],
-];
 
-var quill = new Quill("#editorQuill", {
-  modules: {
-    toolbar: toolbarOptions,
-  },
-  theme: "snow",
+// var toolbarOptions = [
+//   // ["bold", "italic", "underline"], // toggled buttons
+//   [
+//     "bold",
+//     "italic",
+//     "underline",
+//     { list: "ordered" },
+//     { list: "bullet" },
+//     { link: "url" },
+//   ],
+// ];
 
-  // modules: {
-  //   toolbar: toolbarOptions
-  // }
-});
-var quill2 = new Quill("#editorQuillAmount", {
-  theme: "snow",
-  modules: {
-    toolbar: toolbarOptions,
+// var quill = new Quill("#editorQuill", {
+//   modules: {
+//     toolbar: toolbarOptions,
+//   },
+//   theme: "bubble",
+
+//   // modules: {
+//   //   toolbar: toolbarOptions
+//   // }
+// });
+// var quill2 = new Quill("#editorQuillAmount", {
+//   theme: "bubble",
+//   modules: {
+//     toolbar: toolbarOptions,
+//   },
+//   // modules: {
+//   //   toolbar: toolbarOptions
+//   // }
+// });
+// var quill3 = new Quill("#editorQuillSupporter", {
+//   theme: "bubble",
+//   modules: {
+//     toolbar: toolbarOptions,
+//   },
+//   // modules: {
+//   //   toolbar: toolbarOptions
+//   // }
+// });
+
+const editor = new EditorJS({
+  holderId: "editorjs",
+  // tools: {
+
+  //   list: {
+  //     class: List,
+  //     inlineToolbar: true,
+  //     config: {
+  //       defaultStyle: "unordered",
+  //     },
+  //   },
+  // },
+  tools: {
+    list: {
+      class: List,
+      inlineToolbar: ["link"],
+      shortcut: "CMD+SHIFT+L",
+    },
   },
-  // modules: {
-  //   toolbar: toolbarOptions
-  // }
-});
-var quill3 = new Quill("#editorQuillSupporter", {
-  theme: "snow",
-  modules: {
-    toolbar: toolbarOptions,
-  },
-  // modules: {
-  //   toolbar: toolbarOptions
-  // }
+
+  minHeight: 0,
 });

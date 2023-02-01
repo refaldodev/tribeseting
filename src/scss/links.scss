@@ -85,11 +85,20 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     background: #fff;
+    -webkit-user-select: text !important;
+
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
   }
   a {
     color: #007aff !important;
     text-decoration: none;
+    -webkit-user-select: text !important;
 
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
     &:hover {
       text-decoration: underline;
       color: #007aff !important;

@@ -735,40 +735,61 @@ $('input[type="radio"].radioedit2').on("change", function () {
 //   // }
 // });
 
+// const editor = new EditorJS({
+//   holder: "editorjs",
+//   // tools: {
+
+//   //   list: {
+//   //     class: List,
+//   //     inlineToolbar: true,
+//   //     config: {
+//   //       defaultStyle: "unordered",
+//   //     },
+//   //   },
+//   // },
+//   tools: {
+//     list: {
+//       class: List,
+
+//       inlineToolbar: true,
+//       shortcut: "CMD+SHIFT+L",
+//     },
+//     paragraph: {
+//       class: Paragraph,
+//       inlineToolbar: true,
+//     },
+//     linkTool: {
+//       class: LinkTool,
+//     },
+
+//     underline: Underline,
+//   },
+//   minHeight: 0,
+// });
+
+// conTOHU
 const editor = new EditorJS({
-  holder: "editorjs",
-  // tools: {
-
-  //   list: {
-  //     class: List,
-  //     inlineToolbar: true,
-  //     config: {
-  //       defaultStyle: "unordered",
-  //     },
-  //   },
-  // },
-  // tools: {
-  //   list: {
-  //     class: List,
-
-  //     inlineToolbar: true,
-  //     shortcut: "CMD+SHIFT+L",
-  //   },
-  //   paragraph: {
-  //     class: Paragraph,
-  //     inlineToolbar: true,
-  //   },
-  //   linkTool: {
-  //     class: LinkTool,
-  //   },
-
-  //   underline: Underline,
-  // },
+  holderId: "editorjs",
+  inlineToolbar: ["bold", "italic", "underline", "link"],
   tools: {
-    list: {
-      class: List,
+    header: {
+      class: Header,
       inlineToolbar: true,
     },
+    list: List,
+    underline: Underline,
   },
   minHeight: 0,
 });
+
+const addBlock = (type) => {
+  if (editor) {
+    const index = editor.blocks.getBlocksCount() + 1;
+    editor.blocks.insert(type, undefined, undefined, index);
+    editor.caret.setToLastBlock("start", 0);
+  }
+};
+
+const bold = () => {
+  document.execCommand("bold");
+};

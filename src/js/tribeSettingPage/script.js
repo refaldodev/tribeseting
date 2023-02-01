@@ -769,27 +769,11 @@ $('input[type="radio"].radioedit2').on("change", function () {
 
 // conTOHU
 const editor = new EditorJS({
-  holderId: "editorjs",
+  holder: "editorjs",
   inlineToolbar: ["bold", "italic", "underline", "link"],
   tools: {
-    header: {
-      class: Header,
-      inlineToolbar: true,
-    },
     list: List,
     underline: Underline,
   },
   minHeight: 0,
 });
-
-const addBlock = (type) => {
-  if (editor) {
-    const index = editor.blocks.getBlocksCount() + 1;
-    editor.blocks.insert(type, undefined, undefined, index);
-    editor.caret.setToLastBlock("start", 0);
-  }
-};
-
-const bold = () => {
-  document.execCommand("bold");
-};

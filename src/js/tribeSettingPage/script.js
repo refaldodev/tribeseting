@@ -736,7 +736,7 @@ $('input[type="radio"].radioedit2').on("change", function () {
 // });
 
 const editor = new EditorJS({
-  holderId: "editorjs",
+  holder: "editorjs",
   // tools: {
 
   //   list: {
@@ -750,9 +750,11 @@ const editor = new EditorJS({
   tools: {
     list: {
       class: List,
-      inlineToolbar: ["link"],
+      // inlineToolbar: ["link"],
+      inlineToolbar: true,
       shortcut: "CMD+SHIFT+L",
     },
+
     underline: Underline,
   },
 

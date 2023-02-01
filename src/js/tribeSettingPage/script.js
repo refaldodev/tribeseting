@@ -777,3 +777,13 @@ const editor = new EditorJS({
   },
   minHeight: 0,
 });
+
+const editorJsTarget = new EditorJS({
+  holder: "editorJsTarget",
+  inlineToolbar: ["bold", "italic", "underline", "link"],
+  tools: {
+    list: List,
+    underline: Underline,
+  },
+  minHeight: 0,
+});

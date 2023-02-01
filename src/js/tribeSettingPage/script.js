@@ -747,16 +747,28 @@ const editor = new EditorJS({
   //     },
   //   },
   // },
+  // tools: {
+  //   list: {
+  //     class: List,
+
+  //     inlineToolbar: true,
+  //     shortcut: "CMD+SHIFT+L",
+  //   },
+  //   paragraph: {
+  //     class: Paragraph,
+  //     inlineToolbar: true,
+  //   },
+  //   linkTool: {
+  //     class: LinkTool,
+  //   },
+
+  //   underline: Underline,
+  // },
   tools: {
     list: {
       class: List,
-      // inlineToolbar: ["link"],
       inlineToolbar: true,
-      shortcut: "CMD+SHIFT+L",
     },
-
-    underline: Underline,
   },
-
   minHeight: 0,
 });

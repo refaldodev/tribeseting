@@ -702,7 +702,7 @@ var toolbarOptions = [
     "underline",
     { list: "ordered" },
     { list: "bullet" },
-    { link: "url" },
+    "link",
   ],
 ];
 
@@ -716,6 +716,7 @@ var quill = new Quill("#editorQuill", {
   //   toolbar: toolbarOptions
   // }
 });
+
 // var quill2 = new Quill("#editorQuillAmount", {
 //   theme: "bubble",
 //   modules: {
@@ -768,15 +769,15 @@ var quill = new Quill("#editorQuill", {
 // });
 
 // conTOHU
-const editor = new EditorJS({
-  holder: "editorjs",
-  inlineToolbar: ["bold", "italic", "underline", "link"],
-  tools: {
-    list: List,
-    underline: Underline,
-  },
-  minHeight: 0,
-});
+// const editor = new EditorJS({
+//   holder: "editorjs",
+//   inlineToolbar: ["bold", "italic", "underline", "link"],
+//   tools: {
+//     list: List,
+//     underline: Underline,
+//   },
+//   minHeight: 0,
+// });
 
 const editorJsTarget = new EditorJS({
   holder: "editorJsTarget",

@@ -1752,7 +1752,6 @@ body {
   line-height: 140% !important;
   padding: 0;
 }
-.text-editor #editorjs,
 .text-editor #editorJsTarget,
 .text-editor #editorJsTarget2 {
   padding: 0;

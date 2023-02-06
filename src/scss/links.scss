@@ -23,6 +23,7 @@ body {
 #editorQuillAmount,
 #editorQuillSupporter {
   min-height: 40px;
+  // height: 300px;
 }
 .ql-editor {
   ol {
@@ -85,7 +86,8 @@ body {
     line-height: 140% !important;
     padding: 0;
   }
-  #editorjs,
+  // #editorjs
+  // ,
   #editorJsTarget,
   #editorJsTarget2 {
     padding: 0;

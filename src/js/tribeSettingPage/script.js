@@ -694,28 +694,28 @@ $('input[type="radio"].radioedit2').on("change", function () {
   }
 });
 
-// var toolbarOptions = [
-//   // ["bold", "italic", "underline"], // toggled buttons
-//   [
-//     "bold",
-//     "italic",
-//     "underline",
-//     { list: "ordered" },
-//     { list: "bullet" },
-//     { link: "url" },
-//   ],
-// ];
+var toolbarOptions = [
+  // ["bold", "italic", "underline"], // toggled buttons
+  [
+    "bold",
+    "italic",
+    "underline",
+    { list: "ordered" },
+    { list: "bullet" },
+    { link: "url" },
+  ],
+];
 
-// var quill = new Quill("#editorQuill", {
-//   modules: {
-//     toolbar: toolbarOptions,
-//   },
-//   theme: "bubble",
+var quill = new Quill("#editorQuill", {
+  modules: {
+    toolbar: toolbarOptions,
+  },
+  theme: "bubble",
 
-//   // modules: {
-//   //   toolbar: toolbarOptions
-//   // }
-// });
+  // modules: {
+  //   toolbar: toolbarOptions
+  // }
+});
 // var quill2 = new Quill("#editorQuillAmount", {
 //   theme: "bubble",
 //   modules: {

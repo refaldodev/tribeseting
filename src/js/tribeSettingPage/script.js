@@ -716,15 +716,18 @@ var toolbarOptions = [
 //   //   toolbar: toolbarOptions
 //   // }
 // });
-// var quill2 = new Quill("#editorQuillAmount", {
-//   theme: "bubble",
-//   modules: {
-//     toolbar: toolbarOptions,
-//   },
-//   // modules: {
-//   //   toolbar: toolbarOptions
-//   // }
-// });
+var quill2 = new Quill("#editorQuillAmount", {
+  theme: "bubble",
+
+  bounds: "#editorQuillAmount",
+  scrollingContainer: "#editorQuillAmount",
+  modules: {
+    toolbar: toolbarOptions,
+  },
+  // modules: {
+  //   toolbar: toolbarOptions
+  // }
+});
 // var quill3 = new Quill("#editorQuillSupporter", {
 //   theme: "bubble",
 //   modules: {

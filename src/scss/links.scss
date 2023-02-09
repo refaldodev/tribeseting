@@ -19,10 +19,15 @@ html,
 body {
   scroll-behavior: smooth;
 }
-#editorQuill,
-#editorQuillAmount,
-#editorQuillSupporter {
-  min-height: 140px;
+// #editorQuill,
+// #editorQuillAmount,
+// #editorQuillSupporter {
+//   min-height: 140px;
+// }
+#editorContainer {
+  min-height: 90px;
+  height: auto;
+  max-height: 100%;
 }
 .ql-editor {
   ol {
@@ -129,15 +134,20 @@ body {
   pointer-events: none;
 }
 
-.ql-tooltip {
-  left: 0 !important;
-}
+// .ql-tooltip {
+//   left: 0 !important;
+// }
 .ql-editor {
   -webkit-user-select: text !important;
-
+  overflow-y: unset !important ;
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
+}
+.ql-tooltip-editor {
+  input {
+    color: white !important;
+  }
 }
 .ql-clipboard {
   -webkit-user-select: text;
@@ -148,7 +158,10 @@ body {
 
 .ql-container {
   .ql-editor {
-    min-height: 140px;
+    // min-height: 140px;
+    min-height: 90px;
+    height: auto;
+    max-height: 100%;
     border-radius: 6px;
     border: 1px solid #b8b8b8 !important;
     border-radius: 6px !important;
@@ -156,6 +169,19 @@ body {
     -moz-border-radius: 6px !important;
     -ms-border-radius: 6px !important;
     -o-border-radius: 6px !important;
+    a {
+      color: #007aff !important;
+      text-decoration: none;
+      -webkit-user-select: text !important;
+
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+      &:hover {
+        text-decoration: underline;
+        color: #007aff !important;
+      }
+    }
     &:focus {
       border: 1px solid #76cc11 !important;
       background: transparent !important;
@@ -167,9 +193,9 @@ body {
     }
   }
 }
-// .ql-clean {
-//   display: none !important;
-// }
+.ql-clean {
+  display: none !important;
+}
 .ql-container,
 .ql-editor,
 .ql-editor.ql-blank,
@@ -181,18 +207,18 @@ body {
   user-select: text !important;
   -webkit-user-select: text !important;
 }
-// .ql-snow .ql-editor h1 {
-//   font-size: 28px !important;
-//   font-weight: 800 !important;
-// }
-// .ql-snow .ql-editor h2 {
-//   font-size: 24px !important;
-//   font-weight: 600 !important;
-// }
-// .ql-snow .ql-editor h3 {
-//   font-size: 20px !important;
-//   font-weight: 600 !important;
-// }
+.ql-snow .ql-editor h1 {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+}
+.ql-snow .ql-editor h2 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+.ql-snow .ql-editor h3 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
 .ql-snow .ql-editor p {
   font-size: 16px !important;
   font-weight: 400 !important;

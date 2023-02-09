@@ -522,6 +522,7 @@ function uploadVideo() {
   var videoShow = document.querySelector(".wrapper-showVideo");
   freader.readAsDataURL(fileVideo);
   freader.onload = function () {
+    console.log(freader.result);
     videoShow.style.display = "block";
     document.getElementById("sourceVideo").src = freader.result;
     var btn = document.getElementById("wrapper-deleteVideo");
@@ -544,6 +545,7 @@ fileInputVideo.addEventListener("change", function () {
   vid.addEventListener("loadedmetadata", (event) => {
     vid.style.width = vid.videoWidth;
     videoShow.style.height = videoShow.videoHeight;
+    console.log(vid.videoWidth);
   });
 });
 
@@ -676,7 +678,7 @@ $('input[type="radio"].radioedit').on("change", function () {
 
 $('input[type="radio"].radioedit2').on("change", function () {
   $('input[type="radio"].radioedit2').not(this).prop("checked", false);
-
+  console.log(this.name);
   if (this.name != "custom2") {
     $("#year2").attr("disabled", true);
     $("#months2").attr("disabled", true);
@@ -692,17 +694,97 @@ $('input[type="radio"].radioedit2').on("change", function () {
   }
 });
 
-// EditorJS
+var toolbarOptions = [
+  // ["bold", "italic", "underline"], // toggled buttons
+  [
+    "bold",
+    "italic",
+    "underline",
+    { list: "ordered" },
+    { list: "bullet" },
+    "link",
+  ],
+];
 
-const editorJsFirst = new EditorJS({
-  holder: "editorJsFirst",
-  inlineToolbar: ["bold", "italic", "underline", "link"],
-  tools: {
-    list: List,
-    underline: Underline,
+// var quill = new Quill("#editorQuill", {
+//   modules: {
+//     toolbar: toolbarOptions,
+//   },
+//   theme: "bubble",
+
+//   // modules: {
+//   //   toolbar: toolbarOptions
+//   // }
+// });
+// var quill2 = new Quill("#editorQuillAmount", {
+//   theme: "bubble",
+//   modules: {
+//     toolbar: toolbarOptions,
+//   },
+//   // modules: {
+//   //   toolbar: toolbarOptions
+//   // }
+// });
+// var quill3 = new Quill("#editorQuillSupporter", {
+//   theme: "bubble",
+//   modules: {
+//     toolbar: toolbarOptions,
+//   },
+//   // modules: {
+//   //   toolbar: toolbarOptions
+//   // }
+// });
+
+// const editor = new EditorJS({
+//   holder: "editorjs",
+//   // tools: {
+
+//   //   list: {
+//   //     class: List,
+//   //     inlineToolbar: true,
+//   //     config: {
+//   //       defaultStyle: "unordered",
+//   //     },
+//   //   },
+//   // },
+//   tools: {
+//     list: {
+//       class: List,
+
+//       inlineToolbar: true,
+//       shortcut: "CMD+SHIFT+L",
+//     },
+//     paragraph: {
+//       class: Paragraph,
+//       inlineToolbar: true,
+//     },
+//     linkTool: {
+//       class: LinkTool,
+//     },
+
+//     underline: Underline,
+//   },
+//   minHeight: 0,
+// });
+var quill = new Quill("#editorContainer", {
+  theme: "bubble",
+  bounds: "#editorContainer",
+  scrollingContainer: "#editorContainer",
+  modules: {
+    toolbar: toolbarOptions,
   },
-  minHeight: 0,
 });
+
+// conTOHU
+// const editor = new EditorJS({
+//   holder: "editorjs",
+//   inlineToolbar: ["bold", "italic", "underline", "link"],
+//   tools: {
+//     list: List,
+//     underline: Underline,
+//   },
+//   minHeight: 0,
+// });
 
 const editorJsTarget = new EditorJS({
   holder: "editorJsTarget",

@@ -14,6 +14,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         
+        <!-- <link href="https://cdn.quilljs.com/1.2.6/quill.snow.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.bubble.css">
 
         <link rel="stylesheet" href="./src/scss/links.css" />
         <link rel="stylesheet" href="./src/css/creators_all.css" />
@@ -1067,11 +1069,12 @@
             <p class="form-title">
               About CreatorNameHere
           </p>
-          <div class="text-editor">
+          <div id="editorContainer"></div>
+          <!-- <div class="text-editor">
             <div id="editorJsFirst"  >
             
             </div>
-          </div>
+          </div> -->
       </div>
           <div class="wrapper-form ">
             <p class="form-title">
@@ -2279,9 +2282,7 @@
     <!-- <script type="module" src="./src/js/tribeSettingPage/main.js" ></script> -->
     
     <!-- <script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest
 
-"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/editorjs-button@1.0.4"></script> -->
 
 
@@ -2291,6 +2292,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
     <!-- User bundler for old browser that does not support Javascript ES6 Modules -->
     <!-- Bundler using minipack in tool folder by running node minipack.js -->
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+
     <script src="./src/js/tribeSettingPage/bundle.js"></script>
     <script src="./src/js/tribeSettingPage/script.js"></script>
     <script src="./src/js/navbarAndFooter.js"></script>

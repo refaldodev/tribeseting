@@ -832,12 +832,19 @@ select {
 .select2-container--classic.select2-container--open .select2-dropdown {
   border-color: #5897fb;
 }
-/* header {
-  position: -webkit-sticky; 
+header {
   position: sticky;
   top: 0;
   z-index: 999;
-} */
+  height: 55px;
+}
+header .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+}
 
 header.hide {
   display: none;

@@ -85,7 +85,7 @@ body {
     line-height: 140% !important;
     padding: 0;
   }
-  #editorjs,
+  #editorJsFirst,
   #editorJsTarget,
   #editorJsTarget2 {
     padding: 0;
@@ -97,6 +97,19 @@ body {
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+    a {
+      color: #007aff !important;
+      text-decoration: none;
+      -webkit-user-select: text !important;
+
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+      &:hover {
+        text-decoration: underline;
+        color: #007aff !important;
+      }
+    }
   }
   a {
     color: #007aff !important;

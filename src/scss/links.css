@@ -1738,7 +1738,7 @@ body {
   line-height: 140% !important;
   padding: 0;
 }
-.text-editor #editorjs,
+.text-editor #editorJsFirst,
 .text-editor #editorJsTarget,
 .text-editor #editorJsTarget2 {
   padding: 0;
@@ -1748,6 +1748,21 @@ body {
   -webkit-user-select: text !important;
   -moz-user-select: text;
   user-select: text;
+}
+.text-editor #editorJsFirst a,
+.text-editor #editorJsTarget a,
+.text-editor #editorJsTarget2 a {
+  color: #007aff !important;
+  text-decoration: none;
+  -webkit-user-select: text !important;
+  -moz-user-select: text;
+  user-select: text;
+}
+.text-editor #editorJsFirst a:hover,
+.text-editor #editorJsTarget a:hover,
+.text-editor #editorJsTarget2 a:hover {
+  text-decoration: underline;
+  color: #007aff !important;
 }
 .text-editor a {
   color: #007aff !important;

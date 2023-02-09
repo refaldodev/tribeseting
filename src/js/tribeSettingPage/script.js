@@ -693,8 +693,9 @@ $('input[type="radio"].radioedit2').on("change", function () {
 });
 
 // EditorJS
-const editor = new EditorJS({
-  holder: "editorjs",
+
+const editorJsFirst = new EditorJS({
+  holder: "editorJsFirst",
   inlineToolbar: ["bold", "italic", "underline", "link"],
   tools: {
     list: List,

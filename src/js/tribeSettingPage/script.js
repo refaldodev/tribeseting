@@ -811,7 +811,7 @@ const editorJsTarget2 = new EditorJS({
 
 $(".ql-tooltip-editor input").on("keydown", function (e) {
   console.log($(this).val());
-  if (e.shiftKey === true) {
+  if (e.shiftKey === true || e.keyCode === 13) {
     e.preventDefault();
   }
 });

@@ -808,10 +808,23 @@ const editorJsTarget2 = new EditorJS({
   },
   minHeight: 0,
 });
+var tooltip = quill.theme.tooltip;
+var input = tooltip.root.querySelector("input[data-link]");
+input.dataset.link = "www.sociabuzz.com";
 
-$(".ql-tooltip-editor input").on("keydown", function (e) {
-  console.log($(this).val());
-  if (e.shiftKey === true || e.keyCode === 13) {
-    e.preventDefault();
-  }
+$(document).ready(function () {
+  $(".ql-tooltip-editor input").on("keydown", function (e) {
+    console.log($(this).val());
+    if (e.shiftKey === true || e.keyCode === 13) {
+      e.preventDefault();
+    }
+  });
 });
+// const toolbar = quill.getModule("toolbar");
+// toolbar.addHandler("link", (formatTextToLink) => {
+//   if (formatTextToLink) {
+//     quill.theme.tooltip.edit();
+//   } else {
+//     quill.theme.tooltip.edit("link", quill.getFormat().link);
+//   }
+// });

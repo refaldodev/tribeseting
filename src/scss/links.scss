@@ -103,7 +103,9 @@ body {
     font-size: 16px;
     background: #fff;
     -webkit-user-select: text !important;
-
+    overflow-wrap: break-word !important;
+    word-wrap: break-word;
+    word-break: break-word;
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
@@ -111,7 +113,9 @@ body {
       color: #007aff !important;
       text-decoration: none;
       -webkit-user-select: text !important;
-
+      overflow-wrap: break-word !important;
+      word-wrap: break-word;
+      word-break: break-word;
       -moz-user-select: text;
       -ms-user-select: text;
       user-select: text;
@@ -178,7 +182,9 @@ body {
       color: #007aff !important;
       text-decoration: none;
       -webkit-user-select: text !important;
-
+      overflow-wrap: break-word !important;
+      word-wrap: break-word;
+      word-break: break-word;
       -moz-user-select: text;
       -ms-user-select: text;
       user-select: text;
